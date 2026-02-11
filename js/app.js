@@ -1,1545 +1,460 @@
+/**
+ * Designo Ceilings - Navigation Control
+ * Handles switching between About and nested Project categories.
+ * Default Landing: Residential
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Designo Template Loaded');
+    console.log('Designo Ceilings: Navigation system initialized.');
 
-    /* --- Navigation Logic --- */
     const navLinks = document.querySelectorAll('.nav-link');
-    const sectionTitle = document.getElementById('section-title');
-    const contentSections = document.querySelectorAll('.content-section');
+    const sections = document.querySelectorAll('.content-section');
 
+    /**
+     * Switch to a specific section
+     * @param {string} sectionId - The ID of the section to show
+     */
+    function showSection(sectionId) {
+        // Hide all sections
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Show target section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.classList.add('active');
+        }
+
+        // Update active state in navigation
+        navLinks.forEach(link => {
+            if (link.getAttribute('data-section') === sectionId) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Scroll to top of main content
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Attach click events to nav links
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
+            const sectionId = link.getAttribute('data-section');
+            if (sectionId) {
+                showSection(sectionId);
 
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-
-            // Get section name and update title
-            const sectionName = link.getAttribute('data-section');
-            sectionTitle.textContent = sectionName;
-
-            // Hide all content sections
-            contentSections.forEach(section => section.classList.remove('active'));
-
-            // Show the appropriate section
-            const sectionId = 'section-' + sectionName.toLowerCase().replace(/\s+/g, '-');
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.classList.add('active');
-            }
-            // After navigation, ensure empty project slots are hidden so grid collapses correctly
-            try {
-                cleanProjectPlaceholders();
-            } catch (e) {
-                // ignore
+                // Update URL hash without jumping
+                history.pushState(null, null, `#${sectionId}`);
             }
         });
     });
 
-    // Hide empty project slots in top-level grids (Home/Residential/Commercial/Printed Backlit)
-    function cleanProjectPlaceholders() {
-        try {
-            const slots = Array.from(document.querySelectorAll('.project-cover-slot'));
-            slots.forEach(slot => {
-                const img = slot.querySelector('img');
-                if (!img) {
-                    slot.style.display = 'none';
-                    return;
-                }
-                const src = img.getAttribute('src') || '';
-                if (!src.trim()) {
-                    slot.style.display = 'none';
-                    return;
-                }
-                // If image failed to load, hide slot
-                if (img.complete && img.naturalWidth === 0) {
-                    slot.style.display = 'none';
-                    return;
-                }
-                // ensure visible
-                slot.style.display = '';
-            });
-        } catch (e) {
-            // ignore
-        }
-    }
-
-    /* --- Modal Logic --- */
-    const modal = document.getElementById('gallery-modal');
-    const closeBtn = document.querySelector('.close-modal');
-    const seoPotomac = document.getElementById('seo-section-potomac');
-    const seoRockville = document.getElementById('seo-section-rockville');
-    const seoAlexandria = document.getElementById('seo-section-alexandria');
-    const seoArlingtonLinear = document.getElementById('seo-section-arlington-linear');
-    const seoArlingtonLinear2 = document.getElementById('seo-section-arlington-linear-2');
-    const seoRockvilleResidential = document.getElementById('seo-section-rockville-residential');
-    const seoRockvilleCommercial2 = document.getElementById('seo-section-rockville-commercial-2');
-    const seoAlexandriaCommercial = document.getElementById('seo-section-alexandria-commercial');
-    const seoCover9 = document.getElementById('seo-section-cover9');
-    const seoCover10 = document.getElementById('seo-section-cover10');
-    const galleryPotomac = document.getElementById('gallery-potomac');
-    const galleryRockville = document.getElementById('gallery-rockville');
-    const galleryAlexandria = document.getElementById('gallery-alexandria');
-    const galleryArlingtonLinear = document.getElementById('gallery-arlington-linear');
-    const galleryArlingtonLinear2 = document.getElementById('gallery-arlington-linear-2');
-    const galleryRockvilleResidential = document.getElementById('gallery-rockville-residential');
-    const galleryRockvilleCommercial2 = document.getElementById('gallery-rockville-commercial-2');
-    const galleryAlexandriaCommercial = document.getElementById('gallery-alexandria-commercial');
-    const galleryCover9 = document.getElementById('gallery-cover9');
-    const galleryCover10 = document.getElementById('gallery-cover10');
-    const galleryCover11 = document.getElementById('gallery-cover11');
-    const galleryCover21 = document.getElementById('gallery-cover21');
-    const galleryCover13 = document.getElementById('gallery-cover13');
-    const seoCover13 = document.getElementById('seo-section-cover13');
-    const seoCover11 = document.getElementById('seo-section-cover11');
-    const seoCover21 = document.getElementById('seo-section-cover21');
-    const galleryCover12 = document.getElementById('gallery-cover12');
-    const seoCover12 = document.getElementById('seo-section-cover12');
-    const galleryCover22 = document.getElementById('gallery-cover22');
-    const seoCover22 = document.getElementById('seo-section-cover22');
-    let metaCover10Title = null;
-    let metaCover10Desc = null;
-    let metaCover11Title = null;
-    let metaCover21Title = null;
-    let metaAlexTitle = null;
-    let metaAlexDesc = null;
-    let metaCover13Title = null;
-    let metaCover13Desc = null;
-    let metaCover12Title = null;
-    let metaCover12Desc = null;
-    let metaCover22Title = null;
-    let metaCover22Desc = null;
-    const galleryCover30 = document.getElementById('gallery-cover30');
-    const seoCover30 = document.getElementById('seo-section-cover30');
-    let metaCover30Desc = null;
-    const galleryCover31 = document.getElementById('gallery-cover31');
-    const seoCover31 = document.getElementById('seo-section-cover31');
-    let metaCover31Desc = null;
-    const galleryCover32 = document.getElementById('gallery-cover32');
-    const seoCover32 = document.getElementById('seo-section-cover32');
-    let metaCover32Desc = null;
-    const galleryCover33 = document.getElementById('gallery-cover33');
-    const seoCover33 = document.getElementById('seo-section-cover33');
-    let metaCover33Desc = null;
-    const galleryCover35 = document.getElementById('gallery-cover35');
-    const seoCover35 = document.getElementById('seo-section-cover35');
-    let metaCover35Desc = null;
-    const galleryCover37 = document.getElementById('gallery-cover37');
-    const seoCover37 = document.getElementById('seo-section-cover37');
-    let metaCover37Desc = null;
-    const galleryCover38 = document.getElementById('gallery-cover38');
-    const seoCover38 = document.getElementById('seo-section-cover38');
-    let metaCover38Desc = null;
-    const galleryCover39 = document.getElementById('gallery-cover39');
-    const seoCover39 = document.getElementById('seo-section-cover39');
-    let metaCover39Desc = null;
-    const galleryImg400 = document.getElementById('gallery-img400');
-    const seoImg400 = document.getElementById('seo-section-img400');
-    let metaImg400Desc = null;
-    const galleryCover40 = document.getElementById('gallery-cover40');
-    const seoCover40 = document.getElementById('seo-section-cover40');
-    let metaCover40Desc = null;
-    const galleryCover50 = document.getElementById('gallery-cover50');
-    const seoCover50 = document.getElementById('seo-section-cover50');
-    let metaCover50Desc = null;
-    const galleryImg151 = document.getElementById('gallery-img151');
-    const seoImg151 = document.getElementById('seo-section-img151');
-    let metaImg151Desc = null;
-
-    // Utility: remove/hide empty or broken gallery items so grid auto-fills
-    function cleanGalleryPlaceholders() {
-        try {
-            const grids = document.querySelectorAll('.gallery-grid');
-            grids.forEach(grid => {
-                const items = Array.from(grid.querySelectorAll('.gallery-grid-item'));
-                items.forEach(item => {
-                    // If item has no child elements, hide it
-                    if (!item.querySelector('*')) {
-                        item.style.display = 'none';
-                        return;
-                    }
-
-                    const img = item.querySelector('img');
-                    if (img) {
-                        // If src missing, hide
-                        const src = img.getAttribute('src') || '';
-                        if (!src.trim()) {
-                            item.style.display = 'none';
-                            return;
-                        }
-
-                        // If image already loaded but zero natural size, hide
-                        if (img.complete) {
-                            if (img.naturalWidth === 0) {
-                                item.style.display = 'none';
-                            } else {
-                                item.style.display = '';
-                            }
-                        } else {
-                            // Attach error handler to hide broken images
-                            img.addEventListener('error', () => {
-                                item.style.display = 'none';
-                            });
-                            img.addEventListener('load', () => {
-                                if (img.naturalWidth === 0) item.style.display = 'none';
-                                else item.style.display = '';
-                            });
-                        }
-                    }
-                });
-            });
-        } catch (e) {
-            // ignore
-        }
-    }
-
-    // Open Modal Function
-    window.openGalleryModal = function (projectId) {
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-
-        // Clean placeholders before showing content so grid will reflow
-        cleanGalleryPlaceholders();
-
-        // Hide all galleries and SEO sections first
-        if (galleryPotomac) galleryPotomac.style.display = 'none';
-        if (galleryRockville) galleryRockville.style.display = 'none';
-        if (galleryAlexandria) galleryAlexandria.style.display = 'none';
-        if (galleryArlingtonLinear) galleryArlingtonLinear.style.display = 'none';
-        if (galleryArlingtonLinear2) galleryArlingtonLinear2.style.display = 'none';
-        if (galleryRockvilleResidential) galleryRockvilleResidential.style.display = 'none';
-        if (galleryRockvilleCommercial2) galleryRockvilleCommercial2.style.display = 'none';
-        if (galleryAlexandriaCommercial) galleryAlexandriaCommercial.style.display = 'none';
-        if (galleryCover9) galleryCover9.style.display = 'none';
-        if (galleryCover10) galleryCover10.style.display = 'none';
-        if (galleryCover11) galleryCover11.style.display = 'none';
-        if (galleryCover21) galleryCover21.style.display = 'none';
-        if (seoPotomac) seoPotomac.style.display = 'none';
-        if (seoRockville) seoRockville.style.display = 'none';
-        if (seoAlexandria) seoAlexandria.style.display = 'none';
-        if (seoCover9) seoCover9.style.display = 'none';
-        if (seoCover10) seoCover10.style.display = 'none';
-        if (seoCover11) seoCover11.style.display = 'none';
-        if (seoCover21) seoCover21.style.display = 'none';
-        if (seoCover13) seoCover13.style.display = 'none';
-        if (seoCover12) seoCover12.style.display = 'none';
-        if (seoArlingtonLinear) seoArlingtonLinear.style.display = 'none';
-        if (seoArlingtonLinear2) seoArlingtonLinear2.style.display = 'none';
-        if (seoRockvilleResidential) seoRockvilleResidential.style.display = 'none';
-        if (seoRockvilleCommercial2) seoRockvilleCommercial2.style.display = 'none';
-        if (seoAlexandriaCommercial) seoAlexandriaCommercial.style.display = 'none';
-        if (galleryCover22) galleryCover22.style.display = 'none';
-        if (seoCover22) seoCover22.style.display = 'none';
-        if (galleryCover30) galleryCover30.style.display = 'none';
-        if (seoCover30) seoCover30.style.display = 'none';
-        if (galleryCover31) galleryCover31.style.display = 'none';
-        if (seoCover31) seoCover31.style.display = 'none';
-        if (galleryCover32) galleryCover32.style.display = 'none';
-        if (seoCover32) seoCover32.style.display = 'none';
-        if (galleryCover33) galleryCover33.style.display = 'none';
-        if (seoCover33) seoCover33.style.display = 'none';
-        if (galleryCover35) galleryCover35.style.display = 'none';
-        if (seoCover35) seoCover35.style.display = 'none';
-        if (galleryCover37) galleryCover37.style.display = 'none';
-        if (seoCover37) seoCover37.style.display = 'none';
-        if (galleryCover38) galleryCover38.style.display = 'none';
-        if (seoCover38) seoCover38.style.display = 'none';
-        if (galleryCover39) galleryCover39.style.display = 'none';
-        if (seoCover39) seoCover39.style.display = 'none';
-        if (galleryImg400) galleryImg400.style.display = 'none';
-        if (seoImg400) seoImg400.style.display = 'none';
-        if (galleryCover40) galleryCover40.style.display = 'none';
-        if (seoCover40) seoCover40.style.display = 'none';
-        if (galleryCover50) galleryCover50.style.display = 'none';
-        if (seoCover50) seoCover50.style.display = 'none';
-        if (galleryImg151) galleryImg151.style.display = 'none';
-        if (seoImg151) seoImg151.style.display = 'none';
-
-        // Show the appropriate gallery and SEO content
-        if (projectId === 'potomac') {
-            if (galleryPotomac) galleryPotomac.style.display = 'grid';
-            if (seoPotomac) seoPotomac.style.display = 'block';
-        } else if (projectId === 'rockville') {
-            if (galleryRockville) galleryRockville.style.display = 'grid';
-            if (seoRockville) seoRockville.style.display = 'block';
-        } else if (projectId === 'alexandria') {
-            if (galleryAlexandria) galleryAlexandria.style.display = 'grid';
-            if (seoAlexandria) seoAlexandria.style.display = 'block';
-        } else if (projectId === 'arlington-linear') {
-            if (galleryArlingtonLinear) galleryArlingtonLinear.style.display = 'grid';
-            if (seoArlingtonLinear) seoArlingtonLinear.style.display = 'block';
-        } else if (projectId === 'arlington-linear-2') {
-            if (galleryArlingtonLinear2) galleryArlingtonLinear2.style.display = 'grid';
-            if (seoArlingtonLinear2) seoArlingtonLinear2.style.display = 'block';
-        } else if (projectId === 'rockville-residential') {
-            if (galleryRockvilleResidential) galleryRockvilleResidential.style.display = 'grid';
-            if (seoRockvilleResidential) seoRockvilleResidential.style.display = 'block';
-        } else if (projectId === 'rockville-commercial-2') {
-            if (galleryRockvilleCommercial2) galleryRockvilleCommercial2.style.display = 'grid';
-            if (seoRockvilleCommercial2) seoRockvilleCommercial2.style.display = 'block';
-        } else if (projectId === 'alexandria-commercial') {
-            if (galleryAlexandriaCommercial) galleryAlexandriaCommercial.style.display = 'grid';
-            if (seoAlexandriaCommercial) seoAlexandriaCommercial.style.display = 'block';
-
-            // Add meta tags for Alexandria commercial SEO
-            metaAlexTitle = document.createElement('meta');
-            metaAlexTitle.setAttribute('name', 'title');
-            metaAlexTitle.setAttribute('content', 'Commercial LED Ceiling Installation in Alexandria Virginia Office');
-            document.head.appendChild(metaAlexTitle);
-
-            metaAlexDesc = document.createElement('meta');
-            metaAlexDesc.setAttribute('name', 'description');
-            metaAlexDesc.setAttribute('content', 'This commercial office project in Alexandria, Virginia features custom geometric LED ceiling lighting designed to enhance workspace illumination and modern aesthetics. Professionally installed commercial ceilings improve light distribution, energy efficiency, and the overall look of corporate interiors. Businesses in Alexandria, Virginia rely on high-quality ceiling and lighting solutions to create productive, visually appealing environments.');
-            document.head.appendChild(metaAlexDesc);
-            // Ensure SEO block is brought into view inside the modal body (scroll the modal, not the window)
-            setTimeout(() => {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (modalBody && seoAlexandriaCommercial) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoAlexandriaCommercial.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10; // small padding
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-                } catch (e) {
-                    // ignore errors
-                }
-            }, 300);
-        } else if (projectId === 'cover9') {
-            if (galleryCover9) galleryCover9.style.display = 'grid';
-            if (seoCover9) seoCover9.style.display = 'block';
-        } else if (projectId === 'cover13') {
-            if (galleryCover13) galleryCover13.style.display = 'grid';
-            if (seoCover13) seoCover13.style.display = 'block';
-
-            // Add meta tags (meta-only SEO for residential cover13)
-            metaCover13Title = document.createElement('meta');
-            metaCover13Title.setAttribute('name', 'title');
-            metaCover13Title.setAttribute('content', 'Residential Interior Lighting Installation in Northern Virginia | Modern Ceiling Design');
-            document.head.appendChild(metaCover13Title);
-
-            metaCover13Desc = document.createElement('meta');
-            metaCover13Desc.setAttribute('name', 'description');
-            metaCover13Desc.setAttribute('content', 'Expert residential interior lighting installation in Northern Virginia. Custom LED ceiling panels, modern home remodeling, and high-end interior finish work.');
-            document.head.appendChild(metaCover13Desc);
-        } else if (projectId === 'cover10') {
-            if (galleryCover10) galleryCover10.style.display = 'grid';
-            if (seoCover10) seoCover10.style.display = 'block';
-
-            // Add meta tags (meta-only SEO for residential)
-            metaCover10Title = document.createElement('meta');
-            metaCover10Title.setAttribute('name', 'title');
-            metaCover10Title.setAttribute('content', 'Modern Residential Interior Renovation in Northern Virginia | Custom Fireplace & Lighting');
-            document.head.appendChild(metaCover10Title);
-
-            metaCover10Desc = document.createElement('meta');
-            metaCover10Desc.setAttribute('name', 'description');
-            metaCover10Desc.setAttribute('content', 'Professional residential interior renovation in Northern Virginia featuring custom fireplace installation, modern ceiling lighting, and high-end finish work. Quality craftsmanship for modern homes.');
-            document.head.appendChild(metaCover10Desc);
-        }
-
-        else if (projectId === 'cover12') {
-            if (galleryCover12) galleryCover12.style.display = 'grid';
-            if (seoCover12) seoCover12.style.display = 'block';
-
-            // Add meta tags (meta-only SEO for cover12)
-            metaCover12Title = document.createElement('meta');
-            metaCover12Title.setAttribute('name', 'title');
-            metaCover12Title.setAttribute('content', 'Backlit Stretch Ceiling Installation in Washington DC Office');
-            document.head.appendChild(metaCover12Title);
-
-            metaCover12Desc = document.createElement('meta');
-            metaCover12Desc.setAttribute('name', 'description');
-            metaCover12Desc.setAttribute('content', 'This commercial project in Washington, D.C. features a custom backlit stretch ceiling with a nature-inspired graphic, designed to create a calming, modern atmosphere.');
-            document.head.appendChild(metaCover12Desc);
-
-            // Ensure SEO block is visible below images (scroll modal body after images load)
-            (function scrollSeoWhenReady12() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover12) return;
-
-                    const galleryImgs = galleryCover12 ? Array.from(galleryCover12.querySelectorAll('img')) : [];
-                    if (galleryImgs.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover12.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryImgs.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover12.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryImgs.forEach(img => {
-                        if (img.complete) {
-                            remaining -= 1;
-                        } else {
-                            img.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            img.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        }
-        else if (projectId === 'cover11') {
-            if (galleryCover11) galleryCover11.style.display = 'grid';
-            if (seoCover11) seoCover11.style.display = 'block';
-
-            // Add meta title only (metadata only)
-            metaCover11Title = document.createElement('meta');
-            metaCover11Title.setAttribute('name', 'title');
-            metaCover11Title.setAttribute('content', 'Custom Printed Stretch Ceilings for Homes in Northern Virginia');
-            document.head.appendChild(metaCover11Title);
-
-            // Scroll SEO into view after images load
-            (function scrollSeoWhenReady11() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover11) return;
-
-                    const galleryImgs = galleryCover11 ? Array.from(galleryCover11.querySelectorAll('img')) : [];
-                    if (galleryImgs.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover11.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryImgs.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover11.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryImgs.forEach(img => {
-                        if (img.complete) {
-                            remaining -= 1;
-                        } else {
-                            img.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            img.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        }
-        else if (projectId === 'cover21') {
-            if (galleryCover21) galleryCover21.style.display = 'grid';
-            if (seoCover21) seoCover21.style.display = 'block';
-
-            // Add meta title only (metadata only)
-            metaCover21Title = document.createElement('meta');
-            metaCover21Title.setAttribute('name', 'title');
-            metaCover21Title.setAttribute('content', 'Residential Stretch Ceiling Installation in Northern Virginia');
-            document.head.appendChild(metaCover21Title);
-
-            // Scroll SEO into view after images load
-            (function scrollSeoWhenReady21() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover21) return;
-
-                    const galleryImgs = galleryCover21 ? Array.from(galleryCover21.querySelectorAll('img')) : [];
-                    if (galleryImgs.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover21.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryImgs.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover21.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryImgs.forEach(img => {
-                        if (img.complete) {
-                            remaining -= 1;
-                        } else {
-                            img.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            img.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover22') {
-            if (galleryCover22) galleryCover22.style.display = 'grid';
-            if (seoCover22) seoCover22.style.display = 'block';
-
-            // Add meta tags for cover22
-            metaCover22Title = document.createElement('meta');
-            metaCover22Title.setAttribute('name', 'title');
-            metaCover22Title.setAttribute('content', 'Commercial Stretch Ceiling Installation in Virginia');
-            document.head.appendChild(metaCover22Title);
-
-            metaCover22Desc = document.createElement('meta');
-            metaCover22Desc.setAttribute('name', 'description');
-            metaCover22Desc.setAttribute('content', 'Commercial stretch ceiling installation in Virginia featuring custom printed ceilings for spas, wellness centers, and hospitality interiors.');
-            document.head.appendChild(metaCover22Desc);
-
-            // Scroll SEO into view after images load
-            (function scrollSeoWhenReady22() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover22) return;
-
-                    const galleryImgs = galleryCover22 ? Array.from(galleryCover22.querySelectorAll('img')) : [];
-                    if (galleryImgs.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover22.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryImgs.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover22.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryImgs.forEach(img => {
-                        if (img.complete) {
-                            remaining -= 1;
-                        } else {
-                            // Ensure one handler runs
-                            img.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            img.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-
-        } else if (projectId === 'cover30') {
-            if (galleryCover30) galleryCover30.style.display = 'grid';
-            if (seoCover30) seoCover30.style.display = 'block';
-
-            // Add meta tags for cover30
-            metaCover30Desc = document.createElement('meta');
-            metaCover30Desc.setAttribute('name', 'description');
-            metaCover30Desc.setAttribute('content', 'Commercial luminous stretch ceiling installation in Virginia for auto showrooms, retail spaces, and modern commercial interiors.');
-            document.head.appendChild(metaCover30Desc);
-
-            // Scroll SEO into view after images/video load
-            (function scrollSeoWhenReady30() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover30) return;
-
-                    const galleryItems = galleryCover30 ? Array.from(galleryCover30.querySelectorAll('.gallery-grid-item img, .gallery-grid-item video')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover30.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover30.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.tagName === 'VIDEO') {
-                            if (el.readyState >= 1) { // HAVE_METADATA or greater
-                                remaining -= 1;
-                            } else {
-                                el.onloadedmetadata = () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                };
-                                // fallback
-                                setTimeout(() => {
-                                    if (remaining > 0) { // check if not counted yet logic roughly
-                                        // Just force scroll if taking too long
-                                        tryScroll();
-                                    }
-                                }, 1000);
-                            }
-                        } else {
-                            if (el.complete) {
-                                remaining -= 1;
-                            } else {
-                                el.addEventListener('load', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                                el.addEventListener('error', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                            }
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover31') {
-            if (galleryCover31) galleryCover31.style.display = 'grid';
-            if (seoCover31) seoCover31.style.display = 'block';
-
-            // Add meta tags for cover31 (backend only)
-            metaCover31Desc = document.createElement('meta');
-            metaCover31Desc.setAttribute('name', 'description');
-            metaCover31Desc.setAttribute('content', 'Residential LED stretch ceiling installation in Virginia featuring modern perimeter lighting for contemporary home interiors.');
-            document.head.appendChild(metaCover31Desc);
-
-            // Scroll SEO into view after images load
-            (function scrollSeoWhenReady31() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover31) return;
-
-                    const galleryImgs = galleryCover31 ? Array.from(galleryCover31.querySelectorAll('img')) : [];
-                    if (galleryImgs.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover31.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryImgs.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover31.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryImgs.forEach(img => {
-                        if (img.complete) {
-                            remaining -= 1;
-                        } else {
-                            img.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            img.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover32') {
-            if (galleryCover32) galleryCover32.style.display = 'grid';
-            if (seoCover32) seoCover32.style.display = 'block';
-
-            // Add meta tags for cover32 (backend only)
-            metaCover32Desc = document.createElement('meta');
-            metaCover32Desc.setAttribute('name', 'description');
-            metaCover32Desc.setAttribute('content', 'Commercial circular stretch ceiling installation in Virginia featuring a custom sky print for spa and wellness interiors.');
-            document.head.appendChild(metaCover32Desc);
-
-            // Scroll SEO into view after images/video load
-            (function scrollSeoWhenReady32() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover32) return;
-
-                    const galleryItems = galleryCover32 ? Array.from(galleryCover32.querySelectorAll('.gallery-grid-item img, .gallery-grid-item video')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover32.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover32.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.tagName === 'VIDEO') {
-                            if (el.readyState >= 1) { // HAVE_METADATA or greater
-                                remaining -= 1;
-                            } else {
-                                el.onloadedmetadata = () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                };
-                                // fallback
-                                setTimeout(() => {
-                                    if (remaining > 0) {
-                                        tryScroll();
-                                    }
-                                }, 1000);
-                            }
-                        } else {
-                            if (el.complete) {
-                                remaining -= 1;
-                            } else {
-                                el.addEventListener('load', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                                el.addEventListener('error', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                            }
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover33') {
-            if (galleryCover33) galleryCover33.style.display = 'grid';
-            if (seoCover33) seoCover33.style.display = 'block';
-
-            // Add meta tags for cover33 (backend only)
-            metaCover33Desc = document.createElement('meta');
-            metaCover33Desc.setAttribute('name', 'description');
-            metaCover33Desc.setAttribute('content', 'Custom backlit stretch ceiling installation in a commercial interior in Virginia, designed to create a bright, modern lighting feature for offices and public spaces.');
-            document.head.appendChild(metaCover33Desc);
-
-            // Scroll SEO into view after images/video load
-            (function scrollSeoWhenReady33() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover33) return;
-
-                    const galleryItems = galleryCover33 ? Array.from(galleryCover33.querySelectorAll('.gallery-grid-item img, .gallery-grid-item video')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover33.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover33.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.tagName === 'VIDEO') {
-                            if (el.readyState >= 1) { // HAVE_METADATA or greater
-                                remaining -= 1;
-                            } else {
-                                el.onloadedmetadata = () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                };
-                                // fallback
-                                setTimeout(() => {
-                                    if (remaining > 0) {
-                                        tryScroll();
-                                    }
-                                }, 1000);
-                            }
-                        } else {
-                            if (el.complete) {
-                                remaining -= 1;
-                            } else {
-                                el.addEventListener('load', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                                el.addEventListener('error', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                            }
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover35') {
-            if (galleryCover35) galleryCover35.style.display = 'grid';
-            if (seoCover35) seoCover35.style.display = 'block';
-
-            // Add meta tags for cover35 (backend only)
-            metaCover35Desc = document.createElement('meta');
-            metaCover35Desc.setAttribute('name', 'description');
-            metaCover35Desc.setAttribute('content', 'Custom linear LED stretch ceiling installed in a modern residential interior in Washington, DC, creating clean architectural lighting and a sleek ceiling design.');
-            document.head.appendChild(metaCover35Desc);
-
-            // Scroll SEO into view after images/video load
-            (function scrollSeoWhenReady35() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover35) return;
-
-                    const galleryItems = galleryCover35 ? Array.from(galleryCover35.querySelectorAll('.gallery-grid-item img, .gallery-grid-item video')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover35.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover35.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.tagName === 'VIDEO') {
-                            if (el.readyState >= 1) { // HAVE_METADATA or greater
-                                remaining -= 1;
-                            } else {
-                                el.onloadedmetadata = () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                };
-                                // fallback
-                                setTimeout(() => {
-                                    if (remaining > 0) {
-                                        tryScroll();
-                                    }
-                                }, 1000);
-                            }
-                        } else {
-                            if (el.complete) {
-                                remaining -= 1;
-                            } else {
-                                el.addEventListener('load', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                                el.addEventListener('error', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                            }
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover37') {
-            if (galleryCover37) galleryCover37.style.display = 'grid';
-            if (seoCover37) seoCover37.style.display = 'block';
-
-            // Add meta tags for cover37 (backend only)
-            metaCover37Desc = document.createElement('meta');
-            metaCover37Desc.setAttribute('name', 'description');
-            metaCover37Desc.setAttribute('content', 'Commercial stretch ceiling installation with integrated linear LED lighting in Maryland, delivering a modern architectural ceiling design for offices and showrooms.');
-            document.head.appendChild(metaCover37Desc);
-
-            // Scroll SEO into view after images load
-            (function scrollSeoWhenReady37() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover37) return;
-
-                    const galleryItems = galleryCover37 ? Array.from(galleryCover37.querySelectorAll('.gallery-grid-item img, .gallery-grid-item video')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover37.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover37.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.complete) {
-                            remaining -= 1;
-                        } else {
-                            el.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            el.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover38') {
-            if (galleryCover38) galleryCover38.style.display = 'grid';
-            if (seoCover38) seoCover38.style.display = 'block';
-
-            // Add meta tags for cover38 (backend only)
-            metaCover38Desc = document.createElement('meta');
-            metaCover38Desc.setAttribute('name', 'description');
-            metaCover38Desc.setAttribute('content', 'High-end stretch ceiling installation with recessed LED lighting in a modern Washington DC condo, creating a sleek and elegant living space design.');
-            document.head.appendChild(metaCover38Desc);
-
-            // Scroll SEO into view after images load
-            (function scrollSeoWhenReady38() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover38) return;
-
-                    const galleryItems = galleryCover38 ? Array.from(galleryCover38.querySelectorAll('.gallery-grid-item img')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover38.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover38.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.complete) {
-                            remaining -= 1;
-                        } else {
-                            el.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            el.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover39') {
-            if (galleryCover39) galleryCover39.style.display = 'grid';
-            if (seoCover39) seoCover39.style.display = 'block';
-
-            // Add meta tags for cover39 (backend only)
-            metaCover39Desc = document.createElement('meta');
-            metaCover39Desc.setAttribute('name', 'description');
-            metaCover39Desc.setAttribute('content', 'Custom mirror stretch ceiling with modern LED line lighting installed in a Virginia entertainment room, creating a luxury contemporary ceiling design.');
-            document.head.appendChild(metaCover39Desc);
-
-            // Scroll SEO into view after image loads
-            (function scrollSeoWhenReady39() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover39) return;
-
-                    const galleryItems = galleryCover39 ? Array.from(galleryCover39.querySelectorAll('.gallery-grid-item img')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover39.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover39.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.complete) {
-                            remaining -= 1;
-                        } else {
-                            el.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            el.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'img400') {
-            if (galleryImg400) galleryImg400.style.display = 'grid';
-            if (seoImg400) seoImg400.style.display = 'block';
-
-            // Add meta tags for img400 (backend only)
-            metaImg400Desc = document.createElement('meta');
-            metaImg400Desc.setAttribute('name', 'description');
-            metaImg400Desc.setAttribute('content', 'Modern high gloss stretch ceiling with custom LED line lighting installed in a luxury Washington, DC condo living space.');
-            document.head.appendChild(metaImg400Desc);
-
-            // Scroll SEO into view after image loads
-            (function scrollSeoWhenReady400() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoImg400) return;
-
-                    const galleryItems = galleryImg400 ? Array.from(galleryImg400.querySelectorAll('.gallery-grid-item img')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoImg400.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoImg400.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.complete) {
-                            remaining -= 1;
-                        } else {
-                            el.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            el.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover40') {
-            if (galleryCover40) galleryCover40.style.display = 'grid';
-            if (seoCover40) seoCover40.style.display = 'block';
-
-            // Add meta tags for cover40 (backend only)
-            metaCover40Desc = document.createElement('meta');
-            metaCover40Desc.setAttribute('name', 'description');
-            metaCover40Desc.setAttribute('content', 'Luxury gloss stretch ceiling installation in a modern Maryland living room with recessed lighting and clean architectural lines.');
-            document.head.appendChild(metaCover40Desc);
-
-            // Scroll SEO into view after image loads
-            (function scrollSeoWhenReady40() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover40) return;
-
-                    const galleryItems = galleryCover40 ? Array.from(galleryCover40.querySelectorAll('.gallery-grid-item img')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover40.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover40.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        if (el.complete) {
-                            remaining -= 1;
-                        } else {
-                            el.addEventListener('load', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                            el.addEventListener('error', () => {
-                                remaining -= 1;
-                                if (remaining <= 0) tryScroll();
-                            });
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'cover50') {
-            if (galleryCover50) galleryCover50.style.display = 'grid';
-            if (seoCover50) seoCover50.style.display = 'block';
-
-            // Add meta tags for cover50 (backend only)
-            metaCover50Desc = document.createElement('meta');
-            metaCover50Desc.setAttribute('name', 'description');
-            metaCover50Desc.setAttribute('content', 'Custom modern LED ceiling installation in a Washington DC home featuring geometric recessed lighting design in an open concept living space.');
-            document.head.appendChild(metaCover50Desc);
-
-            // Scroll SEO into view after media loads
-            (function scrollSeoWhenReady50() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoCover50) return;
-
-                    const galleryItems = galleryCover50 ? Array.from(galleryCover50.querySelectorAll('.gallery-grid-item img, .gallery-grid-item video')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover50.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoCover50.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        const isVideo = el.tagName.toLowerCase() === 'video';
-                        if (isVideo) {
-                            if (el.readyState >= 3) {
-                                remaining -= 1;
-                            } else {
-                                el.addEventListener('loadeddata', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                                el.addEventListener('error', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                            }
-                        } else {
-                            if (el.complete) {
-                                remaining -= 1;
-                            } else {
-                                el.addEventListener('load', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                                el.addEventListener('error', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                            }
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        } else if (projectId === 'img151') {
-            if (galleryImg151) galleryImg151.style.display = 'grid';
-            if (seoImg151) seoImg151.style.display = 'block';
-
-            // Add meta tags for img151 (backend only)
-            metaImg151Desc = document.createElement('meta');
-            metaImg151Desc.setAttribute('name', 'description');
-            metaImg151Desc.setAttribute('content', 'Backlit printed stretch ceiling with sky effect installed in a modern home theater room in Washington DC.');
-            document.head.appendChild(metaImg151Desc);
-
-            // Scroll SEO into view after media loads
-            (function scrollSeoWhenReady151() {
-                try {
-                    const modalBody = modal.querySelector('.modal-body');
-                    if (!modalBody || !seoImg151) return;
-
-                    const galleryItems = galleryImg151 ? Array.from(galleryImg151.querySelectorAll('.gallery-grid-item img, .gallery-grid-item video')) : [];
-                    if (galleryItems.length === 0) {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoImg151.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                        return;
-                    }
-
-                    let remaining = galleryItems.length;
-                    function tryScroll() {
-                        const rectModal = modalBody.getBoundingClientRect();
-                        const rectSeo = seoImg151.getBoundingClientRect();
-                        const offset = rectSeo.top - rectModal.top + modalBody.scrollTop - 10;
-                        modalBody.scrollTo({ top: offset, behavior: 'smooth' });
-                    }
-
-                    galleryItems.forEach(el => {
-                        const isVideo = el.tagName.toLowerCase() === 'video';
-                        if (isVideo) {
-                            if (el.readyState >= 3) {
-                                remaining -= 1;
-                            } else {
-                                el.addEventListener('loadeddata', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                                el.addEventListener('error', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                            }
-                        } else {
-                            if (el.complete) {
-                                remaining -= 1;
-                            } else {
-                                el.addEventListener('load', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                                el.addEventListener('error', () => {
-                                    remaining -= 1;
-                                    if (remaining <= 0) tryScroll();
-                                });
-                            }
-                        }
-                    });
-
-                    if (remaining <= 0) {
-                        tryScroll();
-                    }
-                } catch (e) {
-                    // ignore
-                }
-            })();
-        }
-
-        // After showing the requested gallery, adjust columns so remaining images fill the row
-        setTimeout(() => {
-            try {
-                const shownGalleries = modal.querySelectorAll('.gallery-grid');
-                shownGalleries.forEach(g => {
-                    if (g.style.display && g.style.display !== 'none') {
-                        // Hide any leftover empty placeholders
-                        cleanGalleryPlaceholders();
-                        // adjustGalleryColumns(g); // Removed to maintain consistent 3-column grid globally
-                    }
-                });
-            } catch (e) {
-                // ignore
+    // Project Modal Selectors
+    const projectModal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-project-title');
+    const modalDesc = document.getElementById('modal-project-description');
+    const modalGallery = document.getElementById('modal-project-gallery');
+    const modalMeta = document.getElementById('modal-meta-description');
+
+    // Project Data Store
+    const projectsData = {
+        'cover0': {
+            title: 'Modern Custom LED Track Ceiling in Alexandria, Virginia Luxury Home',
+            description: `This modern custom LED track ceiling design levels up the entire vibe of this luxury residential interior in Alexandria, Virginia. The clean recessed lighting lines add a sleek, architectural feel while keeping the space bright, airy, and high end. This type of custom ceiling is perfect for homeowners in Northern Virginia and Washington, DC who want a contemporary look that feels premium without being over the top. Designs like this are also trending in Potomac and Rockville, Maryland for modern home renovations that blend lighting, architecture, and luxury finishes into one cohesive statement.`,
+            images: ['cover0.jpg', 'img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg'],
+            alt: 'Custom LED track ceiling installation in luxury residential home in Alexandria VA',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['custom ceiling Alexandria VA', 'modern ceiling Northern Virginia', 'LED track ceiling Washington DC', 'luxury residential ceiling Potomac MD', 'custom ceiling Rockville MD', 'modern ceiling design Arlington VA', 'high end home ceiling Washington DC'],
+            localSEO: {
+                location: 'Alexandria, VA',
+                service: 'Custom Ceiling Installation',
+                market: 'Residential',
+                region: 'Northern Virginia / Washington, DC / Maryland'
             }
-        }, 60);
+        },
+        'cover1': {
+            title: 'High-Gloss Stretch Ceiling with LED Track Lighting in Arlington, Virginia Home',
+            description: `This high-gloss black stretch ceiling with integrated LED track lighting brings serious modern luxury energy to this residential living space in Arlington, Virginia. The reflective ceiling creates a dramatic mirror effect that visually opens up the room, while the clean linear lighting adds a sleek architectural edge. This type of custom ceiling design is trending across Northern Virginia and Washington, DC for homeowners who want their interiors to feel elevated, modern, and low-key iconic. Similar stretch ceiling installs are also gaining traction in Potomac and Rockville, Maryland for contemporary home upgrades that balance style and function.`,
+            images: ['cover1.jpg', 'img6.jpg', 'img7.jpg', 'img8.jpg'],
+            alt: 'Glossy black stretch ceiling with LED track lighting in modern residential living room in Arlington VA',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['stretch ceiling Arlington VA', 'glossy ceiling Northern Virginia', 'custom ceiling Washington DC', 'LED track ceiling Alexandria VA', 'modern ceiling Potomac MD', 'luxury ceiling Rockville MD', 'residential ceiling design Washington DC'],
+            localSEO: {
+                location: 'Arlington, VA',
+                service: 'Stretch Ceiling Installation',
+                market: 'Residential',
+                region: 'Northern Virginia / Washington, DC / Maryland'
+            }
+        },
+        'cover2': {
+            title: 'Geometric LED Track Ceiling Design in Potomac, Maryland Modern Home',
+            description: `This custom geometric LED track ceiling brings a bold, architectural look to this modern residential living space in Potomac, Maryland. The clean linear lighting patterns create a high-end, design-forward vibe that instantly elevates the room while keeping the aesthetic minimal and luxe. Homeowners across Northern Virginia and Washington, DC are choosing ceiling designs like this to add visual interest without cluttering the space. This style of modern track ceiling is also trending in Arlington and Alexandria, Virginia, as well as Rockville, Maryland for luxury home renovations that feel fresh, intentional, and next-level.`,
+            images: ['cover2.jpg', 'img9.jpg'],
+            alt: 'Geometric LED track ceiling installation in modern residential living room in Potomac MD',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['custom ceiling Potomac MD', 'LED track ceiling Rockville MD', 'modern ceiling Washington DC', 'geometric ceiling Northern Virginia', 'luxury ceiling Arlington VA', 'custom ceiling Alexandria VA', 'residential ceiling design Maryland'],
+            localSEO: {
+                location: 'Potomac, MD',
+                service: 'Custom Ceiling Design & Installation',
+                market: 'Residential',
+                region: 'Maryland / Northern Virginia / Washington, DC'
+            }
+        },
+        'cover3': {
+            title: 'Luxury Recessed LED Ceiling Design Concept in Washington, DC Penthouse',
+            metaDescription: 'Luxury recessed LED ceiling design concept for a modern penthouse living room in Washington, DC, featuring integrated linear lighting and architectural tray ceiling detailing.',
+            description: `This luxury recessed LED ceiling design concept brings a high-rise penthouse aesthetic to modern residential interiors in Washington, DC. The clean tray ceiling with integrated linear lighting creates soft ambient illumination while maintaining a sleek, architectural finish. This style of custom ceiling is trending across Northern Virginia, including Arlington and Alexandria, and is increasingly popular in Potomac and Rockville, Maryland for upscale residential renovations seeking a modern city-inspired look.`,
+            images: ['cover3.jpg', 'img23.jpg', 'img24.jpg'],
+            alt: 'Luxury recessed LED ceiling design concept in modern penthouse living room in Washington DC',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['luxury ceiling Washington DC', 'recessed LED ceiling Arlington VA', 'modern ceiling Northern Virginia', 'custom ceiling Potomac MD', 'penthouse ceiling Rockville MD', 'tray ceiling with LED lighting Alexandria VA', 'high-end residential ceiling Maryland'],
+            localSEO: {
+                location: 'Washington, DC',
+                service: 'Design Concept / Rendering',
+                market: 'Residential (Luxury Condo / Penthouse)',
+                region: 'Washington, DC / Northern Virginia / Maryland'
+            }
+        },
+        'cover4': {
+            title: 'Modern LED Track Ceiling Installation in Arlington, Virginia Corporate Office',
+            metaDescription: 'Modern LED track ceiling installation in Arlington, Virginia corporate office featuring recessed linear lighting and architectural ceiling design for contemporary commercial interiors.',
+            description: `This modern LED track ceiling installation brings clean architectural energy to a high-end commercial interior in Arlington, Virginia. The recessed linear lighting creates a sleek and minimal aesthetic that complements floor-to-ceiling windows and contemporary structural elements. This type of custom ceiling is increasingly popular for corporate offices and premium commercial spaces across Northern Virginia and Washington, DC. Similar installations are trending in Rockville and Potomac, Maryland for professional office build-outs that require a polished, forward-thinking interior finish.`,
+            images: ['cover4.jpg', 'img16.jpg', 'img18.jpg', 'img19.jpg', 'img20.jpg', 'img21.jpg', 'img22.jpg'],
+            alt: 'Modern LED track ceiling installation in contemporary commercial office in Arlington VA',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['commercial ceiling Arlington VA', 'LED track ceiling Northern Virginia', 'modern office ceiling Washington DC', 'custom ceiling Rockville MD', 'architectural ceiling Potomac MD', 'corporate ceiling design Alexandria VA', 'commercial ceiling contractor Northern Virginia'],
+            localSEO: {
+                location: 'Arlington, VA',
+                service: 'Custom Modern LED Track Ceiling',
+                market: 'Commercial',
+                region: 'Northern Virginia / Washington, DC / Maryland'
+            }
+        },
+        'cover5': {
+            title: 'Luxury Tray Ceiling with LED Cove Lighting – Residential Rendering in Washington, DC',
+            metaDescription: 'This luxury tray ceiling rendering with soft LED cove lighting showcases a clean, modern ceiling design concept for high-end residential interiors in Washington, DC and Northern Virginia.',
+            description: `This luxury tray ceiling rendering with integrated LED cove lighting presents a refined, modern ceiling concept designed for upscale residential interiors in Washington, DC. The recessed architectural ceiling detail creates a calm, elevated atmosphere ideal for living rooms and open-concept homes throughout Northern Virginia, including Arlington and Alexandria. Similar custom ceiling designs are trending in Potomac and Rockville, Maryland for homeowners seeking subtle architectural depth with a premium finish.`,
+            images: ['cover5.jpg', 'img11.jpg', 'img12.jpg', 'img13.jpg', 'img14.jpg', 'img15.jpg'],
+            alt: 'Luxury residential tray ceiling rendering with LED cove lighting in modern living room in Washington DC',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['luxury ceiling Washington DC', 'tray ceiling with LED lighting Northern Virginia', 'custom ceiling Arlington VA', 'modern ceiling Alexandria VA', 'residential ceiling design Potomac MD', 'LED cove ceiling Rockville MD', 'ceiling design rendering Maryland'],
+            localSEO: {
+                location: 'Washington, DC',
+                service: 'Residential Rendering',
+                market: 'Residential',
+                region: 'Washington, DC / Northern Virginia / Maryland'
+            }
+        },
+        'cover6': {
+            title: 'Printed Backlit Stretch Ceiling Installation in Rockville, Maryland Auto Showroom',
+            metaDescription: 'Printed backlit stretch ceiling installation in Rockville, Maryland automotive showroom featuring large-format luminous ceiling panels designed to evenly diffuse light and enhance modern commercial interiors across Maryland, Northern Virginia, and Washington, DC.',
+            description: `This printed backlit stretch ceiling installation transforms a modern automotive showroom in Rockville, Maryland with clean, evenly diffused lighting that elevates the entire customer experience. The luminous ceiling panel creates a bright, premium atmosphere that enhances vehicle presentation while maintaining a spacious, high-end feel. Commercial ceiling systems like this are increasingly popular in Washington, DC and Northern Virginia, including Arlington and Alexandria. Similar backlit ceiling installations are also trending in Potomac, Maryland for commercial spaces seeking a modern architectural lighting statement.`,
+            images: ['cover6.jpg', 'img25.jpg', 'img26.jpg'],
+            alt: 'Printed backlit stretch ceiling installation in commercial auto showroom in Rockville MD',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['printed backlit ceiling Rockville MD', 'commercial ceiling Washington DC', 'backlit stretch ceiling Northern Virginia', 'showroom ceiling Arlington VA', 'modern commercial ceiling Alexandria VA', 'luminous ceiling Potomac MD', 'custom commercial ceiling Maryland'],
+            localSEO: {
+                location: 'Rockville, MD',
+                service: 'Printed Backlit Stretch Ceiling Installation',
+                market: 'Commercial',
+                industry: 'Automotive Showroom',
+                region: 'Maryland / Northern Virginia / Washington, DC'
+            }
+        },
+        'cover7': {
+            title: 'Modern LED Stretch Ceiling in Residential Dining Room – Northern Virginia',
+            metaDescription: 'Modern LED stretch ceiling installation in a residential dining and kitchen space in Northern Virginia featuring integrated linear lighting and glossy architectural ceiling design for contemporary homes across DC and Maryland.',
+            description: `This modern stretch ceiling with integrated LED light lines was installed in a contemporary residential dining and kitchen space in Northern Virginia. The glossy ceiling finish combined with custom linear lighting creates a clean, minimalist aesthetic that enhances both functionality and architectural design. Homeowners throughout Washington, DC, Maryland, and Northern Virginia are increasingly selecting LED stretch ceiling systems to introduce refined lighting accents and elevate interior spaces with sleek, modern detailing.`,
+            images: ['cover7.jpg', 'img27.jpg', 'img28.jpg', 'img29.jpg', 'img30.jpg'],
+            alt: 'modern LED stretch ceiling with linear lighting in residential dining room Northern Virginia',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['residential stretch ceiling Northern Virginia', 'modern LED ceiling Washington DC', 'custom ceiling design Maryland', 'kitchen stretch ceiling Arlington VA', 'dining room LED ceiling Alexandria VA', 'contemporary ceiling Potomac MD', 'glossy stretch ceiling installation DC'],
+            localSEO: {
+                location: 'Arlington, VA / Northern Virginia',
+                service: 'Residential LED Stretch Ceiling',
+                market: 'Residential',
+                region: 'Northern Virginia / Washington, DC / Maryland'
+            }
+        },
+        'cover8': {
+            title: 'Mirrored Stretch Ceiling with LED Perimeter Lighting in Modern Home – Rockville, Maryland',
+            metaDescription: 'Mirrored stretch ceiling installation with integrated LED perimeter lighting in a modern residential living space in Rockville, Maryland, delivering reflective luxury and contemporary architectural illumination for homes across DC and Northern Virginia.',
+            description: `This custom mirrored stretch ceiling with integrated LED perimeter lighting transforms a modern residential living space into a sleek, high-end interior. The high-gloss reflective ceiling finish visually enhances ceiling height while recessed LED light lines create a clean architectural glow. Homeowners across Rockville, Potomac, Washington, DC, and Northern Virginia are increasingly selecting modern stretch ceiling systems to elevate living rooms with contemporary lighting and luxury finishes.`,
+            images: ['cover8.jpg', 'img31.jpg', 'img32.jpg', 'img33.jpg', 'img34.jpg', 'img35.jpg', 'img36.jpg', 'img37.jpg'],
+            alt: 'mirrored stretch ceiling with LED perimeter lighting in modern residential living room Maryland',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['mirrored stretch ceiling Maryland', 'residential LED ceiling Rockville MD', 'modern ceiling design Potomac MD', 'custom stretch ceiling Washington DC', 'luxury ceiling installation Northern Virginia', 'LED perimeter ceiling Alexandria VA', 'contemporary living room ceiling Arlington VA'],
+            localSEO: {
+                location: 'Rockville, MD / Maryland',
+                service: 'Residential Mirrored Stretch Ceiling',
+                market: 'Residential',
+                region: 'Maryland / Northern Virginia / Washington, DC'
+            }
+        },
+        'cover9': {
+            title: 'Modern Geometric LED Ceiling Rendering for Luxury Homes – Northern Virginia & Washington DC',
+            metaDescription: 'Modern geometric LED ceiling rendering featuring recessed light lines and a minimalist stretch ceiling concept designed for luxury homes across Washington, DC, Northern Virginia, and Maryland.',
+            description: `This modern 3D ceiling rendering showcases sleek geometric LED light lines integrated into a minimalist stretch ceiling concept designed for high-end residential interiors. Contemporary ceiling designs like this are trending in luxury homes and modern renovations throughout Washington, DC, Northern Virginia, and Maryland, including Alexandria, Arlington, Potomac, and Rockville. It serves as inspiration for homeowners seeking bold architectural ceiling concepts with clean LED lighting integration.`,
+            images: ['cover9.jpg', 'img40.jpg', 'img41.jpg', 'img42.jpg', 'img43.jpg', 'img44.jpg', 'img45.jpg', 'img46.jpg'],
+            alt: 'modern geometric LED ceiling rendering for luxury living room',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['geometric LED ceiling design', 'modern ceiling rendering', 'custom LED ceiling Washington DC', 'luxury ceiling design Northern Virginia', 'stretch ceiling design Maryland', 'modern ceiling lighting Alexandria VA', 'ceiling design ideas Arlington VA', 'custom ceiling concepts Potomac MD'],
+            localSEO: {
+                location: 'Washington, DC / Northern Virginia',
+                service: 'Modern Geometric LED Ceiling Rendering',
+                market: 'Renderings / Design Concepts',
+                region: 'Washington, DC / Northern Virginia / Maryland'
+            }
+        },
+        'cover10': {
+            title: 'Modern LED Perimeter Ceiling in Commercial Lobby – Washington DC, Maryland & Northern Virginia',
+            metaDescription: 'Modern commercial lobby ceiling featuring recessed perimeter LED lighting and custom architectural ceiling design for office interiors across Washington, DC, Northern Virginia, and Maryland.',
+            description: `This commercial lobby showcases a modern custom ceiling with recessed perimeter LED lighting, delivering a clean and sophisticated aesthetic for corporate and office interiors. This type of LED ceiling design is increasingly popular in office buildings, medical facilities, and professional commercial environments throughout Washington, DC, Northern Virginia, and Maryland, including Arlington, Alexandria, Bethesda, and Rockville. Our custom ceiling systems enhance lighting performance, architectural presence, and overall interior refinement for business spaces.`,
+            images: ['cover10.jpg', 'img47.jpg', 'img48.jpg', 'img58.jpg', 'img59.jpg', 'img60.jpg'],
+            alt: 'commercial lobby ceiling with recessed LED perimeter lighting',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['commercial ceiling design Washington DC', 'office lobby ceiling lighting', 'LED perimeter ceiling Northern Virginia', 'custom commercial ceilings Maryland', 'corporate interior ceiling design', 'stretch ceiling commercial installation', 'modern office ceiling lighting DC'],
+            localSEO: {
+                location: 'Washington, DC / Northern Virginia / Maryland',
+                service: 'Commercial LED Perimeter Ceiling',
+                market: 'Commercial',
+                region: 'Washington, DC / Northern Virginia / Maryland'
+            }
+        },
+        'cover11': {
+            title: 'Modern Linear LED Ceiling Lighting in Residential Hallway – Northern Virginia, Washington DC & Maryland',
+            metaDescription: 'Modern residential hallway featuring recessed linear LED ceiling lighting and integrated architectural detailing for luxury homes across Northern Virginia, Washington, DC, and Maryland.',
+            description: `This modern residential hallway showcases custom recessed linear LED ceiling lighting integrated seamlessly into a minimalist architectural design. Clean light lines enhance both functionality and visual appeal, creating a sophisticated, contemporary atmosphere. Linear LED ceiling installations like this are increasingly popular in luxury homes and modern renovations throughout Northern Virginia, Washington, DC, and Maryland, including Alexandria, Arlington, Potomac, and Rockville. Our custom ceiling lighting systems elevate residential interiors with precision detailing and refined illumination.`,
+            images: ['cover11.jpg', 'img51.jpg', 'img52.jpg', 'img53.jpg', 'img54.jpg', 'img55.jpg', 'img56.jpg', 'img57.jpg'],
+            alt: 'modern residential hallway ceiling with recessed linear LED lighting',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['modern residential ceiling lighting', 'linear LED ceiling Northern Virginia', 'custom hallway ceiling Washington DC', 'recessed LED ceiling Maryland', 'luxury home ceiling design Arlington VA', 'contemporary ceiling lighting Alexandria VA'],
+            localSEO: {
+                location: 'Northern Virginia / Washington, DC / Maryland',
+                service: 'Residential Linear LED Ceiling Lighting',
+                market: 'Residential',
+                region: 'Northern Virginia / Washington, DC / Maryland'
+            }
+        },
+        'cover22': {
+            title: 'Luxury Stretch Ceiling with Geometric LED Lighting – Alexandria VA, Washington DC & Potomac MD',
+            metaDescription: 'Luxury residential foyer featuring a high-gloss stretch ceiling with geometric linear LED lighting, installed in upscale homes across Northern Virginia, Washington DC, and Maryland.',
+            description: `This luxury residential foyer showcases a high-gloss stretch ceiling with integrated geometric LED lighting, creating a bold and modern architectural statement. Reflective ceiling panels visually enhance height and depth, while recessed linear light accents deliver clean, contemporary illumination. Custom stretch ceiling installations like this are increasingly popular in upscale homes across Alexandria, Arlington, Potomac, Rockville, and the greater Washington DC metropolitan area.`,
+            images: ['cover22.jpg', 'img50.jpg'],
+            alt: 'luxury stretch ceiling with geometric LED lighting in residential foyer',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['stretch ceiling Alexandria VA', 'modern LED ceiling Washington DC', 'luxury residential ceiling Potomac MD', 'geometric LED ceiling Northern Virginia', 'custom stretch ceilings Rockville MD', 'high gloss ceiling design Arlington VA'],
+            localSEO: {
+                location: 'Alexandria, VA / Washington DC / Potomac MD',
+                service: 'Luxury Stretch Ceiling with Geometric LED Lighting',
+                market: 'Residential',
+                region: 'Northern Virginia / Washington DC / Maryland'
+            }
+        },
+        'cover12': {
+            title: 'Luxury Stretch Ceiling with LED Perimeter Lighting – Washington DC, Arlington VA & Bethesda MD',
+            metaDescription: 'Luxury residential living and dining space featuring a custom stretch ceiling with perimeter LED cove lighting and modern linear accents, installed in upscale homes across Washington DC, Northern Virginia, and Maryland.',
+            description: `This luxury residential living and dining area features a custom stretch ceiling with integrated perimeter LED cove lighting and modern linear light accents. The clean ceiling finish combined with architectural lighting creates an elegant, high-end atmosphere ideal for upscale homes and condominiums. Stretch ceiling installations like this are increasingly popular throughout Washington, DC, Northern Virginia, and Maryland, including Arlington, Alexandria, Bethesda, and Silver Spring, for homeowners seeking seamless finishes and refined lighting design.`,
+            images: ['cover12.jpg', 'img61.jpg', 'img62.jpg', 'img63.jpg'],
+            alt: 'luxury stretch ceiling with LED perimeter lighting in modern living room',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['stretch ceiling Washington DC', 'modern ceiling design Arlington VA', 'luxury LED ceiling Bethesda MD', 'custom ceiling lighting Northern Virginia', 'living room stretch ceiling Alexandria VA', 'perimeter LED ceiling Maryland'],
+            localSEO: {
+                location: 'Washington DC / Arlington VA / Bethesda MD',
+                service: 'Luxury Stretch Ceiling with LED Perimeter Lighting',
+                market: 'Residential',
+                region: 'Washington DC / Northern Virginia / Maryland'
+            }
+        },
+        'cover13': {
+            title: 'Custom Stretch Ceiling with Circular LED Cove Lighting – Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This commercial indoor pool and spa features a custom stretch ceiling with circular architectural designs and integrated LED cove lighting. The curved ceiling layout enhances the luxury ambiance while providing soft, even illumination for hospitality and wellness spaces. Ideal for hotels, fitness centers, and luxury residential amenities in Washington, DC, Northern Virginia, and Maryland, including Arlington, Tysons, Bethesda, and Silver Spring.',
+            description: `This commercial indoor pool and spa features a custom stretch ceiling with circular architectural designs and integrated LED cove lighting. The curved ceiling layout enhances the luxury ambiance while providing soft, even illumination for hospitality and wellness spaces. Ideal for hotels, fitness centers, and luxury residential amenities in Washington, DC, Northern Virginia, and Maryland, including Arlington, Tysons, Bethesda, and Silver Spring.`,
+            images: ['cover13.jpg', 'img70.jpg', 'img71.jpg', 'img72.jpg', 'img74.jpg'],
+            alt: 'custom stretch ceiling with circular LED lighting in indoor pool spa',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['commercial stretch ceiling Washington DC', 'pool ceiling design Northern Virginia', 'spa ceiling lighting Maryland', 'hotel ceiling installation Arlington VA', 'custom ceiling contractor Bethesda MD', 'architectural LED ceiling Tysons VA'],
+            localSEO: {
+                location: 'Washington DC / Northern Virginia / Maryland',
+                service: 'Commercial Stretch Ceiling Installation',
+                market: 'Commercial / Hospitality',
+                region: 'Northern Virginia / Washington DC / Maryland'
+            }
+        },
+        'cover14': {
+            title: 'Backlit Stretch Ceiling with Custom Sky Print – Residential Project in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This residential home theater features a custom backlit stretch ceiling with a printed sky design, creating a dramatic illuminated ceiling centerpiece. The LED lightbox ceiling provides even ambient lighting while adding a modern architectural statement to the room. Ideal for luxury homes, media rooms, and entertainment spaces in Washington, DC, Northern Virginia, and Maryland, including McLean, Alexandria, Bethesda, and Rockville.',
+            description: `This residential home theater features a custom backlit stretch ceiling with a printed sky design, creating a dramatic illuminated ceiling centerpiece. The LED lightbox ceiling provides even ambient lighting while adding a modern architectural statement to the room. Ideal for luxury homes, media rooms, and entertainment spaces in Washington, DC, Northern Virginia, and Maryland, including McLean, Alexandria, Bethesda, and Rockville.`,
+            images: ['cover14.jpg', 'img75.jpg', 'img76.jpg', 'img86.jpg'],
+            alt: 'backlit stretch ceiling with custom sky print in home theater room',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['backlit stretch ceiling Washington DC', 'home theater ceiling Northern Virginia', 'printed stretch ceiling Maryland', 'LED lightbox ceiling McLean VA', 'custom ceiling design Bethesda MD', 'modern ceiling installation Rockville'],
+            localSEO: {
+                location: 'Washington DC Metropolitan Area',
+                service: 'Backlit Stretch Ceiling with Custom Sky Print',
+                market: 'Commercial (Residential Amenities)',
+                region: 'Washington DC / Virginia / Maryland'
+            }
+        },
+        'cover15': {
+            title: 'Backlit Stretch Ceiling with Forest Sky Print – Commercial Project in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This commercial interior features a custom backlit stretch ceiling with a forest sky print, creating a bright, immersive ceiling feature that transforms the space with natural light effects. The illuminated ceiling panel adds a modern, calming atmosphere ideal for offices, wellness centers, clinics, hotels, and commercial interiors. Professional stretch ceiling installation services available in Washington, DC, Northern Virginia, and Maryland, including Arlington, Tysons, Bethesda, Silver Spring, and Rockville.',
+            description: `This commercial interior features a custom backlit stretch ceiling with a forest sky print, creating a bright, immersive ceiling feature that transforms the space with natural light effects. The illuminated ceiling panel adds a modern, calming atmosphere ideal for offices, wellness centers, clinics, hotels, and commercial interiors. Professional stretch ceiling installation services available in Washington, DC, Northern Virginia, and Maryland, including Arlington, Tysons, Bethesda, Silver Spring, and Rockville.`,
+            images: ['cover15.jpg', 'img80.jpg', 'img81.jpg', 'img82.jpg', 'img83.jpg', 'img84.jpg'],
+            alt: 'backlit stretch ceiling with forest sky print in commercial interior',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['backlit stretch ceiling Washington DC', 'commercial stretch ceiling Northern Virginia', 'printed stretch ceiling Maryland', 'LED lightbox ceiling Arlington VA', 'custom ceiling design Bethesda MD', 'illuminated ceiling panels Silver Spring', 'modern commercial ceiling Rockville'],
+            localSEO: {
+                location: 'Washington DC / Northern Virginia / Maryland',
+                service: 'Commercial Backlit Forest Sky Print',
+                market: 'Commercial',
+                region: 'Northern Virginia / Washington DC / Maryland'
+            }
+        },
+        'cover88': {
+            title: 'Luxury Backlit Stretch Ceiling with Sky Print – Commercial Spa Project in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This luxury spa interior features a custom backlit stretch ceiling with a sky and cloud print, creating a relaxing, immersive ceiling experience. The illuminated ceiling panel enhances the ambiance of wellness centers, spas, hotels, and luxury commercial interiors by providing soft, even LED lighting and a striking architectural focal point. Ideal for premium commercial spaces in Washington, DC, Northern Virginia, and Maryland, including Tysons, Arlington, Bethesda, Rockville, and Silver Spring.',
+            description: `This luxury spa interior features a custom backlit stretch ceiling with a sky and cloud print, creating a relaxing, immersive ceiling experience. The illuminated ceiling panel enhances the ambiance of wellness centers, spas, hotels, and luxury commercial interiors by providing soft, even LED lighting and a striking architectural focal point. Ideal for premium commercial spaces in Washington, DC, Northern Virginia, and Maryland, including Tysons, Arlington, Bethesda, Rockville, and Silver Spring.`,
+            images: ['cover88.jpg', 'img97.jpg', 'img98.jpg'],
+            alt: 'luxury backlit stretch ceiling with sky print in spa and wellness center',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['backlit stretch ceiling Washington DC', 'commercial stretch ceiling Northern Virginia', 'spa ceiling design Maryland', 'printed stretch ceiling Tysons VA', 'LED ceiling panels Arlington VA', 'custom ceiling installation Bethesda MD', 'luxury ceiling design Rockville MD', 'wellness center ceiling Silver Spring'],
+            localSEO: {
+                location: 'Washington DC / Northern Virginia / Maryland',
+                service: 'Luxury Commercial Backlit Sky Print',
+                market: 'Commercial',
+                region: 'Northern Virginia / Washington DC / Maryland'
+            }
+        },
+        'cover16': {
+            title: 'Backlit Stretch Ceiling with Sky Print – Commercial Lobby Project in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This modern commercial lobby features a custom backlit stretch ceiling with a realistic sky and cloud print, creating the illusion of natural daylight in an interior atrium. The illuminated ceiling panel enhances vertical architectural spaces such as hotel lobbies, office atriums, and luxury commercial buildings by adding depth, brightness, and a high-end visual focal point. Ideal for commercial ceiling installations in Washington, DC, Northern Virginia, and Maryland, including Tysons, Arlington, Bethesda, and Rockville.',
+            description: `This modern commercial lobby features a custom backlit stretch ceiling with a realistic sky and cloud print, creating the illusion of natural daylight in an interior atrium. The illuminated ceiling panel enhances vertical architectural spaces such as hotel lobbies, office atriums, and luxury commercial buildings by adding depth, brightness, and a high-end visual focal point. Ideal for commercial ceiling installations in Washington, DC, Northern Virginia, and Maryland, including Tysons, Arlington, Bethesda, and Rockville.`,
+            images: ['cover16.jpg', 'img100.jpg', 'img101.jpg', 'img102.jpg', 'img103.jpg', 'img104.jpg', 'img105.jpg', 'img106.jpg', 'img107.jpg'],
+            alt: 'backlit stretch ceiling with sky print in commercial lobby atrium',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['backlit stretch ceiling Washington DC', 'commercial ceiling installation Northern Virginia', 'sky print stretch ceiling Maryland', 'lobby ceiling design Tysons VA', 'atrium ceiling lighting Arlington VA', 'custom printed ceiling Bethesda MD', 'LED lightbox ceiling Rockville MD', 'modern commercial ceiling Silver Spring'],
+            localSEO: {
+                location: 'Washington DC / Northern Virginia / Maryland',
+                service: 'Commercial Lobby Sky Print Backlit',
+                market: 'Commercial',
+                region: 'Northern Virginia / Washington DC / Maryland'
+            }
+        },
+        'cover78': {
+            title: 'Geometric LED Line Ceiling Design – Commercial Office Project in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This contemporary commercial office features a custom geometric LED line ceiling integrated into a stretch ceiling system, creating a clean, high-tech lighting pattern across the workspace. The illuminated linear ceiling design enhances brightness, improves visual comfort, and adds a bold architectural identity to modern office interiors. Ideal for corporate offices, coworking spaces, tech companies, and commercial interiors in Washington, DC, Northern Virginia, and Maryland, including Arlington, Tysons, Bethesda, and Silver Spring.',
+            description: `This contemporary commercial office features a custom geometric LED line ceiling integrated into a stretch ceiling system, creating a clean, high-tech lighting pattern across the workspace. The illuminated linear ceiling design enhances brightness, improves visual comfort, and adds a bold architectural identity to modern office interiors. Ideal for corporate offices, coworking spaces, tech companies, and commercial interiors in Washington, DC, Northern Virginia, and Maryland, including Arlington, Tysons, Bethesda, and Silver Spring.`,
+            images: ['cover78.jpg', 'img200.jpg', 'img201.jpg'],
+            alt: 'geometric LED line ceiling in modern commercial office interior',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['LED line ceiling Washington DC', 'commercial office ceiling Northern Virginia', 'geometric stretch ceiling Maryland', 'modern office ceiling design Arlington VA', 'linear LED ceiling Tysons VA', 'corporate ceiling lighting Bethesda MD', 'custom office ceiling Silver Spring MD', 'contemporary ceiling installation Washington DC'],
+            localSEO: {
+                location: 'Washington DC / Northern Virginia / Maryland',
+                service: 'Commercial Geometric LED Line Ceiling',
+                market: 'Commercial',
+                region: 'Northern Virginia / Washington DC / Maryland'
+            }
+        },
+        'cover99': {
+            title: 'Glossy Stretch Ceiling with Geometric LED Light Frames – Commercial Restaurant Project in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This upscale commercial restaurant interior features a glossy stretch ceiling with custom geometric LED light frames, creating a sleek, modern atmosphere for dining spaces. The reflective ceiling surface enhances brightness and visual depth, while the integrated linear LED lighting delivers balanced illumination across the room. Ideal for restaurants, banquet halls, hotel dining areas, and hospitality venues in Washington, DC, Northern Virginia, and Maryland, including Arlington, Alexandria, Bethesda, and Rockville.',
+            description: `This upscale commercial restaurant interior features a glossy stretch ceiling with custom geometric LED light frames, creating a sleek, modern atmosphere for dining spaces. The reflective ceiling surface enhances brightness and visual depth, while the integrated linear LED lighting delivers balanced illumination across the room. Ideal for restaurants, banquet halls, hotel dining areas, and hospitality venues in Washington, DC, Northern Virginia, and Maryland, including Arlington, Alexandria, Bethesda, and Rockville.`,
+            images: ['cover99.jpg', 'img300.jpg', 'img301.jpg'],
+            alt: 'glossy stretch ceiling with geometric LED lighting in modern restaurant interior',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['glossy stretch ceiling Washington DC', 'restaurant ceiling design Northern Virginia', 'commercial dining ceiling Maryland', 'LED geometric ceiling Arlington VA', 'modern restaurant ceiling Alexandria VA', 'hospitality ceiling installation Bethesda MD', 'custom LED ceiling Rockville MD', 'banquet hall ceiling Washington DC'],
+            localSEO: {
+                location: 'Washington DC / Northern Virginia / Maryland',
+                service: 'Glossy Restaurant Stretch Ceiling',
+                market: 'Commercial',
+                region: 'Northern Virginia / Washington DC / Maryland'
+            }
+        }
     };
 
-    // Close Modal Function
-    function closeModal() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        if (galleryPotomac) galleryPotomac.style.display = 'none';
-        if (galleryRockville) galleryRockville.style.display = 'none';
-        if (galleryAlexandria) galleryAlexandria.style.display = 'none';
-        if (galleryArlingtonLinear) galleryArlingtonLinear.style.display = 'none';
-        if (galleryArlingtonLinear2) galleryArlingtonLinear2.style.display = 'none';
-        if (galleryRockvilleResidential) galleryRockvilleResidential.style.display = 'none';
-        if (galleryRockvilleCommercial2) galleryRockvilleCommercial2.style.display = 'none';
-        if (galleryAlexandriaCommercial) galleryAlexandriaCommercial.style.display = 'none';
-        if (galleryCover9) galleryCover9.style.display = 'none';
-        if (galleryCover10) galleryCover10.style.display = 'none';
-        if (seoPotomac) seoPotomac.style.display = 'none';
-        if (seoRockville) seoRockville.style.display = 'none';
-        if (seoAlexandria) seoAlexandria.style.display = 'none';
-        if (seoCover9) seoCover9.style.display = 'none';
-        if (seoCover10) seoCover10.style.display = 'none';
-        if (seoCover13) seoCover13.style.display = 'none';
-        if (seoArlingtonLinear) seoArlingtonLinear.style.display = 'none';
-        if (seoCover12) seoCover12.style.display = 'none';
-        if (seoArlingtonLinear2) seoArlingtonLinear2.style.display = 'none';
-        if (seoRockvilleResidential) seoRockvilleResidential.style.display = 'none';
-        if (seoRockvilleCommercial2) seoRockvilleCommercial2.style.display = 'none';
-        if (seoRockvilleCommercial2) seoRockvilleCommercial2.style.display = 'none';
-        if (seoAlexandriaCommercial) seoAlexandriaCommercial.style.display = 'none';
-        if (galleryCover22) galleryCover22.style.display = 'none';
-        if (seoCover22) seoCover22.style.display = 'none';
-        if (galleryCover30) galleryCover30.style.display = 'none';
-        if (seoCover30) seoCover30.style.display = 'none';
-        if (galleryCover31) galleryCover31.style.display = 'none';
-        if (seoCover31) seoCover31.style.display = 'none';
-        if (galleryCover32) galleryCover32.style.display = 'none';
-        if (seoCover32) seoCover32.style.display = 'none';
-        if (galleryCover33) galleryCover33.style.display = 'none';
-        if (seoCover33) seoCover33.style.display = 'none';
-        if (galleryCover35) galleryCover35.style.display = 'none';
-        if (seoCover35) seoCover35.style.display = 'none';
-        if (galleryCover37) galleryCover37.style.display = 'none';
-        if (seoCover37) seoCover37.style.display = 'none';
-        if (galleryCover38) galleryCover38.style.display = 'none';
-        if (seoCover38) seoCover38.style.display = 'none';
-        if (galleryCover39) galleryCover39.style.display = 'none';
-        if (seoCover39) seoCover39.style.display = 'none';
-        if (galleryImg400) galleryImg400.style.display = 'none';
-        if (seoImg400) seoImg400.style.display = 'none';
-        if (galleryCover40) galleryCover40.style.display = 'none';
-        if (seoCover40) seoCover40.style.display = 'none';
-        if (galleryCover50) galleryCover50.style.display = 'none';
-        if (seoCover50) seoCover50.style.display = 'none';
-        if (galleryImg151) galleryImg151.style.display = 'none';
-        if (seoImg151) seoImg151.style.display = 'none';
-        // Remove dynamic meta tags for cover10 if present
-        if (metaCover10Title && metaCover10Title.parentNode) metaCover10Title.parentNode.removeChild(metaCover10Title);
-        metaCover10Title = null;
-        if (metaCover10Desc && metaCover10Desc.parentNode) metaCover10Desc.parentNode.removeChild(metaCover10Desc);
-        metaCover10Desc = null;
-        // Remove dynamic meta tags for Alexandria commercial if present
-        if (metaAlexTitle && metaAlexTitle.parentNode) metaAlexTitle.parentNode.removeChild(metaAlexTitle);
-        metaAlexTitle = null;
-        if (metaAlexDesc && metaAlexDesc.parentNode) metaAlexDesc.parentNode.removeChild(metaAlexDesc);
-        metaAlexDesc = null;
-        // Remove dynamic meta tags for cover13 if present
-        if (metaCover13Title && metaCover13Title.parentNode) metaCover13Title.parentNode.removeChild(metaCover13Title);
-        metaCover13Title = null;
-        if (metaCover13Desc && metaCover13Desc.parentNode) metaCover13Desc.parentNode.removeChild(metaCover13Desc);
-        metaCover13Desc = null;
-        // Remove dynamic meta tags for cover11 if present
-        if (metaCover11Title && metaCover11Title.parentNode) metaCover11Title.parentNode.removeChild(metaCover11Title);
-        metaCover11Title = null;
-        // Remove dynamic meta tags for cover21 if present
-        if (metaCover21Title && metaCover21Title.parentNode) metaCover21Title.parentNode.removeChild(metaCover21Title);
-        metaCover21Title = null;
-        // Remove dynamic meta tags for cover12 if present
-        if (metaCover12Title && metaCover12Title.parentNode) metaCover12Title.parentNode.removeChild(metaCover12Title);
-        metaCover12Title = null;
-        if (metaCover12Desc && metaCover12Desc.parentNode) metaCover12Desc.parentNode.removeChild(metaCover12Desc);
-        metaCover12Desc = null;
-        // Remove dynamic meta tags for cover22 if present
-        if (metaCover22Title && metaCover22Title.parentNode) metaCover22Title.parentNode.removeChild(metaCover22Title);
-        metaCover22Title = null;
-        if (metaCover22Desc && metaCover22Desc.parentNode) metaCover22Desc.parentNode.removeChild(metaCover22Desc);
-        metaCover22Desc = null;
-        // Remove dynamic meta tags for cover30 if present
-        if (metaCover30Desc && metaCover30Desc.parentNode) metaCover30Desc.parentNode.removeChild(metaCover30Desc);
-        metaCover30Desc = null;
-        // Remove dynamic meta tags for cover31 if present
-        if (metaCover31Desc && metaCover31Desc.parentNode) metaCover31Desc.parentNode.removeChild(metaCover31Desc);
-        metaCover31Desc = null;
-        // Remove dynamic meta tags for cover32 if present
-        if (metaCover32Desc && metaCover32Desc.parentNode) metaCover32Desc.parentNode.removeChild(metaCover32Desc);
-        metaCover32Desc = null;
-        // Remove dynamic meta tags for cover33 if present
-        if (metaCover33Desc && metaCover33Desc.parentNode) metaCover33Desc.parentNode.removeChild(metaCover33Desc);
-        metaCover33Desc = null;
-        // Remove dynamic meta tags for cover35 if present
-        if (metaCover35Desc && metaCover35Desc.parentNode) metaCover35Desc.parentNode.removeChild(metaCover35Desc);
-        metaCover35Desc = null;
-        // Remove dynamic meta tags for cover37 if present
-        if (metaCover37Desc && metaCover37Desc.parentNode) metaCover37Desc.parentNode.removeChild(metaCover37Desc);
-        metaCover37Desc = null;
-        // Remove dynamic meta tags for cover38 if present
-        if (metaCover38Desc && metaCover38Desc.parentNode) metaCover38Desc.parentNode.removeChild(metaCover38Desc);
-        metaCover38Desc = null;
-        // Remove dynamic meta tags for cover39 if present
-        if (metaCover39Desc && metaCover39Desc.parentNode) metaCover39Desc.parentNode.removeChild(metaCover39Desc);
-        metaCover39Desc = null;
-        // Remove dynamic meta tags for img400 if present
-        if (metaImg400Desc && metaImg400Desc.parentNode) metaImg400Desc.parentNode.removeChild(metaImg400Desc);
-        metaImg400Desc = null;
-        // Remove dynamic meta tags for cover40 if present
-        if (metaCover40Desc && metaCover40Desc.parentNode) metaCover40Desc.parentNode.removeChild(metaCover40Desc);
-        metaCover40Desc = null;
-        // Remove dynamic meta tags for cover50 if present
-        if (metaCover50Desc && metaCover50Desc.parentNode) metaCover50Desc.parentNode.removeChild(metaCover50Desc);
-        metaCover50Desc = null;
-        // Remove dynamic meta tags for img151 if present
-        if (metaImg151Desc && metaImg151Desc.parentNode) metaImg151Desc.parentNode.removeChild(metaImg151Desc);
-        metaImg151Desc = null;
-    }
+    /**
+     * Open a project in detail view
+     * @param {string} projectId - ID used to identify which project was clicked
+     */
+    window.openProject = function (projectId) {
+        projectModal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
 
-    // Utility: adjust gallery columns based on visible items (1 -> 1col, 2 -> 2col, 3+ -> 3col)
-    function adjustGalleryColumns(gallery) {
-        try {
-            if (!gallery) return;
-            const items = Array.from(gallery.querySelectorAll('.gallery-grid-item'));
-            const visibleItems = items.filter(it => {
-                // consider element visible if not display:none and contains an image with src
-                if (it.style && it.style.display === 'none') return false;
-                const media = it.querySelector('img') || it.querySelector('video');
-                if (!media) return false;
-                const src = media.getAttribute('src') || (media.querySelector('source') ? media.querySelector('source').getAttribute('src') : '');
-                return src && src.trim().length > 0;
+        const data = projectsData[projectId];
+
+        if (data) {
+            modalTitle.textContent = data.title;
+            modalDesc.innerHTML = `<p>${data.description}</p>`;
+
+            // Backend SEO Tags (Hidden)
+            modalMeta.innerHTML = `
+                <p>Meta Description: ${data.metaDescription || ''}</p>
+                <p>Keywords: ${data.keywords.join(', ')}</p>
+                <p>Local SEO: ${JSON.stringify(data.localSEO)}</p>
+            `;
+
+            // Populate Gallery
+            modalGallery.innerHTML = '';
+            data.images.forEach(imgName => {
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'gallery-item';
+
+                const img = document.createElement('img');
+                img.src = `images/${imgName}`;
+                img.alt = data.alt || data.title;
+                img.loading = 'lazy';
+                // Preserve ratio is handled by CSS (object-fit: contain)
+
+                img.onerror = function () {
+                    // If image fails, remove the container entirely to avoid gray gaps
+                    this.parentElement.remove();
+                };
+
+                imgContainer.appendChild(img);
+                modalGallery.appendChild(imgContainer);
             });
-            let cols = 3;
-            if (visibleItems.length <= 1) cols = 1;
-            else if (visibleItems.length === 2) cols = 2;
-            else cols = 3;
-            gallery.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-        } catch (e) {
-            // ignore
+        } else {
+            // Fallback for projects without specific data yet
+            modalTitle.textContent = projectId.replace(/-/g, ' ').toUpperCase();
+            modalDesc.innerHTML = `<p>Premium custom ceiling system installation. Details for project ${projectId} will appear here including technical specifications and design approach.</p>`;
+
+            modalGallery.innerHTML = `
+                <div class="project-placeholder"></div>
+                <div class="project-placeholder"></div>
+                <div class="project-placeholder"></div>
+            `;
         }
-    }
 
-    // Run project placeholder cleanup on initial load to remove empty slots in Home
-    try {
-        cleanProjectPlaceholders();
-    } catch (e) {
-        // ignore
-    }
-
-    // Back to Home Function (global)
-    window.backToHome = function () {
-        // Close the modal first
-        closeModal();
-
-        // Navigate to Home section
-        const homeLink = document.querySelector('.nav-link[data-section="Home"]');
-        if (homeLink) {
-            homeLink.click();
-        }
+        // Update URL hash
+        history.pushState(null, null, `#project-${projectId}`);
     };
 
-    closeBtn.addEventListener('click', closeModal);
+    /**
+     * Close the project detail view
+     */
+    window.closeProject = function () {
+        projectModal.style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
 
-    // Close interaction outside
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+        // Return to the current section hash
+        const activeLink = document.querySelector('.nav-link.active');
+        const activeSection = activeLink ? activeLink.getAttribute('data-section') : 'residential';
+        history.pushState(null, null, `#${activeSection}`);
+    };
 
-    /* Consultation modal removed per request */
+    // Handle initial landing or refresh
+    const currentHash = window.location.hash.substring(1).toLowerCase();
+    const validSections = ['about', 'residential', 'commercial', 'renderings', 'backlit'];
 
-    /* --- Phone Number Reveal Logic --- */
-    const phoneLink = document.getElementById('phone-link');
-    if (phoneLink) {
-        phoneLink.addEventListener('click', function (e) {
-            // Check if we are on a desktop device (non-touch) or if it's the first click
-            // to show the number before initiating the call (optional)
-            // For now, let's just toggle the class.
-            this.classList.toggle('active');
-
-            // If the number is not yet revealed, we might want to prevent call on first click?
-            // Actually, requirements say "When clicked... number should be displayed... MUST also initiate a call".
-            // So both can happen at once.
-        });
+    if (validSections.includes(currentHash)) {
+        showSection(currentHash);
+    } else {
+        // DEFAULT LANDING: Residential
+        showSection('residential');
     }
-
 });

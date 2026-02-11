@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designo Ceilings</title>
+    <title>Designo Ceilings | High-End Ceiling Systems</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,1240 +14,381 @@
 
 <body>
 
-    <!-- Sidebar -->
+    <!-- Sidebar (Original Template Framework) -->
     <aside class="sidebar">
         <div class="sidebar-header">
-            <a href="#" class="logo">Designo Ceilings</a>
-            <p class="tagline">Custom, modern ceilings for distinctive spaces</p>
+            <a href="#" class="logo">
+                <img src="./images/logo.jpg" alt="Designo Ceilings Logo" class="logo-img">
+            </a>
+            <p class="tagline">We design and install high end ceiling systems that elevate interiors through precision,
+                lighting, and clean architectural lines.</p>
+            <a href="tel:7037751119" class="sidebar-phone">703-775-1119</a>
         </div>
 
         <nav class="primary-nav">
             <ul>
-                <li><a href="#" class="nav-link active" data-section="Home">Home</a></li>
-                <li><a href="#" class="nav-link" data-section="About">About</a></li>
-                <!-- Contact Us nav removed -->
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li class="nav-category-parent">
+                    <span class="nav-label">Projects</span>
+                    <ul class="sub-nav">
+                        <li><a href="#residential" class="nav-link active" data-section="residential">Residential</a>
+                        </li>
+                        <li><a href="#commercial" class="nav-link" data-section="commercial">Commercial</a></li>
+                        <li><a href="#renderings" class="nav-link" data-section="renderings">Renderings</a></li>
+                        <li><a href="#backlit" class="nav-link" data-section="backlit">Printed Backlit</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
-        <div class="services-nav">
-            <h3>SERVICES</h3>
-            <ul>
-                <li><a href="#" class="nav-link" data-section="Residential">Residential</a></li>
-                <li><a href="#" class="nav-link" data-section="Commercial">Commercial</a></li>
-                <li><a href="#" class="nav-link" data-section="Printed Backlit">Printed Backlit</a></li>
-            </ul>
-        </div>
-
         <div class="sidebar-footer">
             <div class="social-icons">
-                <a href="tel:2025555555" title="Call Us" id="phone-link" class="phone-link">
+                <a href="tel:7037751119" title="Call Us" class="phone-link">
                     <i class="fas fa-phone"></i>
-                    <span class="phone-reveal">202-555-5555</span>
+                    <span class="phone-label">703-775-1119</span>
                 </a>
                 <a href="https://www.instagram.com/designoceilings" target="_blank" rel="noopener noreferrer"
-                    title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"><i
-                        class="fab fa-youtube"></i></a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok"><i
-                        class="fab fa-tiktok"></i></a>
+                    title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.youtube.com/@DesignoBuilders" target="_blank" rel="noopener noreferrer"
+                    title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
             </div>
         </div>
     </aside>
 
-    <!-- Main Content -->
+    <!-- Main Content (Original Template Framework) -->
     <main class="main-content">
-        <!-- Title -->
-        <h2 id="section-title" class="current-section-title">Home</h2>
 
-        <!-- Home Section (with images) -->
-        <div id="section-home" class="content-section active">
-            <div class="projects-grid">
-                <div class="project-cover-slot" onclick="openGalleryModal('potomac')">
-                    <img src="image/cover1.jpg" alt="Potomac Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('rockville')">
-                    <img src="image/cover2.jpg" alt="Rockville Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('alexandria')">
-                    <img src="image/cover3.jpg" alt="Alexandria Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('arlington-linear')">
-                    <img src="image/cover4.jpg" alt="Arlington Linear Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('arlington-linear-2')">
-                    <img src="image/cover5.jpg" alt="Arlington Linear 2 Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('rockville-residential')">
-                    <img src="image/coverr.jpg" alt="Rockville Residential Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('rockville-commercial-2')">
-                    <img src="image/cover7.jpg" alt="Rockville Commercial 2 Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('alexandria-commercial')">
-                    <img src="image/cover8.jpg"
-                        alt="Modern office with geometric LED ceiling lighting and custom ceiling design in Alexandria Virginia"
-                        title="Commercial LED Ceiling Installation in Alexandria Virginia Office" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover12')">
-                    <img src="image/cover12.jpg"
-                        alt="Backlit stretch ceiling with nature design installed in a commercial office in Washington DC"
-                        title="Backlit Stretch Ceiling Installation in Washington DC Office" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover9')">
-                    <img src="image/cover9.jpg" alt="Cover 9" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover10')">
-                    <img src="image/cover10.jpg" alt="Cover 10" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover13')">
-                    <img src="image/cover13.jpg"
-                        alt="Modern recessed LED ceiling lighting in a luxury residential interior in Northern Virginia"
-                        title="Residential Interior Lighting Installation in Northern Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover11')">
-                    <img src="image/cover11.jpg" alt="Custom Printed Stretch Ceiling Installation in Northern Virginia"
-                        title="Custom Printed Stretch Ceiling Installation in Northern Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover21')">
-                    <img src="image/cover21.jpg" alt="Custom Printed Stretch Ceiling Installation in Northern Virginia"
-                        title="Custom Printed Stretch Ceiling Installation in Northern Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover22')">
-                    <img src="image/cover22.jpg" alt="Custom Printed Stretch Ceiling Installation in Virginia"
-                        title="Custom Printed Stretch Ceiling Installation in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover30')">
-                    <img src="image/cover30.jpg" alt="Commercial Luminous Stretch Ceiling Installation in Virginia"
-                        title="Commercial Luminous Stretch Ceiling Installation in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover31')">
-                    <img src="image/cover31.jpg" alt="Residential LED Stretch Ceiling Installation in Virginia"
-                        title="Residential LED Stretch Ceiling Installation in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover32')">
-                    <img src="image/cover32.jpg"
-                        alt="Commercial Circular Stretch Ceiling Installation for Spa in Virginia"
-                        title="Commercial Circular Stretch Ceiling Installation for Spa in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover33')">
-                    <img src="image/cover33.jpg" alt="Backlit Backlit Stretch Ceiling Installation in Virginia"
-                        title="Backlit Stretch Ceiling Installation in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover35')">
-                    <img src="image/cover35.jpg"
-                        alt="Modern linear LED stretch ceiling installation in a residential home in Washington, DC"
-                        title="Modern Linear LED Stretch Ceiling in Washington DC" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover37')">
-                    <img src="image/cover37.jpg"
-                        alt="Commercial stretch ceiling with linear LED lighting installed in a modern interior in Maryland"
-                        title="Custom Commercial Stretch Ceiling with Linear LED Lighting in Maryland"
-                        class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover38')">
-                    <img src="image/cover38.jpg"
-                        alt="Luxury stretch ceiling with recessed LED lighting in a modern living room in Washington DC"
-                        title="Luxury Stretch Ceiling with LED Lighting in Washington DC Condo" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover39')">
-                    <img src="image/cover39.jpg"
-                        alt="Mirror stretch ceiling with LED line lighting in a modern game room in Virginia"
-                        title="Custom Mirror Stretch Ceiling with LED Lines in Virginia Game Room" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('img400')">
-                    <img src="image/img400.jpg"
-                        alt="High gloss stretch ceiling with LED line lighting in a modern Washington, DC apartment"
-                        title="Luxury High Gloss Stretch Ceiling with LED Lighting in Washington, DC" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover40')">
-                    <img src="image/cover40.jpg"
-                        alt="Custom gloss stretch ceiling in a modern luxury living room in Maryland."
-                        title="Custom Gloss Stretch Ceiling Installation in Maryland" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover50')">
-                    <img src="image/cover50.jpg"
-                        alt="Modern LED geometric custom ceiling installation in a Washington DC home."
-                        title="Modern LED Custom Ceiling Installation in Washington DC" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('img151')">
-                    <img src="image/img151.jpg"
-                        alt="Backlit custom stretch ceiling with sky design in a Washington DC media room."
-                        title="Custom Backlit Stretch Ceiling Installation in Washington DC" class="cover-img">
-                </div>
-            </div>
-        </div>
-
-        <!-- Residential Section (with images) -->
-        <div id="section-residential" class="content-section">
-            <div class="projects-grid">
-                <div class="project-cover-slot" onclick="openGalleryModal('potomac')">
-                    <img src="image/cover1.jpg" alt="Potomac Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('alexandria')">
-                    <img src="image/cover3.jpg" alt="Alexandria Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('arlington-linear')">
-                    <img src="image/cover4.jpg" alt="Arlington Linear Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('arlington-linear-2')">
-                    <img src="image/cover5.jpg" alt="Arlington Linear 2 Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('rockville-residential')">
-                    <img src="image/coverr.jpg" alt="Rockville Residential Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover9')">
-                    <img src="image/cover9.jpg" alt="Cover 9" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover10')">
-                    <img src="image/cover10.jpg" alt="Cover 10" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover13')">
-                    <img src="image/cover13.jpg"
-                        alt="Modern recessed LED ceiling lighting in a luxury residential interior in Northern Virginia"
-                        title="Residential Interior Lighting Installation in Northern Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover31')">
-                    <img src="image/cover31.jpg" alt="Residential LED Stretch Ceiling Installation in Virginia"
-                        title="Residential LED Stretch Ceiling Installation in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover35')">
-                    <img src="image/cover35.jpg"
-                        alt="Modern linear LED stretch ceiling installation in a residential home in Washington, DC"
-                        title="Modern Linear LED Stretch Ceiling in Washington DC" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover38')">
-                    <img src="image/cover38.jpg"
-                        alt="Luxury stretch ceiling with recessed LED lighting in a modern living room in Washington DC"
-                        title="Luxury Stretch Ceiling with LED Lighting in Washington DC Condo" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('img400')">
-                    <img src="image/img400.jpg"
-                        alt="High gloss stretch ceiling with LED line lighting in a modern Washington, DC apartment"
-                        title="Luxury High Gloss Stretch Ceiling with LED Lighting in Washington, DC" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover40')">
-                    <img src="image/cover40.jpg"
-                        alt="Custom gloss stretch ceiling in a modern luxury living room in Maryland."
-                        title="Custom Gloss Stretch Ceiling Installation in Maryland" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover50')">
-                    <img src="image/cover50.jpg"
-                        alt="Modern LED geometric custom ceiling installation in a Washington DC home."
-                        title="Modern LED Custom Ceiling Installation in Washington DC" class="cover-img">
-                </div>
-            </div>
-        </div>
-
-        <!-- Commercial Section (empty placeholders) -->
-        <div id="section-commercial" class="content-section">
-            <div class="projects-grid">
-                <div class="project-cover-slot" onclick="openGalleryModal('rockville')">
-                    <img src="image/cover2.jpg" alt="Rockville Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('rockville-commercial-2')">
-                    <img src="image/cover7.jpg" alt="Rockville Commercial 2 Cover" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('alexandria-commercial')">
-                    <img src="image/cover8.jpg"
-                        alt="Modern office with geometric LED ceiling lighting and custom ceiling design in Alexandria Virginia"
-                        title="Commercial LED Ceiling Installation in Alexandria Virginia Office" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover30')">
-                    <img src="image/cover30.jpg" alt="Commercial Luminous Stretch Ceiling Installation in Virginia"
-                        title="Commercial Luminous Stretch Ceiling Installation in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover32')">
-                    <img src="image/cover32.jpg"
-                        alt="Commercial Circular Stretch Ceiling Installation for Spa in Virginia"
-                        title="Commercial Circular Stretch Ceiling Installation for Spa in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover37')">
-                    <img src="image/cover37.jpg"
-                        alt="Commercial stretch ceiling with linear LED lighting installed in a modern interior in Maryland"
-                        title="Custom Commercial Stretch Ceiling with Linear LED Lighting in Maryland"
-                        class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover39')">
-                    <img src="image/cover39.jpg"
-                        alt="Mirror stretch ceiling with LED line lighting in a modern game room in Virginia"
-                        title="Custom Mirror Stretch Ceiling with LED Lines in Virginia Game Room" class="cover-img">
-                </div>
-            </div>
-        </div>
-
-        <!-- Printed Backlit Section (empty placeholders) -->
-        <div id="section-printed-backlit" class="content-section">
-            <div class="projects-grid">
-                <div class="project-cover-slot" onclick="openGalleryModal('cover11')">
-                    <img src="image/cover11.jpg" alt="Custom Printed Stretch Ceiling Installation in Northern Virginia"
-                        title="Custom Printed Stretch Ceiling Installation in Northern Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover12')">
-                    <img src="image/cover12.jpg"
-                        alt="Backlit stretch ceiling with nature design installed in a commercial office in Washington DC"
-                        title="Backlit Stretch Ceiling Installation in Washington DC Office" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover21')">
-                    <img src="image/cover21.jpg" alt="Custom Printed Stretch Ceiling Installation in Northern Virginia"
-                        title="Custom Printed Stretch Ceiling Installation in Northern Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover22')">
-                    <img src="image/cover22.jpg" alt="Custom Printed Stretch Ceiling Installation in Virginia"
-                        title="Custom Printed Stretch Ceiling Installation in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('cover33')">
-                    <img src="image/cover33.jpg" alt="Backlit Stretch Ceiling Installation in Virginia"
-                        title="Backlit Stretch Ceiling Installation in Virginia" class="cover-img">
-                </div>
-                <div class="project-cover-slot" onclick="openGalleryModal('img151')">
-                    <img src="image/img151.jpg"
-                        alt="Backlit custom stretch ceiling with sky design in a Washington DC media room."
-                        title="Custom Backlit Stretch Ceiling Installation in Washington DC" class="cover-img">
-                </div>
-            </div>
-        </div>
-
-        <!-- About Section (text content) -->
-        <div id="section-about" class="content-section text-section">
-            <div class="text-content-area">
+        <!-- About Section -->
+        <section id="about" class="content-section about-section">
+            <div class="about-grid">
                 <div class="about-text">
                     <p>At Designo Ceilings, we specialize in premium custom stretch ceilings and integrated LED lighting
                         solutions that completely transform residential and commercial spaces. Our mission is simple:
                         deliver a true wow factor through innovative design, precision fabrication, and flawless
                         installation.</p>
-
                     <p>Our team brings deep European expertise to every project, inspired by modern ceiling systems and
                         lighting designs from across Europe and Spain. Unlike traditional ceiling systems, we do not use
                         drywall. Every ceiling is custom fabricated and engineered for performance, beauty, and
                         longevity, changing the game for interior design in the United States.</p>
-
                     <p>All of our materials are fabricated in the United States, ensuring top tier quality, durability,
                         and fast turnaround times. From sleek modern homes to large scale commercial environments, we
-                        work closely with custom home builders, residential builders, architects, designers, and
-                        commercial contractors to deliver standout results.</p>
-
+                        work closely with custom home builders, architects, designers, and commercial contractors to
+                        deliver standout results.</p>
                     <p>We proudly serve Washington, DC, Virginia, and Maryland, providing fully customized ceiling
                         solutions tailored to each space. No project is too small or too ambitious. If you can imagine
                         it, we can build it.</p>
-
                     <p>To help clients visualize their space before installation, we also offer free custom renderings,
                         giving a clear picture of how the new ceiling and lighting design will look once completed.</p>
-
                     <p>Whether someone is looking to elevate a home, office, retail space, or commercial property,
                         Designo Ceilings is the trusted partner for next level custom ceilings.</p>
-
-                    <p>Residential or commercial, feel free to give us a call at <a href="tel:2025555555"
-                            class="inline-link">202-555-5555</a> and let us design something extraordinary.
-                    </p>
+                    <p>Residential or commercial, feel free to give us a call at <a href="tel:7037751119"
+                            class="inline-link">703-775-1119</a> and let us design something extraordinary.</p>
+                </div>
+                <div class="about-image-placeholder">
+                    <!-- Clean block for future image -->
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Contact Us Section removed -->
+        <!-- Residential Section -->
+        <section id="residential" class="content-section active">
+            <h2 class="section-label">Residential</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openProject('cover0')">
+                    <img src="images/cover0.jpg"
+                        alt="Custom LED track ceiling installation in luxury residential home in Alexandria VA"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover2')">
+                    <img src="images/cover2.jpg"
+                        alt="Geometric LED track ceiling installation in modern residential living room in Potomac MD"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover1')">
+                    <img src="images/cover1.jpg"
+                        alt="Glossy black stretch ceiling with LED track lighting in modern residential living room in Arlington VA"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover7')">
+                    <img src="images/cover7.jpg"
+                        alt="modern LED stretch ceiling with linear lighting in residential dining room Northern Virginia"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover8')">
+                    <img src="images/cover8.jpg"
+                        alt="mirrored stretch ceiling with LED perimeter lighting in modern residential living room Maryland"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover11')">
+                    <img src="images/cover11.jpg"
+                        alt="modern residential hallway ceiling with recessed linear LED lighting"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover22')">
+                    <img src="images/cover22.jpg"
+                        alt="luxury stretch ceiling with geometric LED lighting in residential foyer"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover12')">
+                    <img src="images/cover12.jpg"
+                        alt="luxury stretch ceiling with LED perimeter lighting in modern living room"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('res-9')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('res-10')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('res-11')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('res-12')">
+                    <div class="project-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commercial Section -->
+        <section id="commercial" class="content-section">
+            <h2 class="section-label">Commercial</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openProject('cover13')">
+                    <img src="images/cover13.jpg"
+                        alt="custom stretch ceiling with circular LED lighting in indoor pool spa"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+
+                <div class="project-card" onclick="openProject('cover6')">
+                    <img src="images/cover6.jpg"
+                        alt="Printed backlit stretch ceiling installation in commercial auto showroom in Rockville MD"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover10')">
+                    <img src="images/cover10.jpg" alt="commercial lobby ceiling with recessed LED perimeter lighting"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover4')">
+                    <img src="images/cover4.jpg"
+                        alt="Modern LED track ceiling installation in contemporary commercial office in Arlington VA"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover78')">
+                    <img src="images/cover78.jpg" alt="geometric LED line ceiling in modern commercial office interior"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover99')">
+                    <img src="images/cover99.jpg"
+                        alt="glossy stretch ceiling with geometric LED lighting in modern restaurant interior"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('com-6')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('com-7')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('com-8')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('com-9')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('com-10')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('com-11')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('com-12')">
+                    <div class="project-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Renderings Section -->
+        <section id="renderings" class="content-section">
+            <h2 class="section-label">Renderings</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openProject('cover3')">
+                    <img src="images/cover3.jpg"
+                        alt="Luxury recessed LED ceiling design concept in modern penthouse living room in Washington DC"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover5')">
+                    <img src="images/cover5.jpg"
+                        alt="Luxury residential tray ceiling rendering with LED cove lighting in modern living room in Washington DC"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover9')">
+                    <img src="images/cover9.jpg" alt="modern geometric LED ceiling rendering for luxury living room"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-4')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-5')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-6')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-7')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-8')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-9')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-10')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-11')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('ren-12')">
+                    <div class="project-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Backlit Section -->
+        <section id="backlit" class="content-section">
+            <h2 class="section-label">Printed Backlit</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openProject('cover14')">
+                    <img src="images/cover14.jpg"
+                        alt="backlit stretch ceiling with custom sky print in home theater room"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover15')">
+                    <img src="images/cover15.jpg"
+                        alt="backlit stretch ceiling with forest sky print in commercial interior"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover16')">
+                    <img src="images/cover16.jpg"
+                        alt="backlit stretch ceiling with sky print in commercial lobby atrium"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('cover88')">
+                    <img src="images/cover88.jpg"
+                        alt="luxury backlit stretch ceiling with sky print in spa and wellness center"
+                        class="project-cover-img"
+                        onerror="if(!this.src.includes('/image/')){this.src=this.src.replace('/images/','/image/');}else{this.style.display='none'; this.nextElementSibling.style.display='block';}">
+                    <div class="project-placeholder" style="display:none;"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-3')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-4')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-5')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-6')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-7')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-8')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-9')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-10')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-11')">
+                    <div class="project-placeholder"></div>
+                </div>
+                <div class="project-card" onclick="openProject('print-12')">
+                    <div class="project-placeholder"></div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <!-- Gallery Modal -->
-    <div id="gallery-modal" class="modal">
+    <!-- Project View Modal -->
+    <div id="project-modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <button class="back-to-home-btn" onclick="backToHome()">← Back to Home</button>
-                <span class="close-modal">&times;</span>
+                <button class="back-btn" onclick="closeProject()">← Back</button>
+                <span class="close-icon" onclick="closeProject()">&times;</span>
             </div>
             <div class="modal-body">
-
-                <!-- Potomac Gallery Grid - 3 Columns, 2 Rows -->
-                <div id="gallery-potomac" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img1.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Design in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img2.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Design in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img3.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Design in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img4.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Design in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img5.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Design in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img6.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Design in Arlington Virginia"></div>
+                <!-- Gallery Space -->
+                <div id="modal-project-gallery" class="modal-gallery-grid">
+                    <!-- Project-specific images will go here -->
                 </div>
 
-                <!-- Rockville Gallery Grid - 3 Columns, 2 Rows -->
-                <div id="gallery-rockville" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img8.jpg"
-                            alt="Curved commercial ceiling with integrated halo LED lighting in an indoor pool facility in Rockville Maryland"
-                            title="Custom Commercial Halo Ceiling Installation in Rockville Maryland"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img9.jpg"
-                            alt="Curved commercial ceiling with integrated halo LED lighting in an indoor pool facility in Rockville Maryland"
-                            title="Custom Commercial Halo Ceiling Installation in Rockville Maryland"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img10.jpg"
-                            alt="Curved commercial ceiling with integrated halo LED lighting in an indoor pool facility in Rockville Maryland"
-                            title="Custom Commercial Halo Ceiling Installation in Rockville Maryland"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img11.jpg"
-                            alt="Curved commercial ceiling with integrated halo LED lighting in an indoor pool facility in Rockville Maryland"
-                            title="Custom Commercial Halo Ceiling Installation in Rockville Maryland"></div>
-                    <div class="gallery-grid-item">
-                        <video class="gallery-img" controls playsinline preload="metadata"
-                            title="Custom Commercial Halo Ceiling Installation in Rockville Maryland">
-                            <source src="image/img12.MP4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <!-- SEO Section -->
+                <div class="seo-container">
+                    <h2 id="modal-project-title" class="seo-title">Project Title</h2>
+                    <div id="modal-project-description" class="seo-description">
+                        <p>Project description text goes here.</p>
                     </div>
+                    <!-- Meta Description Space (Internal Use Only) -->
+                    <div id="modal-meta-description" style="display: none;"></div>
                 </div>
-
-                <!-- Alexandria Gallery Grid - 3 Columns -->
-                <div id="gallery-alexandria" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img13.jpg"
-                            alt="High-gloss residential ceiling with integrated LED lighting in a modern living room in Alexandria Virginia"
-                            title="Modern Residential Gloss Ceiling Installation in Alexandria Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img14.jpg"
-                            alt="High-gloss residential ceiling with integrated LED lighting in a modern living room in Alexandria Virginia"
-                            title="Modern Residential Gloss Ceiling Installation in Alexandria Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img15.jpg"
-                            alt="High-gloss residential ceiling with integrated LED lighting in a modern living room in Alexandria Virginia"
-                            title="Modern Residential Gloss Ceiling Installation in Alexandria Virginia"></div>
-                </div>
-
-                <!-- Arlington Linear LED Gallery Grid - 3 Columns -->
-                <div id="gallery-arlington-linear" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img16.jpg"
-                            alt="Minimalist residential hallway ceiling with recessed linear LED lighting in Arlington Virginia"
-                            title="Modern Residential Linear LED Ceiling Design in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img17.jpg"
-                            alt="Minimalist residential hallway ceiling with recessed linear LED lighting in Arlington Virginia"
-                            title="Modern Residential Linear LED Ceiling Design in Arlington Virginia"></div>
-                </div>
-
-                <!-- Arlington Linear LED 2 Gallery Grid - 3 Columns -->
-                <div id="gallery-arlington-linear-2" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img18.jpg"
-                            alt="Living room with recessed geometric LED ceiling lighting in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Feature in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img19.jpg"
-                            alt="Living room with recessed geometric LED ceiling lighting in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Feature in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img20.jpg"
-                            alt="Living room with recessed geometric LED ceiling lighting in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Feature in Arlington Virginia"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img21.jpg"
-                            alt="Living room with recessed geometric LED ceiling lighting in Arlington Virginia"
-                            title="Modern Residential LED Ceiling Feature in Arlington Virginia"></div>
-                </div>
-
-                <!-- Rockville Residential LED Gallery Grid - 3 Columns -->
-                <div id="gallery-rockville-residential" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img25.jpg"
-                            alt="Room with recessed geometric LED ceiling lighting and perimeter cove lighting in Rockville Maryland"
-                            title="Modern Residential LED Ceiling Design in Rockville Maryland"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img26.jpg"
-                            alt="Room with recessed geometric LED ceiling lighting and perimeter cove lighting in Rockville Maryland"
-                            title="Modern Residential LED Ceiling Design in Rockville Maryland"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img27.jpg"
-                            alt="Room with recessed geometric LED ceiling lighting and perimeter cove lighting in Rockville Maryland"
-                            title="Modern Residential LED Ceiling Design in Rockville Maryland"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img28.jpg"
-                            alt="Room with recessed geometric LED ceiling lighting and perimeter cove lighting in Rockville Maryland"
-                            title="Modern Residential LED Ceiling Design in Rockville Maryland"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img29.jpg"
-                            alt="Room with recessed geometric LED ceiling lighting and perimeter cove lighting in Rockville Maryland"
-                            title="Modern Residential LED Ceiling Design in Rockville Maryland"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img30.jpg"
-                            alt="Room with recessed geometric LED ceiling lighting and perimeter cove lighting in Rockville Maryland"
-                            title="Modern Residential LED Ceiling Design in Rockville Maryland"></div>
-                </div>
-
-                <!-- Rockville Commercial 2 Gallery Grid - 3 Columns -->
-                <div id="gallery-rockville-commercial-2" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img31.jpg"
-                            alt="Modern restaurant with glossy stretch ceiling and geometric LED ceiling lighting in Rockville Maryland"
-                            title="Commercial dining space featuring a high-gloss stretch ceiling with geometric LED lighting in Rockville, Maryland.">
-                    </div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img32.jpg"
-                            alt="Modern restaurant with glossy stretch ceiling and geometric LED ceiling lighting in Rockville Maryland"
-                            title="Commercial dining space featuring a high-gloss stretch ceiling with geometric LED lighting in Rockville, Maryland.">
-                    </div>
-                </div>
-
-                <!-- Alexandria Commercial Gallery Grid - 3 Columns -->
-                <div id="gallery-alexandria-commercial" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img33.jpg"
-                            alt="Modern office with geometric LED ceiling lighting and custom ceiling design in Alexandria Virginia"
-                            title="Commercial LED Ceiling Installation in Alexandria Virginia Office"></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img34.jpg"
-                            alt="Modern office with geometric LED ceiling lighting and custom ceiling design in Alexandria Virginia"
-                            title="Commercial LED Ceiling Installation in Alexandria Virginia Office"></div>
-                </div>
-
-                <!-- Cover12 Gallery (3-column grid) -->
-                <div id="gallery-cover12" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img40.jpg"
-                            alt="Backlit stretch ceiling with nature design installed in a commercial office in Washington DC"
-                            title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img41.jpg"
-                            alt="Backlit stretch ceiling with nature design installed in a commercial office in Washington DC"
-                            title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img42.jpg"
-                            alt="Backlit stretch ceiling with nature design installed in a commercial office in Washington DC"
-                            title=""></div>
-                </div>
-
-                <!-- Cover13 Gallery (3-column grid) - Residential/Home -->
-                <div id="gallery-cover13" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img51.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Northern Virginia"
-                            title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img52.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Northern Virginia"
-                            title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img53.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Northern Virginia"
-                            title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img54.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Northern Virginia"
-                            title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img55.jpg"
-                            alt="Modern recessed LED ceiling lighting in a luxury residential interior in Northern Virginia"
-                            title=""></div>
-                </div>
-
-                <!-- SEO Section - Alexandria Commercial Project (moved directly after gallery) -->
-                <div id="seo-section-alexandria-commercial" class="seo-container" style="display:none;">
-
-                    <!-- Title (bold + centered) -->
-                    <h2 class="seo-title-visible">Commercial LED Ceiling Installation in Alexandria Virginia Office</h2>
-
-                    <!-- Image Caption (visible) -->
-                    <p class="seo-caption">Contemporary office space featuring custom geometric LED ceiling lighting in
-                        Alexandria, Virginia.</p>
-
-                    <!-- SEO Description (visible) -->
-                    <p class="seo-description">This commercial office project in Alexandria, Virginia features custom
-                        geometric LED ceiling lighting designed to enhance workspace illumination and modern aesthetics.
-                        Professionally installed commercial ceilings improve light distribution, energy efficiency, and
-                        the overall look of corporate interiors. Businesses in Alexandria, Virginia rely on high-quality
-                        ceiling and lighting solutions to create productive, visually appealing environments.</p>
-
-                    <!-- Project Timeline removed -->
-
-                    <!-- CTA removed -->
-
-                </div>
-
-                <!-- Cover9 Gallery (3-column grid) -->
-                <div id="gallery-cover9" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img45.jpg"
-                            alt="Recessed LED cove lighting installed in a residential ceiling in Rockville Maryland"
-                            title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img46.jpg"
-                            alt="Recessed LED cove lighting installed in a residential ceiling in Rockville Maryland"
-                            title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img47.jpg"
-                            alt="Recessed LED cove lighting installed in a residential ceiling in Rockville Maryland"
-                            title=""></div>
-                </div>
-
-                <!-- Cover10 Gallery (3-column grid) -->
-                <div id="gallery-cover10" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img48.jpg"
-                            alt="Modern residential interior renovation in Northern Virginia" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img49.jpg"
-                            alt="Modern residential interior renovation in Northern Virginia" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img50.jpg"
-                            alt="Modern residential interior renovation in Northern Virginia" title=""></div>
-                </div>
-
-                <!-- Cover11 Gallery (3-column grid) - Residential/Printed Backlit/Home -->
-                <div id="gallery-cover11" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img38.jpg"
-                            alt="Custom printed stretch ceiling in a residential interior" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img39.jpg"
-                            alt="Custom printed stretch ceiling in a residential interior" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img91.jpg"
-                            alt="Custom printed stretch ceiling in a residential interior" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img92.jpg"
-                            alt="Custom printed stretch ceiling in a residential interior" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img93.jpg"
-                            alt="Custom printed stretch ceiling in a residential interior" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img95.jpg"
-                            alt="Custom printed stretch ceiling in a residential interior" title=""></div>
-                </div>
-
-                <div id="seo-section-cover11" class="seo-container" style="display:none;">
-
-                    <!-- Title (bold + centered) -->
-                    <h2 class="seo-title-visible">Custom Printed Stretch Ceiling Installation in Northern Virginia</h2>
-
-                    <!-- Image Caption (visible) -->
-                    <p class="seo-caption">Residential interior featuring a custom printed stretch ceiling with
-                        integrated lighting and sky/cloud graphics.</p>
-
-                    <!-- Project Description (visible in project view only) -->
-                    <p class="seo-description">This residential interior features a custom printed stretch ceiling with
-                        a sky and cloud design, creating a bright, open-sky effect inside the home. Our team installed
-                        the decorative ceiling system with integrated lighting to enhance the room’s ambiance and
-                        provide a modern, visually striking focal point. Custom stretch ceilings like this are a perfect
-                        solution for homeowners looking to elevate interior design with unique lighting and ceiling
-                        finishes. We proudly offer residential ceiling installation and custom interior remodeling
-                        services throughout Northern Virginia.</p>
-
-                </div>
-
-                <!-- Cover21 Gallery (3-column grid) -->
-                <div id="gallery-cover21" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img96.jpg"
-                            alt="Custom printed stretch ceiling" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img97.jpg"
-                            alt="Custom printed stretch ceiling" title=""></div>
-                </div>
-
-                <div id="seo-section-cover21" class="seo-container" style="display:none;">
-
-                    <!-- Title (bold + centered) -->
-                    <h2 class="seo-title-visible">Residential Stretch Ceiling Installation in Northern Virginia</h2>
-
-                    <!-- Image Caption (visible) -->
-                    <p class="seo-caption">Custom printed stretch ceiling with integrated LED perimeter lighting in a
-                        residential interior.</p>
-
-                    <!-- Project Description (visible in project view only) -->
-                    <p class="seo-description">This residential project features a custom printed stretch ceiling with a
-                        nature-inspired design, framed with integrated LED perimeter lighting. The illuminated ceiling
-                        creates a bright, open-sky effect that enhances the overall ambiance of the space while adding a
-                        modern architectural detail. Our team specializes in high-quality stretch ceiling installations
-                        that transform ordinary interiors into visually striking, contemporary living spaces. We proudly
-                        provide residential ceiling installation and custom interior solutions throughout Northern
-                        Virginia.</p>
-                </div>
-
-                <!-- Cover22 Gallery (3-column grid) -->
-                <div id="gallery-cover22" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/cover22.jpg"
-                            alt="Custom printed stretch ceiling in a commercial wellness interior" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img100.jpg"
-                            alt="Custom printed stretch ceiling in a commercial wellness interior" title=""></div>
-                </div>
-
-                <div id="seo-section-cover22" class="seo-container" style="display:none;">
-                    <!-- Title (bold + centered) -->
-                    <h2 class="seo-title-visible">Custom Printed Stretch Ceiling Installation in Virginia</h2>
-
-                    <!-- Project Description (visible in project view only) -->
-                    <p class="seo-description">This commercial wellness interior features a custom printed stretch
-                        ceiling with a sky inspired design, creating a calming and immersive atmosphere above the spa
-                        area. The integrated lighting enhances the visual depth of the ceiling while complementing the
-                        natural design elements throughout the space. This stretch ceiling solution delivers a modern,
-                        moisture resistant, and visually striking finish suitable for hospitality and wellness
-                        environments in Virginia.</p>
-                </div>
-
-                <!-- Cover30 Gallery (3-column grid) -->
-                <div id="gallery-cover30" class="gallery-grid" style="display:none;">
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/cover30.jpg"
-                            alt="Commercial Luminous Stretch Ceiling" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img200.jpg"
-                            alt="Commercial Luminous Stretch Ceiling" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img201.jpg"
-                            alt="Commercial Luminous Stretch Ceiling" title=""></div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img202.jpg"
-                            alt="Commercial Luminous Stretch Ceiling" title=""></div>
-                    <div class="gallery-grid-item">
-                        <video class="gallery-img" controls playsinline preload="metadata">
-                            <source src="image/img203.MP4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="gallery-grid-item"><img class="gallery-img" src="image/img204.jpg"
-                            alt="Commercial Luminous Stretch Ceiling" title=""></div>
-                </div>
-
-                <div id="seo-section-cover30" class="seo-container" style="display:none;">
-                    <!-- Title (bold + centered) -->
-                    <h2 class="seo-title-visible">Commercial Luminous Stretch Ceiling Installation in Virginia</h2>
-
-                    <!-- Project Description (Visible Text) -->
-                    <p class="seo-description"><strong>Luminous Stretch Ceiling Installation in Virginia Auto
-                            Showroom</strong><br><br>This commercial automotive showroom features a large format
-                        luminous stretch ceiling designed to provide bright, even illumination across the vehicle
-                        display area. The backlit ceiling enhances the visual presentation of the showroom, improves
-                        ambient lighting, and creates a modern, high end atmosphere for customers. This custom stretch
-                        ceiling solution delivers energy efficient lighting and a clean architectural finish ideal for
-                        commercial showrooms in Virginia.</p>
-                </div>
-
-            </div>
-
-            <!-- SEO Section - Visible ONLY after click, BELOW images -->
-            <div id="seo-section-potomac" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern residential ceiling design with integrated recessed LED
-                    lighting in a luxury home in Arlington, Virginia.</h2>
-
-                <!-- Main Description -->
-                <p class="seo-description">This modern residential ceiling project features clean architectural
-                    lines and integrated recessed LED lighting to enhance both functionality and visual appeal. The
-                    custom ceiling system creates a bright, contemporary atmosphere that complements high-end
-                    interior finishes and open-concept layouts, delivering a refined and modern look for luxury
-                    homes in Arlington, Virginia.</p>
-
-                <!-- Project Timeline removed -->
-
-                <!-- Project Highlights removed -->
-
-                <!-- CTA Section removed -->
-
-                <!-- CTA removed -->
-
-            </div>
-
-            <!-- SEO Section - Rockville Commercial Project -->
-
-            <!-- SEO Section - Cover9 Project -->
-            <div id="seo-section-cover9" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern LED Cove Ceiling Installation in Rockville Maryland</h2>
-
-                <!-- Image Caption (visible) -->
-                <p class="seo-caption">Custom LED cove ceiling lighting enhancing a modern home interior in
-                    Rockville, Maryland.</p>
-
-                <!-- SEO Description (visible text block) -->
-                <p class="seo-description">This residential project in Rockville, Maryland features a modern LED
-                    cove ceiling installation designed to add soft ambient lighting and a sleek architectural
-                    finish. Cove lighting is a popular choice for homeowners looking to elevate living rooms and
-                    bedrooms with clean lines, energy-efficient LED technology, and a contemporary ceiling design.
-                    Homeowners in Rockville, Maryland choose custom ceiling lighting to create warm, stylish, and
-                    functional interiors.</p>
-
-            </div>
-
-            <div id="seo-section-cover13" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern Residential Interior Lighting Installation in Northern Virginia
-                </h2>
-
-                <!-- Image Caption (visible) -->
-                <p class="seo-caption">Modern recessed LED ceiling lighting in a luxury residential interior in
-                    Northern Virginia.</p>
-
-                <!-- Project Description (visible) -->
-                <p class="seo-description">This residential interior project features a custom recessed LED ceiling
-                    light panel designed to enhance both functionality and modern aesthetics. Our team completed
-                    detailed ceiling finishing, precise lighting integration, and high-quality interior
-                    craftsmanship to create a bright, contemporary living space. This type of custom lighting
-                    solution adds depth, elegance, and energy efficiency to modern homes. We proudly provide
-                    professional residential remodeling and lighting installation services throughout Northern
-                    Virginia.</p>
-
-            </div>
-
-            <div id="seo-section-cover12" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Backlit Stretch Ceiling Installation in Washington DC Office</h2>
-
-                <!-- Image Caption (visible) -->
-                <p class="seo-caption">Custom backlit stretch ceiling featuring a nature design in a commercial
-                    space in Washington, D.C.</p>
-
-                <!-- SEO Description (visible) -->
-                <p class="seo-description">This commercial project in Washington, D.C. features a custom backlit
-                    stretch ceiling with a nature-inspired graphic, designed to create a calming, modern atmosphere.
-                    Backlit ceilings are ideal for commercial interiors such as offices, medical clinics, and
-                    wellness spaces, providing soft ambient lighting, visual impact, and a premium architectural
-                    finish. Businesses in Washington, D.C. choose custom stretch ceiling systems to elevate interior
-                    design while maintaining functional, energy-efficient lighting solutions.</p>
-
-            </div>
-
-            <!-- CTA removed -->
-
-            <div id="seo-section-cover10" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern Residential Interior Renovation in Northern Virginia</h2>
-
-                <!-- Project Description -->
-                <p class="seo-description">This custom residential interior project showcases a sleek, modern
-                    fireplace feature wall combined with elegant recessed ceiling lighting. Our team delivered
-                    precise finish work, clean architectural lines, and high-end materials to create a warm yet
-                    contemporary living space. From detailed drywall finishing to custom lighting integration, every
-                    element was designed to elevate comfort, style, and functionality. We proudly provide
-                    professional residential renovation and interior remodeling services throughout Northern
-                    Virginia.</p>
-
-                <!-- Project Highlights removed -->
-
-            </div>
-
-            <!-- CTA removed -->
-
-            <div id="seo-section-rockville" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Custom Commercial Halo Ceiling Installation in Rockville Maryland</h2>
-
-                <!-- Main Description -->
-                <p class="seo-description">This custom commercial halo ceiling installation in Rockville, Maryland
-                    features curved architectural ceiling forms with integrated LED lighting designed to enhance
-                    large-scale hospitality and wellness environments. The ceiling system provides balanced
-                    illumination, visual continuity, and a refined modern aesthetic well-suited for indoor pools,
-                    spas, fitness centers, and amenity spaces. Commercial clients in Rockville, Maryland benefit
-                    from professionally designed ceiling solutions that improve both functionality and architectural
-                    impact.</p>
-
-                <!-- Project Timeline removed -->
-
-                <!-- Project Highlights removed -->
-
-                <!-- CTA Section removed -->
-
-                <!-- CTA removed -->
-
-            </div>
-
-            <!-- SEO Section - Alexandria Gloss Project -->
-            <div id="seo-section-alexandria" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern Residential Gloss Ceiling Installation in Alexandria Virginia
-                </h2>
-
-                <!-- SEO Description (visible) -->
-                <p class="seo-description">This modern residential gloss ceiling installation in Alexandria,
-                    Virginia features a reflective stretch ceiling paired with integrated LED lighting to create a
-                    clean, contemporary interior environment. The ceiling design enhances ambient lighting, adds
-                    visual depth, and complements modern residential finishes. Homeowners seeking custom ceiling
-                    design and professional installation in Alexandria, Virginia can achieve a refined, modern
-                    aesthetic through tailored residential ceiling solutions such as this project.</p>
-
-                <!-- Project Timeline removed -->
-
-                <!-- Project Highlights removed -->
-
-                <!-- CTA Section removed -->
-
-                <!-- CTA removed -->
-
-            </div>
-
-            <!-- SEO Section - Arlington Linear LED Project -->
-            <div id="seo-section-arlington-linear" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern Residential Linear LED Ceiling Design in Arlington Virginia
-                </h2>
-
-                <!-- Image Caption (visible) -->
-                <p class="seo-caption">Minimalist residential hallway featuring recessed linear LED ceiling lighting
-                    in Arlington, Virginia.</p>
-
-                <!-- SEO Description (visible) -->
-                <p class="seo-description">This modern residential ceiling design in Arlington, Virginia features
-                    recessed linear LED lighting integrated into a clean, minimalist ceiling layout. The custom
-                    ceiling solution enhances ambient lighting, improves visual flow, and adds a refined
-                    architectural detail to residential hallways and interior corridors. Homeowners in Arlington,
-                    Virginia benefit from professionally designed ceiling systems that deliver both functional
-                    lighting and contemporary design.</p>
-
-                <!-- Project Timeline removed -->
-
-                <!-- Project Highlights removed -->
-
-                <!-- CTA Section removed -->
-
-                <!-- CTA removed -->
-
-            </div>
-
-            <!-- SEO Section - Arlington Linear LED 2 Project -->
-            <div id="seo-section-arlington-linear-2" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern Residential LED Ceiling Feature in Arlington Virginia</h2>
-
-                <!-- Image Caption (visible) -->
-                <p class="seo-caption">Contemporary living room featuring a recessed geometric LED ceiling design in
-                    Arlington, Virginia.</p>
-
-                <!-- SEO Description (visible) -->
-                <p class="seo-description">This residential living room in Arlington, Virginia showcases a custom
-                    recessed LED ceiling feature with a geometric light frame that adds depth and visual interest to
-                    the space. The integrated LED lighting provides soft ambient illumination while enhancing the
-                    modern ceiling design. Professionally installed ceiling systems like this elevate home interiors
-                    with clean lines, energy-efficient lighting, and a refined architectural finish for homeowners
-                    in Arlington, Virginia.</p>
-
-                <!-- Project Timeline removed -->
-
-                <!-- Project Highlights removed -->
-
-                <!-- CTA Section removed -->
-
-                <!-- CTA removed -->
-
-            </div>
-
-            <!-- SEO Section - Rockville Residential LED Project -->
-            <div id="seo-section-rockville-residential" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern Residential LED Ceiling Design in Rockville Maryland</h2>
-
-                <!-- Image Caption (visible) -->
-                <p class="seo-caption">Modern interior featuring a recessed geometric LED ceiling with perimeter
-                    lighting in Rockville, Maryland.</p>
-
-                <!-- SEO Description (visible) -->
-                <p class="seo-description">This residential project in Rockville, Maryland features a contemporary
-                    recessed LED ceiling design with geometric lighting lines and soft perimeter cove illumination.
-                    The integrated lighting enhances the room's architectural lines while providing balanced ambient
-                    light. Custom LED ceiling installations like this bring a modern, upscale look to residential
-                    interiors and improve both aesthetics and functionality for homeowners in Rockville, Maryland.
-                </p>
-
-                <!-- Project Timeline removed -->
-
-                <!-- Project Highlights removed -->
-
-                <!-- CTA Section removed -->
-
-                <!-- CTA removed -->
-
-            </div>
-
-            <!-- SEO Section - Rockville Commercial 2 Project -->
-            <div id="seo-section-rockville-commercial-2" class="seo-container" style="display:none;">
-
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Commercial Ceiling Installation in Rockville Maryland</h2>
-
-                <!-- SEO Description (visible) -->
-                <p class="seo-description">This commercial project in Rockville, Maryland showcases a high-gloss
-                    stretch ceiling paired with modern geometric LED light panels. The reflective ceiling surface
-                    enhances brightness and visual depth, creating a clean, upscale atmosphere ideal for
-                    restaurants, offices, and hospitality spaces. Professional commercial ceiling installations in
-                    Rockville, Maryland improve lighting efficiency, aesthetics, and customer experience.</p>
-
-                <!-- Project Timeline removed -->
-
-                <!-- Project Highlights removed -->
-
-                <!-- CTA removed -->
-
-                <!-- CTA removed -->
-
-                <!-- (Alexandria SEO relocated earlier) -->
-
-            </div>
-            <!-- Consultation content removed -->
-            <!-- Cover31 Gallery (3-column grid) -->
-            <div id="gallery-cover31" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover31.jpg"
-                        alt="Residential LED Stretch Ceiling Installation in Virginia" title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img205.jpg"
-                        alt="Residential LED Stretch Ceiling Installation in Virginia" title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img206.jpg"
-                        alt="Residential LED Stretch Ceiling Installation in Virginia" title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img207.jpg"
-                        alt="Residential LED Stretch Ceiling Installation in Virginia" title=""></div>
-            </div>
-
-            <div id="seo-section-cover31" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Residential LED Stretch Ceiling Installation in Virginia</h2>
-
-                <!-- Image Caption (Visible Text Block) -->
-                <p class="seo-caption">Modern LED Perimeter Stretch Ceiling Design in Virginia Residence</p>
-
-                <!-- Project Description (Visible Text Block) -->
-                <p class="seo-description">This residential interior showcases a custom stretch ceiling with integrated
-                    linear LED perimeter lighting, creating a sleek geometric ceiling feature. The minimalist design
-                    adds
-                    architectural interest while providing soft, ambient illumination throughout the room. This type of
-                    modern stretch ceiling solution is ideal for contemporary homes in Virginia, offering both
-                    functional lighting and refined interior aesthetics.</p>
-            </div>
-
-            <!-- Cover32 Gallery (3-column grid) -->
-            <div id="gallery-cover32" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover32.jpg"
-                        alt="Commercial Circular Stretch Ceiling Installation for Spa in Virginia" title=""></div>
-                <div class="gallery-grid-item">
-                    <video class="gallery-img" controls playsinline preload="metadata">
-                        <source src="image/img210.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="gallery-grid-item">
-                    <video class="gallery-img" controls playsinline preload="metadata">
-                        <source src="image/img211.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-
-            <div id="seo-section-cover32" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Commercial Circular Stretch Ceiling Installation for Spa in Virginia</h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This commercial wellness interior features a custom circular stretch ceiling
-                    with a printed sky design, creating a calming focal point above the spa treatment or soaking area.
-                    Integrated recessed lighting enhances the tranquil atmosphere, while the stretch ceiling provides a
-                    seamless, moisture resistant solution ideal for spa and wellness environments. This type of
-                    installation is well suited for luxury hospitality and wellness facilities across Virginia,
-                    delivering both visual impact and functional performance.</p>
-            </div>
-
-            <!-- Cover33 Gallery (3-column grid) -->
-            <div id="gallery-cover33" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover33.jpg"
-                        alt="Backlit stretch ceiling installation in a commercial building in Virginia." title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img215.jpg"
-                        alt="Backlit stretch ceiling installation in a commercial building in Virginia." title=""></div>
-                <div class="gallery-grid-item">
-                    <video class="gallery-img" controls playsinline preload="metadata">
-                        <source src="image/img216.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-
-            <div id="seo-section-cover33" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Backlit Stretch Ceiling Installation for Commercial Space in Virginia
-                </h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This custom backlit stretch ceiling was installed in a commercial interior in
-                    Virginia, creating a modern, illuminated ceiling feature that enhances the overall architectural
-                    design. Backlit stretch ceilings are ideal for offices, corporate buildings, healthcare facilities,
-                    and public spaces across Virginia, offering uniform lighting, clean lines, and a high end finished
-                    look.</p>
-            </div>
-
-            <!-- Cover35 Gallery (3-column grid) -->
-            <div id="gallery-cover35" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover35.jpg"
-                        alt="Modern linear LED stretch ceiling installation in a residential home in Washington, DC."
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img220.jpg"
-                        alt="Modern linear LED stretch ceiling installation in a residential home in Washington, DC."
-                        title=""></div>
-                <div class="gallery-grid-item">
-                    <video class="gallery-img" controls playsinline preload="metadata">
-                        <source src="image/img221.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img222.jpg"
-                        alt="Modern linear LED stretch ceiling installation in a residential home in Washington, DC."
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img223.jpg"
-                        alt="Modern linear LED stretch ceiling installation in a residential home in Washington, DC."
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img224.jpg"
-                        alt="Modern linear LED stretch ceiling installation in a residential home in Washington, DC."
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img225.jpg"
-                        alt="Modern linear LED stretch ceiling installation in a residential home in Washington, DC."
-                        title=""></div>
-            </div>
-
-            <div id="seo-section-cover35" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern Linear LED Stretch Ceiling Installation in Washington, DC</h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This custom linear LED stretch ceiling was installed in a residential
-                    property in Washington, DC, delivering a sleek, contemporary ceiling design with integrated LED
-                    lighting. Linear LED stretch ceilings are a popular choice for modern homes in Washington, DC,
-                    offering clean lines, soft ambient lighting, and a high end architectural finish for living rooms,
-                    bedrooms, and custom interior spaces.</p>
-            </div>
-
-            <!-- Cover37 Gallery (3-column grid) -->
-            <div id="gallery-cover37" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover37.jpg"
-                        alt="Commercial stretch ceiling with linear LED lighting installed in a modern interior in Maryland"
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img230.jpg"
-                        alt="Commercial stretch ceiling with linear LED lighting installed in a modern interior in Maryland"
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img231.jpg"
-                        alt="Commercial stretch ceiling with linear LED lighting installed in a modern interior in Maryland"
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img232.jpg"
-                        alt="Commercial stretch ceiling with linear LED lighting installed in a modern interior in Maryland"
-                        title=""></div>
-            </div>
-
-            <div id="seo-section-cover37" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Custom Commercial Stretch Ceiling with Linear LED Lighting in Maryland
-                </h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This commercial stretch ceiling installation in Maryland features custom
-                    linear LED lighting integrated into a modern architectural ceiling design. Stretch ceilings with LED
-                    lighting are an ideal solution for offices, showrooms, and commercial spaces throughout Maryland,
-                    providing clean lines, high end finishes, and energy efficient illumination for large interior
-                    environments.</p>
-            </div>
-
-            <!-- Cover38 Gallery (3-column grid) -->
-            <div id="gallery-cover38" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover38.jpg"
-                        alt="Luxury stretch ceiling with recessed LED lighting in a modern living room in Washington DC."
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img300.jpg"
-                        alt="Luxury stretch ceiling with recessed LED lighting in a modern living room in Washington DC."
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img301.jpg"
-                        alt="Luxury stretch ceiling with recessed LED lighting in a modern living room in Washington DC."
-                        title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img302.jpg"
-                        alt="Luxury stretch ceiling with recessed LED lighting in a modern living room in Washington DC."
-                        title=""></div>
-            </div>
-
-            <div id="seo-section-cover38" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Luxury Stretch Ceiling with LED Lighting in Washington DC Condo</h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This luxury stretch ceiling installation in a Washington DC condo features
-                    integrated recessed LED lighting for a clean, modern ceiling design. Custom stretch ceilings in
-                    Washington DC are ideal for upscale residential interiors, offering smooth finishes, concealed
-                    lighting, and a contemporary architectural look that enhances natural light and open floor plans.
-                </p>
-            </div>
-
-            <!-- Cover39 Gallery (single image) -->
-            <div id="gallery-cover39" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover39.jpg"
-                        alt="Mirror stretch ceiling with LED line lighting in a modern game room in Virginia." title="">
-                </div>
-            </div>
-
-            <div id="seo-section-cover39" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Custom Mirror Stretch Ceiling with LED Lines in Virginia Game Room</h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This custom mirror stretch ceiling installation in a Virginia game room
-                    features integrated LED line lighting and reflective ceiling panels for a bold, high end design.
-                    Stretch ceilings in Virginia are ideal for entertainment rooms, basements, and luxury residential
-                    spaces, offering modern aesthetics, enhanced lighting effects, and a dramatic architectural ceiling
-                    finish.</p>
-            </div>
-
-            <!-- img400 Gallery (single image) -->
-            <div id="gallery-img400" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img400.jpg"
-                        alt="High gloss stretch ceiling with LED line lighting in a modern Washington, DC apartment."
-                        title=""></div>
-            </div>
-
-            <div id="seo-section-img400" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Luxury High Gloss Stretch Ceiling with LED Lighting in Washington, DC</h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This luxury high gloss stretch ceiling installation in Washington, DC
-                    features
-                    integrated LED line lighting that creates a sleek, contemporary ceiling design. Custom stretch
-                    ceilings in Washington, DC are ideal for modern condos, penthouses, and high end residential
-                    interiors, delivering reflective finishes, clean lines, and premium architectural lighting.</p>
-            </div>
-
-            <!-- cover40 Gallery (2 images) -->
-            <div id="gallery-cover40" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover40.jpg"
-                        alt="Custom gloss stretch ceiling in a modern luxury living room in Maryland." title=""></div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img500.jpg"
-                        alt="Custom gloss stretch ceiling in a modern luxury living room in Maryland." title=""></div>
-            </div>
-
-            <div id="seo-section-cover40" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Custom Gloss Stretch Ceiling Installation in Maryland</h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This custom gloss stretch ceiling installation in Maryland enhances a modern
-                    luxury living room with a sleek, reflective finish and integrated recessed lighting. Custom ceiling
-                    solutions in Maryland are ideal for high end residential interiors, providing a contemporary look,
-                    improved lighting design, and a clean architectural ceiling profile.</p>
-            </div>
-
-            <!-- cover50 Gallery (1 image + 3 videos) -->
-            <div id="gallery-cover50" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/cover50.jpg"
-                        alt="Modern LED geometric custom ceiling installation in a Washington DC home." title=""></div>
-                <div class="gallery-grid-item">
-                    <video class="gallery-img" controls playsinline preload="metadata">
-                        <source src="image/img60.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="gallery-grid-item">
-                    <video class="gallery-img" controls playsinline preload="metadata">
-                        <source src="image/img61.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="gallery-grid-item">
-                    <video class="gallery-img" controls playsinline preload="metadata">
-                        <source src="image/img62.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-
-            <div id="seo-section-cover50" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Modern LED Custom Ceiling Installation in Washington DC</h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This modern custom ceiling installation in Washington, DC features geometric
-                    recessed LED lighting integrated into a smooth ceiling surface. Custom ceiling designs in
-                    Washington, DC elevate contemporary interiors by adding architectural lighting patterns, clean
-                    lines, and a high end modern aesthetic for luxury homes and renovations.</p>
-            </div>
-
-            <!-- img151 Gallery (2 images) -->
-            <div id="gallery-img151" class="gallery-grid" style="display:none;">
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img151.jpg"
-                        alt="Backlit custom stretch ceiling with sky design in a Washington DC media room." title="">
-                </div>
-                <div class="gallery-grid-item"><img class="gallery-img" src="image/img152.jpg"
-                        alt="Backlit custom stretch ceiling with sky design in a Washington DC media room." title="">
-                </div>
-            </div>
-
-            <div id="seo-section-img151" class="seo-container" style="display:none;">
-                <!-- Title (bold + centered) -->
-                <h2 class="seo-title-visible">Custom Backlit Stretch Ceiling Installation in Washington DC</h2>
-
-                <!-- Project Description (Visible Text) -->
-                <p class="seo-description">This custom backlit stretch ceiling installation in Washington DC features a
-                    printed sky design with integrated LED lighting, creating a dramatic focal point for a home theater
-                    or media room. Custom ceilings in Washington DC are a popular choice for luxury basements,
-                    entertainment rooms, and modern interiors that demand a bold architectural statement.</p>
             </div>
         </div>
-    </div>
     </div>
 
     <script src="js/app.js"></script>
