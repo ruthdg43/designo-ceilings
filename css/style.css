@@ -166,8 +166,9 @@ ul {
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .social-icons a {
