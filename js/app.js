@@ -374,6 +374,66 @@ document.addEventListener('DOMContentLoaded', () => {
                 market: 'Commercial',
                 region: 'Northern Virginia / Washington DC / Maryland'
             }
+        },
+        'cover17': {
+            title: 'Backlit Stretch Ceiling with Geometric LED Design – Luxury Bathroom Project in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This luxury residential bathroom features a custom backlit stretch ceiling with modern geometric LED light lines, creating a floating ceiling effect and high-end architectural statement. The illuminated ceiling design provides soft ambient lighting while enhancing the contemporary spa-like atmosphere of the space. Ideal for luxury homes, penthouses, and upscale residential renovations in Washington, DC, Northern Virginia, and Maryland, including McLean, Arlington, Bethesda, and Potomac.',
+            description: `This luxury residential bathroom features a custom backlit stretch ceiling with modern geometric LED light lines, creating a floating ceiling effect and high-end architectural statement. The illuminated ceiling design provides soft ambient lighting while enhancing the contemporary spa-like atmosphere of the space. Ideal for luxury homes, penthouses, and upscale residential renovations in Washington, DC, Northern Virginia, and Maryland, including McLean, Arlington, Bethesda, and Potomac.`,
+            images: ['cover17.jpg', 'img800.jpg', 'img801.jpg', 'img802.jpg'],
+            alt: 'backlit stretch ceiling with geometric LED lighting in luxury residential bathroom',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['backlit stretch ceiling Washington DC', 'luxury bathroom ceiling Northern Virginia', 'LED stretch ceiling Maryland', 'modern ceiling design McLean VA', 'custom ceiling installation Bethesda MD', 'high end bathroom ceiling Potomac'],
+            localSEO: {
+                location: 'Washington, DC / Northern Virginia / Maryland',
+                service: 'Backlit Stretch Ceiling with LED Geometry',
+                market: 'Residential',
+                region: 'Washington DC / Virginia / Maryland'
+            }
+        },
+        'cover18': {
+            title: 'Glossy Stretch Ceiling with LED Perimeter Lighting – Modern Commercial Office in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This modern commercial space features a high-gloss stretch ceiling with integrated LED perimeter lighting, creating a sleek reflective ceiling surface that enhances natural light and architectural depth. The illuminated ceiling design delivers a clean, contemporary look ideal for corporate offices, showrooms, design studios, and professional workspaces. Perfect for commercial interior projects in Washington, DC, Northern Virginia, and Maryland, including Arlington, Tysons, Bethesda, and Silver Spring.',
+            description: `This modern commercial space features a high-gloss stretch ceiling with integrated LED perimeter lighting, creating a sleek reflective ceiling surface that enhances natural light and architectural depth. The illuminated ceiling design delivers a clean, contemporary look ideal for corporate offices, showrooms, design studios, and professional workspaces. Perfect for commercial interior projects in Washington, DC, Northern Virginia, and Maryland, including Arlington, Tysons, Bethesda, and Silver Spring.`,
+            images: ['cover18.jpg', 'img900.jpg', 'img901.jpg'],
+            alt: 'glossy stretch ceiling with LED perimeter lighting in modern commercial office',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['commercial stretch ceiling Washington DC', 'LED perimeter ceiling Northern Virginia', 'modern office ceiling Maryland', 'glossy ceiling installation Arlington VA', 'custom commercial ceiling Tysons VA', 'architectural ceiling design Bethesda MD'],
+            localSEO: {
+                location: 'Washington DC / Northern Virginia / Maryland',
+                service: 'Commercial | Stretch Ceiling with Integrated LED Lighting',
+                market: 'Commercial',
+                region: 'Washington DC / Virginia / Maryland'
+            }
+        },
+        'cover19': {
+            title: 'High-Gloss Stretch Ceiling with LED Cove Lighting – Luxury Residential Living Room in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This luxury residential living room features a high-gloss stretch ceiling with soft LED cove lighting, creating a reflective ceiling surface that enhances brightness and visual height. The illuminated ceiling design adds a refined architectural touch while delivering warm ambient lighting for everyday living and entertaining. Ideal for upscale homes, condos, and apartments in Washington, DC, Northern Virginia, and Maryland, including Arlington, Alexandria, Bethesda, and Silver Spring.',
+            description: `This luxury residential living room features a high-gloss stretch ceiling with soft LED cove lighting, creating a reflective ceiling surface that enhances brightness and visual height. The illuminated ceiling design adds a refined architectural touch while delivering warm ambient lighting for everyday living and entertaining. Ideal for upscale homes, condos, and apartments in Washington, DC, Northern Virginia, and Maryland, including Arlington, Alexandria, Bethesda, and Silver Spring.`,
+            images: ['cover19.jpg', 'img700.jpg', 'img701.jpg'],
+            alt: 'high-gloss stretch ceiling with LED cove lighting in luxury living room',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['residential stretch ceiling Washington DC', 'glossy ceiling living room Northern Virginia', 'LED cove ceiling Maryland', 'luxury ceiling design Arlington VA', 'custom ceiling installation Alexandria VA', 'modern stretch ceiling Bethesda MD'],
+            localSEO: {
+                location: 'Washington, DC / Northern Virginia / Maryland',
+                service: 'Residential | Stretch Ceiling with Perimeter LED Lighting',
+                market: 'Residential',
+                region: 'Washington DC / Virginia / Maryland'
+            }
+        },
+        'cover21': {
+            title: 'Glossy Stretch Ceiling with Recessed Lighting in Luxury Bedroom – Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This modern residential bedroom features a glossy stretch ceiling with recessed perimeter lighting, creating a bright, open feel and reflecting natural daylight from the windows below. The clean ceiling design enhances the architectural detail of the space while adding soft ambient lighting for comfort and relaxation. Perfect for luxury homes, master bedrooms, and high-end residential interiors in Washington, DC, Northern Virginia, and Maryland, including Fairfax, Arlington, Bethesda, and Rockville.',
+            description: `This modern residential bedroom features a glossy stretch ceiling with recessed perimeter lighting, creating a bright, open feel and reflecting natural daylight from the windows below. The clean ceiling design enhances the architectural detail of the space while adding soft ambient lighting for comfort and relaxation. Perfect for luxury homes, master bedrooms, and high-end residential interiors in Washington, DC, Northern Virginia, and Maryland, including Fairfax, Arlington, Bethesda, and Rockville.`,
+            images: ['cover21.jpg', 'img2022.jpg'],
+            alt: 'glossy stretch ceiling with recessed lighting in modern luxury bedroom',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['bedroom stretch ceiling Washington DC', 'luxury ceiling design Northern Virginia', 'custom ceiling bedroom Maryland', 'glossy ceiling installation Fairfax VA', 'modern stretch ceiling Rockville MD', 'recessed ceiling lighting Arlington VA'],
+            localSEO: {
+                location: 'Washington, DC / Northern Virginia / Maryland',
+                service: 'Residential | Custom Stretch Ceiling (Rendering)',
+                market: 'Renderings / Design Concepts',
+                region: 'Washington DC / Virginia / Maryland'
+            }
         }
     };
 
@@ -419,15 +479,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalGallery.appendChild(imgContainer);
             });
         } else {
-            // Fallback for projects without specific data yet
-            modalTitle.textContent = projectId.replace(/-/g, ' ').toUpperCase();
-            modalDesc.innerHTML = `<p>Premium custom ceiling system installation. Details for project ${projectId} will appear here including technical specifications and design approach.</p>`;
-
-            modalGallery.innerHTML = `
-                <div class="project-placeholder"></div>
-                <div class="project-placeholder"></div>
-                <div class="project-placeholder"></div>
-            `;
+            console.warn(`Project data for ${projectId} not found.`);
+            closeProject();
         }
 
         // Update URL hash
