@@ -434,6 +434,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 market: 'Renderings / Design Concepts',
                 region: 'Washington DC / Virginia / Maryland'
             }
+        },
+        'cover87': {
+            title: 'Modern Stretch Ceiling with LED Cove Lighting – Residential Living Room in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This modern living room features a recessed stretch ceiling with warm LED cove lighting and integrated downlights, creating soft ambient illumination and a clean architectural finish. The ceiling design enhances comfort and depth while complementing contemporary interiors. Ideal for residential homes and apartments in Washington, DC, Northern Virginia, and Maryland, including Arlington, Fairfax, Bethesda, and Rockville.',
+            description: `This modern living room features a recessed stretch ceiling with warm LED cove lighting and integrated downlights, creating soft ambient illumination and a clean architectural finish. The ceiling design enhances comfort and depth while complementing contemporary interiors. Ideal for residential homes and apartments in Washington, DC, Northern Virginia, and Maryland, including Arlington, Fairfax, Bethesda, and Rockville.`,
+            images: ['cover87.jpg', 'img500.jpg', 'img501.jpg', 'img502.jpg', 'img503.jpg'],
+            alt: 'modern recessed stretch ceiling with LED cove lighting in residential living room',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['residential stretch ceiling Washington DC', 'LED cove ceiling Northern Virginia', 'modern ceiling design Maryland', 'stretch ceiling installation Fairfax VA', 'custom recessed ceiling Arlington VA'],
+            localSEO: {
+                location: 'Washington DC, Northern Virginia & Maryland',
+                service: 'Residential | Recessed Stretch Ceiling',
+                market: 'Residential',
+                region: 'DC/VA/MD'
+            }
+        },
+        'cover97': {
+            title: 'Minimalist Stretch Ceiling with Perimeter LED Lighting – Luxury Home in Washington DC, Northern Virginia & Maryland',
+            metaDescription: 'This luxury open-concept living room showcases a minimalist stretch ceiling with integrated perimeter LED lighting, delivering a seamless and elegant architectural appearance. The concealed lighting detail creates soft ambient glow while maintaining a clean, modern aesthetic. Perfect for high-end residential projects in Washington, DC, Northern Virginia, and Maryland, including McLean, Great Falls, Potomac, and Chevy Chase.',
+            description: `This luxury open-concept living room showcases a minimalist stretch ceiling with integrated perimeter LED lighting, delivering a seamless and elegant architectural appearance. The concealed lighting detail creates soft ambient glow while maintaining a clean, modern aesthetic. Perfect for high-end residential projects in Washington, DC, Northern Virginia, and Maryland, including McLean, Great Falls, Potomac, and Chevy Chase.`,
+            images: ['cover97.jpg', 'img600.jpg', 'img601.jpg', 'img602.jpg', 'img603.jpg', 'img604.jpg', 'img605.jpg'],
+            alt: 'minimalist stretch ceiling with perimeter LED lighting in luxury open living room',
+            // Backend SEO Tags (Not visible on page)
+            keywords: ['luxury stretch ceiling Washington DC', 'minimalist ceiling Northern Virginia', 'modern LED ceiling Maryland', 'custom ceiling McLean VA', 'high-end ceiling Potomac MD'],
+            localSEO: {
+                location: 'Washington DC, Northern Virginia & Maryland',
+                service: 'Residential | Minimalist Ceiling Design',
+                market: 'Rendering / Concept Visualization',
+                region: 'DC/VA/MD'
+            }
         }
     };
 
