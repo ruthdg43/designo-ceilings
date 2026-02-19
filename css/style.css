@@ -123,6 +123,15 @@ ul {
     opacity: 0.7;
 }
 
+.sidebar-location {
+    font-size: 0.75rem;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 6px;
+    font-weight: 400;
+}
+
 /* Sidebar Navigation Hierarchy */
 .primary-nav {
     margin-bottom: 25px;
@@ -265,17 +274,33 @@ ul {
 }
 
 /* About Section Specifics */
+.about-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+
+.about-logo {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
 .about-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 60px;
-    align-items: start;
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 800px;
 }
 
 .about-text p {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     font-size: 1.1rem;
-    line-height: 1.85;
+    line-height: 1.6;
     color: #444;
 }
 
@@ -299,36 +324,55 @@ ul {
 
 .project-card {
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     width: 100%;
     overflow: hidden;
     position: relative;
     background-color: #fcfcfc;
-    /* Very light neutral gray foundation */
     aspect-ratio: 4/5;
-    /* Refined vertical/elongated tall architectural ratio */
+    border-radius: 6px;
+    /* Slightly softer for a more premium look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
 .project-card:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-    /* Subtle 'lift' feel */
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    /* Deeper architectural shadow */
 }
 
-/* Vertical Editorial Ratio - Standard for High-End Architectural Portfolios */
 .project-cover-img {
     width: 100%;
     height: 100%;
-    /* Fill the vertical container */
     object-fit: cover;
     object-position: center;
     display: block;
-    transition: transform 0.6s ease;
+    filter: contrast(1.03) brightness(1.02);
+    /* Enhancing architectural crispness */
+    transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.6s ease;
+}
+
+/* Lighting Overlay for a high-end photography feel */
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.02) 100%);
+    opacity: 0.5;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
 }
 
 .project-card:hover .project-cover-img {
-    transform: scale(1.02);
-    /* Very subtle cinematic zoom */
+    transform: scale(1.08);
+    filter: contrast(1.05) brightness(1.05);
+}
+
+.project-card:hover::after {
+    opacity: 0.8;
 }
 
 .project-placeholder {
@@ -353,14 +397,26 @@ ul {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    /* High-end white clean view */
     overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.modal.active {
+    display: block;
+    opacity: 1;
 }
 
 .modal-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 60px;
+    padding: 60px 40px;
+    transform: translateY(40px);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
 }
 
 .modal-header {
@@ -397,45 +453,224 @@ ul {
 .modal-gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 80px;
+    gap: 25px;
+    margin-bottom: 60px;
 }
 
-.modal-gallery-grid img,
-.modal-gallery-grid .project-placeholder {
-    width: 100%;
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
     aspect-ratio: 4/5;
-    /* Matches refined architectural vertical rhythm */
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
     display: block;
     object-fit: cover;
     object-position: center;
-    background-color: #f9f9f9;
+    filter: contrast(1.02);
+    transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* SEO Container within Project View */
-.seo-container {
-    border-top: 1px solid #f0f0f0;
-    padding-top: 60px;
+.gallery-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.gallery-item:hover::after {
+    opacity: 0;
+}
+
+/* Project Overview Styling */
+.project-overview {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 60px auto;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 }
 
-.seo-title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: #111;
-    text-align: center;
+.modal.active .project-overview {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.seo-description {
+.project-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #000;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    text-transform: none;
+}
+
+.project-description {
     font-size: 1.15rem;
     line-height: 1.8;
-    color: #555;
-    text-align: left;
-    margin-top: 20px;
+    color: #444;
 }
+
+.project-description p {
+    margin-bottom: 25px;
+}
+
+.project-description h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 50px 0 25px 0;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.project-description h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 1px;
+    background: #000;
+}
+
+.project-details-meta {
+    margin: 40px auto 40px auto;
+    padding: 20px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    font-weight: 600;
+}
+
+.project-details-meta span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-details-meta i {
+    font-size: 0.9rem;
+    color: #333;
+    opacity: 0.7;
+}
+
+.project-features {
+    margin: 60px 0;
+    text-align: left;
+    background: #fcfcfc;
+    padding: 50px;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+}
+
+.project-features h2 {
+    margin-top: 0;
+    text-align: left;
+}
+
+.project-features h2::after {
+    left: 0;
+    transform: none;
+}
+
+.project-features ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-features li {
+    margin-bottom: 0;
+    padding: 15px 0 15px 35px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #222;
+    font-weight: 500;
+    border-top: 1px solid #f0f0f0;
+}
+
+.project-features li:first-child {
+    border-top: none;
+}
+
+.project-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.project-seo-tags {
+    margin-top: 80px;
+    padding: 30px;
+    background: #fdfdfd;
+    border-top: 1px solid #f0f0f0;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.project-seo-tags p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+}
+
+.project-seo-tags strong {
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
 
 /* Responsive */
 @media (max-width: 1024px) {
