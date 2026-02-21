@@ -116,6 +116,57 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const projectsData = {
+        'rend-hero': {
+            title: 'Architectural Rendering Collection',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Conceptual Design</span>
+                <span><i class="fas fa-drafting-compass"></i> Rendering</span>
+            </div>
+            <p>A curated collection of photorealistic architectural renderings showcasing stretch ceiling concepts across residential and commercial environments. These high-fidelity visualizations demonstrate design possibilities before installation, highlighting material finishes, lighting integration, and spatial composition.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>Photorealistic architectural visualization</li>
+                    <li>Advanced lighting simulation</li>
+                    <li>Material and finish previsualization</li>
+                    <li>Spatial composition studies</li>
+                    <li>Design-to-installation accuracy</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'rend.jpg', alt: 'Architectural Rendering Collection - Hero View', category: 'rendering', quality: 'high' },
+                { src: 'rend1.jpg', alt: 'Architectural rendering detail 1', category: 'rendering', quality: 'high' },
+                { src: 'rend2.jpg', alt: 'Architectural rendering detail 2', category: 'rendering', quality: 'high' },
+                { src: 'rend3.jpg', alt: 'Architectural rendering detail 3', category: 'rendering', quality: 'high' },
+                { src: 'rend4.jpg', alt: 'Architectural rendering detail 4', category: 'rendering', quality: 'high' },
+                { src: 'rend5.jpg', alt: 'Architectural rendering detail 5', category: 'rendering', quality: 'high' }
+            ]
+        },
+        'bathroom-hero': {
+            title: 'Modern Luxury Bathroom Matte Ceiling',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Luxury Home</span>
+                <span><i class="fas fa-bath"></i> Residential Bathroom</span>
+            </div>
+            <p>A sophisticated matte stretch ceiling installation designed for a high-end residential bathroom. The seamless moisture-resistant membrane provides a clean, architectural finish that complements modern luxury fixtures and lighting.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>Premium museum-grade matte membrane</li>
+                    <li>Moisture-resistant architectural finish</li>
+                    <li>Seamless monolithic ceiling plane</li>
+                    <li>Integrated luxury lighting detail</li>
+                    <li>Precision-engineered installation</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'bathroom0.jpg', alt: 'Modern Luxury Bathroom Matte Ceiling - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'bathroom.jpg', alt: 'Bathroom ceiling detail view', category: 'ceiling', quality: 'high' },
+                { src: 'bathroom3.jpg', alt: 'Bathroom lightning and finish detail', category: 'ceiling', quality: 'high' }
+            ]
+        },
         'lines-hero': {
             title: 'Elite Residential Architectural Lines Ceiling',
             description: `
@@ -135,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'lines.jpg', alt: 'Elite Residential Architectural Lines Ceiling - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'lines.jpg?v=20260221', alt: 'Elite Residential Architectural Lines Ceiling - Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'lines2.jpg', alt: 'Architectural lines ceiling detail 2', category: 'ceiling', quality: 'high' },
                 { src: 'lines3.jpg', alt: 'Architectural lines ceiling detail 3', category: 'ceiling', quality: 'high' },
                 { src: 'lines4.jpg', alt: 'Architectural lines ceiling detail 4', category: 'ceiling', quality: 'high' },
@@ -173,13 +224,13 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'cover0': {
-            title: 'Modern Luxury Ceiling Installation in McLean, Virginia',
+            title: 'Modern Luxury Ceiling Installation in Washington, DC',
             description: `
             <div class="project-details-meta">
-                <span><i class="fas fa-location-dot"></i> McLean, Virginia</span>
+                <span><i class="fas fa-location-dot"></i> Washington, DC</span>
                 <span><i class="fas fa-check-circle"></i> Licensed &amp; Permitted</span>
             </div>
-            <p>A fully permitted, architecturally designed ceiling installation in McLean, Virginia featuring layered recessed profiles, continuous perimeter LED channels, and precision-level drywall finishing. Every element was engineered for structural integrity, code compliance, and a seamless, high-end result that defines the living and dining space.</p>
+            <p>A fully permitted, architecturally designed ceiling installation in Washington, DC featuring layered recessed profiles, continuous perimeter LED channels, and precision-level drywall finishing. Every element was engineered for structural integrity, code compliance, and a seamless, high-end result that defines the living and dining space.</p>
             <div class="project-features">
                 <h2>Project Scope &amp; Technical Details</h2>
                 <ul>
@@ -191,13 +242,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover0.jpg', alt: 'Modern Luxury Ceiling Installation in McLean, Virginia - Hero View' },
-                { src: 'img2.jpg', alt: 'Modern recessed ceiling with integrated LED lighting McLean' },
-                { src: 'img5.jpg', alt: 'Precision lighting channels in modern ceiling McLean' },
-                { src: 'img1.jpg', alt: 'Custom architectural ceiling design McLean VA' },
-                { src: 'img4.jpg', alt: 'High-end residential ceiling design McLean VA' },
-                { src: 'img3.jpg', alt: 'Licensed ceiling contractor Northern Virginia installation' },
-                { src: 'img6.jpg', alt: 'Contemporary ceiling installation Washington DC' }
+                { src: 'cover0.jpg', alt: 'Modern Luxury Ceiling Installation in Washington, DC - Hero View' },
+                { src: 'img2.jpg', alt: 'Modern recessed ceiling with integrated LED lighting Washington, DC' },
+                { src: 'img5.jpg', alt: 'Precision lighting channels in modern ceiling Washington, DC' },
+                { src: 'img1.jpg', alt: 'Custom architectural ceiling design Washington, DC' },
+                { src: 'img4.jpg', alt: 'High-end residential ceiling design Washington, DC' },
+                { src: 'img3.jpg', alt: 'Licensed ceiling contractor Washington, DC installation' },
+                { src: 'img6.jpg', alt: 'Contemporary ceiling installation Washington, DC' }
             ]
         },
         'cover1': {
@@ -223,7 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'img7.jpg', alt: 'Double-height custom ceiling design Arlington VA' },
                 { src: 'img9.jpg', alt: 'Architectural ceiling lines and minimalist detailing Arlington VA' },
                 { src: 'img8.jpg', alt: 'Modern recessed lighting in high-end residential ceiling Arlington' },
-                { src: 'img11.jpg', alt: 'Luxury home custom ceiling installation Northern VA' },
                 { src: 'img12.jpg', alt: 'Modern luxury custom ceiling finishing detail Arlington' },
                 { src: 'img10.jpg', alt: 'Licensed residential ceiling contractor Arlington Northern Virginia' }
             ]
@@ -396,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
 
-        'cover9': { images: [{ src: 'cover9.jpg' }, { src: 'img40.jpg' }, { src: 'img41.jpg' }, { src: 'img42.jpg' }, { src: 'img43.jpg' }, { src: 'img44.jpg' }, { src: 'img45.jpg' }, { src: 'img46.jpg' }] },
+        'cover9': { images: [{ src: 'img40.jpg' }, { src: 'img41.jpg' }, { src: 'img42.jpg' }, { src: 'img43.jpg' }, { src: 'img44.jpg' }] },
         'cover10': {
             title: 'Modern Luxury Ceiling Installation in McLean, Virginia',
             description: `
@@ -495,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'img56.jpg', alt: 'Linear LED channels luxury residential' }
             ]
         },
-        'cover14': { images: [{ src: 'cover14.jpg' }, { src: 'img86.jpg' }, { src: 'img75.jpg' }, { src: 'img76.jpg' }] },
+        'cover14': { images: [{ src: 'img86.jpg' }, { src: 'img75.jpg' }, { src: 'img76.jpg' }] },
         'cover15': {
             title: 'Premium High-Gloss Reflective Ceiling for Modern Living Spaces',
             description: `
@@ -573,8 +623,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'img64.jpg', alt: 'Geometric LED frame close-up' }
             ]
         },
-        'cover78': { images: [{ src: 'cover78.jpg' }, { src: 'img200.jpg' }, { src: 'img201.jpg' }] },
-        'cover99': { images: [{ src: 'cover99.jpg' }, { src: 'img300.jpg' }, { src: 'img301.jpg' }] },
+        'cover78': { images: [{ src: 'img200.jpg' }] },
+        'cover99': { images: [{ src: 'img300.jpg' }, { src: 'img301.jpg' }] },
         'cover17': {
             title: 'Custom Geometric LED Ceiling Installation in Luxury Automotive Garage',
             description: `
@@ -596,8 +646,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover17.jpg', alt: 'Custom Geometric LED Ceiling Installation in Luxury Automotive Garage - Hero View' },
-                { src: 'img65.jpg', alt: 'Geometric LED ceiling layout automotive garage' },
-                { src: 'img66.jpg', alt: 'Modern architectural lighting showroom garage' }
+                { src: 'img66.jpg', alt: 'Modern architectural lighting showroom garage' },
+                { src: 'img65.jpg', alt: 'Geometric LED ceiling layout automotive garage' }
             ]
         },
         'commercial3': {
@@ -624,7 +674,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'commercial3.jpg', alt: 'Custom Architectural Ceiling with Wood Panel & Backlit Design – Washington, DC - Hero View' },
-                { src: 'commercial1.jpg', alt: 'Curved wood panel framing and integrated backlit diffused panels' },
                 { src: 'commercial2.jpg', alt: 'Modern office ceiling with wood finishes and illuminated panels' }
             ]
         },
@@ -705,8 +754,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover19.jpg', alt: 'Custom Curved Ceiling with Integrated LED Cove Lighting in Luxury Indoor Pool Facility - Hero View' },
-                { src: 'img68.jpg', alt: 'Recessed circular ceiling cove with LED lighting' },
-                { src: 'img69.jpg', alt: 'Modern architectural lighting indoor pool' }
+                { src: 'img69.jpg', alt: 'Modern architectural lighting indoor pool' },
+                { src: 'img68.jpg', alt: 'Recessed circular ceiling cove with LED lighting' }
             ]
         },
         'cover20': {
@@ -1010,8 +1059,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover32.jpg', alt: 'Modern LED Geometric Ceiling Installation in Washington, DC - Hero View' },
-                { src: 'img900.jpg', alt: 'Integrated LED geometric lighting Washington DC' }
+                { src: 'cover32.jpg', alt: 'Modern LED Geometric Ceiling Installation in Washington, DC - Hero View' }
             ]
         },
         'cover33': {
@@ -1579,7 +1627,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
 
-        'cover97': { images: [{ src: 'cover97.jpg' }, { src: 'img600.jpg' }, { src: 'img601.jpg' }, { src: 'img602.jpg' }, { src: 'img603.jpg' }, { src: 'img604.jpg' }, { src: 'img605.jpg' }] },
+        'cover97': { images: [{ src: 'img600.jpg' }, { src: 'img601.jpg' }, { src: 'img602.jpg' }, { src: 'img603.jpg' }] },
         'cover84': {
             title: 'Modern LED Tray Ceiling & Feature Wall Installation – Washington, DC',
             description: `
@@ -1630,12 +1678,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'Residential gloss8.jpg', alt: 'Strongest high-gloss ceiling mirror reflection McLean', category: 'ceiling', quality: 'high' },
                 { src: 'Residential gloss5.jpg', alt: 'Mirror-finish ceiling with integrated lighting detail', category: 'ceiling', quality: 'high' },
                 { src: 'Residential gloss4.jpg', alt: 'Contemporary gloss ceiling architectural perspective', category: 'ceiling', quality: 'high' },
                 { src: 'Residential gloss3.jpg', alt: 'Residential gloss ceiling installation view', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss2.jpg', alt: 'High-gloss membrane reflection clarity', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss1.jpg', alt: 'Luxury high-gloss stretch ceiling overview', category: 'ceiling', quality: 'high' }
+                { src: 'Residential gloss2.jpg', alt: 'High-gloss membrane reflection clarity', category: 'ceiling', quality: 'high' }
             ]
         },
         'glossy-hero': {
@@ -1683,7 +1729,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'gloss.jpg', alt: 'Elite high-gloss ceiling mirror reflection', category: 'ceiling', quality: 'high' },
                 { src: 'gloss1.jpg', alt: 'High-gloss ceiling architectural detail', category: 'ceiling', quality: 'high' },
                 { src: 'gloss2.jpg', alt: 'Contemporary reflective ceiling finish', category: 'ceiling', quality: 'high' },
                 { src: 'gloss3.jpg', alt: 'Modern gloss stretch ceiling installation', category: 'ceiling', quality: 'high' }
@@ -1741,8 +1786,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'Residentialgloss.jpg', alt: 'Premium high-gloss reflective ceiling finish', category: 'ceiling', quality: 'high' },
                 { src: 'Residential gloss21.jpg', alt: 'Modern high-gloss ceiling installation - View 1', category: 'ceiling', quality: 'high' },
                 { src: 'Showergloss.jpg', alt: 'High-gloss shower ceiling reflective finish', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss22.jpg', alt: 'High-gloss ceiling detail - View 2', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss23.jpg', alt: 'Reflective ceiling perspective - View 3', category: 'ceiling', quality: 'high' }
+                { src: 'residential gloss22.jpg', alt: 'High-gloss ceiling detail - View 2', category: 'ceiling', quality: 'high' },
+                { src: 'residential gloss23.jpg', alt: 'Reflective ceiling perspective - View 3', category: 'ceiling', quality: 'high' }
             ]
         },
         'ResidentialMat3': {
