@@ -624,7 +624,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'commercial3.jpg', alt: 'Custom Architectural Ceiling with Wood Panel & Backlit Design – Washington, DC - Hero View' },
-                { src: 'coomercial1.jpg', alt: 'Curved wood panel framing and integrated backlit diffused panels' },
+                { src: 'commercial1.jpg', alt: 'Curved wood panel framing and integrated backlit diffused panels' },
                 { src: 'commercial2.jpg', alt: 'Modern office ceiling with wood finishes and illuminated panels' }
             ]
         },
@@ -1813,7 +1813,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'Residentialgloss5.jpg', alt: 'Special matte-integrated finish detail', category: 'ceiling', quality: 'high' }
             ]
         },
-        'Residentilglossy': {
+        'Residentialglossy': {
             title: 'Commercial Dental Clinic Ceiling Installation',
             description: `
             <div class="project-details-meta">
@@ -1832,7 +1832,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'Residentialglossy5.jpg', alt: 'Commercial ceiling lighting integration', category: 'ceiling', quality: 'high' },
-                { src: 'Residentilglossy.jpg', alt: 'Modern medical facility glossy ceiling finish', category: 'ceiling', quality: 'high' },
+                { src: 'Residentialglossy.jpg', alt: 'Modern medical facility glossy ceiling finish', category: 'ceiling', quality: 'high' },
                 { src: 'Residentialglossy4.jpg', alt: 'Strongest commercial glossy ceiling perspective', category: 'ceiling', quality: 'high' },
                 { src: 'Residentialglossy3.jpg', alt: 'Dental clinic glossy ceiling installation', category: 'ceiling', quality: 'high' },
                 { src: 'Residentialglossy2.jpg', alt: 'Clinical space glossy ceiling detail', category: 'ceiling', quality: 'high' }
@@ -1963,7 +1963,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Keywords:</strong> commercial ceiling contractor DC, architectural ceiling installation Virginia, commercial LED lighting Maryland, licensed ceiling contractor DMV</p>
             </div>`,
             images: [
-                { src: 'comeercial20.jpg', alt: 'Custom Commercial Ceiling Installation Washington DC - Hero View', category: 'ceiling', quality: 'high' }
+                { src: 'commercial20.jpg', alt: 'Custom Commercial Ceiling Installation Washington DC - Hero View', category: 'ceiling', quality: 'high' }
             ]
         },
         'commercial-main': {
@@ -2211,10 +2211,9 @@ document.addEventListener('DOMContentLoaded', () => {
             container.className = 'gallery-item';
 
             const img = document.createElement('img');
-            img.src = `images/${imgObj.src}`;
+            img.src = `./images/${imgObj.src}`;
             img.alt = imgObj.alt || 'Project Detail';
             img.loading = 'lazy';
-            img.onerror = () => container.remove();
 
             // Click opens lightbox
             container.addEventListener('click', () => {
