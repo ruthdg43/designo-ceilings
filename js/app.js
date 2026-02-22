@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Designo Ceilings - Navigation & Gallery Logic
  */
 
@@ -243,8 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover0.jpg', alt: 'Modern Luxury Ceiling Installation in Washington, DC - Hero View' },
-                { src: 'img2.jpg', alt: 'Modern recessed ceiling with integrated LED lighting Washington, DC' },
                 { src: 'img5.jpg', alt: 'Precision lighting channels in modern ceiling Washington, DC' },
+                { src: 'img2.jpg', alt: 'Modern recessed ceiling with integrated LED lighting Washington, DC' },
                 { src: 'img1.jpg', alt: 'Custom architectural ceiling design Washington, DC' },
                 { src: 'img4.jpg', alt: 'High-end residential ceiling design Washington, DC' },
                 { src: 'img3.jpg', alt: 'Licensed ceiling contractor Washington, DC installation' },
@@ -271,8 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover1.jpg', alt: 'Luxury Custom Ceiling Installation in Arlington, Virginia - Main Interior' },
-                { src: 'img7.jpg', alt: 'Double-height custom ceiling design Arlington VA' },
                 { src: 'img9.jpg', alt: 'Architectural ceiling lines and minimalist detailing Arlington VA' },
+                { src: 'img7.jpg', alt: 'Double-height custom ceiling design Arlington VA' },
                 { src: 'img8.jpg', alt: 'Modern recessed lighting in high-end residential ceiling Arlington' },
                 { src: 'img12.jpg', alt: 'Modern luxury custom ceiling finishing detail Arlington' },
                 { src: 'img10.jpg', alt: 'Licensed residential ceiling contractor Arlington Northern Virginia' }
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-building"></i> Contemporary Detail</span>
                 <span><i class="fas fa-award"></i> Premium Finish</span>
             </div>
-            <p>A precision ceiling installation in Washington, D.C. defined by clean geometry, architectural linear LED integration, and a museum-grade level 5 drywall finish. The design prioritizes symmetry and restraint — no exposed fixtures, no visual clutter — delivering a minimalist interior where the lighting itself is the architectural feature.</p>
+            <p>A precision ceiling installation in Washington, D.C. defined by clean geometry, architectural linear LED integration, and a museum-grade level 5 drywall finish. The design prioritizes symmetry and restraint â€” no exposed fixtures, no visual clutter â€” delivering a minimalist interior where the lighting itself is the architectural feature.</p>
             <div class="project-features">
                 <h2>Licensed Contractor D.C. Metro Area</h2>
                 <ul>
@@ -299,11 +299,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover2.jpg', alt: 'Contemporary LED Ceiling Detail D.C. - Architectural Perspective' },
-                { src: 'img19.jpg', alt: 'Contemporary LED Ceiling Detail in Washington, D.C. - Minimalist Recessed Design' },
                 { src: 'img17.jpg', alt: 'Contemporary LED Ceiling Detail D.C. - Symmetrical Lighting Design' },
+                { src: 'img19.jpg', alt: 'Contemporary LED Ceiling Detail in Washington, D.C. - Minimalist Recessed Design' },
+                { src: 'img15.jpg', alt: 'Contemporary LED Ceiling Detail D.C. - Modern Ceiling Lighting' },
                 { src: 'img13.jpg', alt: 'Contemporary LED Ceiling Detail D.C. - Linear Lighting Layout' },
                 { src: 'img18.jpg', alt: 'Contemporary LED Ceiling Detail D.C. - High-End Architectural Finish' },
-                { src: 'img15.jpg', alt: 'Contemporary LED Ceiling Detail D.C. - Modern Ceiling Lighting' },
                 { src: 'img14.jpg', alt: 'Contemporary LED Ceiling Detail D.C. - Precision Finishing' },
                 { src: 'img16.jpg', alt: 'Contemporary LED Ceiling Detail D.C. - Recessed Ceiling Frame' }
             ]
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-cube"></i> Geometric Design</span>
                 <span><i class="fas fa-lightbulb"></i> Custom LED System</span>
             </div>
-            <p>Executed in Potomac, Maryland, this coffered ceiling installation features a modern geometric layout with integrated low-voltage LED lighting, high-precision mitered corners, and synchronized lighting control. The result is a ceiling with genuine architectural character — structured, refined, and built to the highest residential standard.</p>
+            <p>Executed in Potomac, Maryland, this coffered ceiling installation features a modern geometric layout with integrated low-voltage LED lighting, high-precision mitered corners, and synchronized lighting control. The result is a ceiling with genuine architectural character â€” structured, refined, and built to the highest residential standard.</p>
             <div class="project-features">
                 <h2>Specialized Architectural Details</h2>
                 <ul>
@@ -334,8 +334,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'img21.jpg', alt: 'Luxury living room interior design Potomac MD', category: 'general', quality: 'low' },
                 { src: 'img23.jpg', alt: 'High-end residential room furniture and interior design Potomac', category: 'general', quality: 'low' },
                 { src: 'img25.jpg', alt: 'Precision framing for custom LED ceiling construction progress', category: 'general', quality: 'low' },
-                { src: 'img26.jpg', alt: 'Contemporary ceiling installation with stairs and railing detail Potomac MD', category: 'staircase', quality: 'low' },
-                { src: 'img24.jpg', alt: 'Geometric LED lighting pattern detail Potomac Maryland', category: 'kitchen', quality: 'low' }
+                { src: 'img24.jpg', alt: 'Geometric LED lighting pattern detail Potomac Maryland', category: 'kitchen', quality: 'low' },
+                { src: 'img26.jpg', alt: 'Contemporary ceiling installation with stairs and railing detail Potomac MD', category: 'staircase', quality: 'low' }
             ]
         },
         'cover4': {
@@ -359,10 +359,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover4.jpg', alt: 'Minimalist Linear LED Ceiling Installation in McLean, Virginia - Hero View' },
-                { src: 'img27.jpg', alt: 'Modern linear LED ceiling layout McLean Virginia' },
                 { src: 'img30.jpg', alt: 'Symmetrical LED ceiling lighting design' },
-                { src: 'img28.jpg', alt: 'Custom architectural lighting integration McLean' },
                 { src: 'img33.jpg', alt: 'Luxury ceiling finishing and LED placement' },
+                { src: 'img27.jpg', alt: 'Modern linear LED ceiling layout McLean Virginia' },
+                { src: 'img28.jpg', alt: 'Custom architectural lighting integration McLean' },
                 { src: 'img29.jpg', alt: 'Precision recessed ceiling detailing Northern VA' },
                 { src: 'img31.jpg', alt: 'High-end residential ceiling contractor McLean' },
                 { src: 'img32.jpg', alt: 'Contemporary ceiling installation Potomac DMV' }
@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-location-dot"></i> Arlington, Virginia</span>
                 <span><i class="fas fa-home"></i> Residential</span>
             </div>
-            <p>A geometric recessed ceiling with perimeter cove lighting and integrated LED channels, installed in a luxury residential interior in Arlington, Virginia. The design introduces architectural interest and layered illumination without overwhelming the space — precision-framed and finished to a minimalist luxury standard with full code compliance.</p>
+            <p>A geometric recessed ceiling with perimeter cove lighting and integrated LED channels, installed in a luxury residential interior in Arlington, Virginia. The design introduces architectural interest and layered illumination without overwhelming the space â€” precision-framed and finished to a minimalist luxury standard with full code compliance.</p>
             <div class="project-features">
                 <h2>Licensed &amp; Code-Compliant Ceiling Contractor in Northern Virginia</h2>
                 <ul>
@@ -387,7 +387,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover5.jpg?v=20260220', alt: 'Modern Architectural Ceiling Installation in Arlington, Virginia - Hero View' },
                 { src: 'img34.jpg', alt: 'Geometric recessed ceiling design Arlington VA' },
                 { src: 'img35.jpg', alt: 'Integrated linear LED lighting installation Arlington' },
                 { src: 'img38.jpg', alt: 'Luxury minimalist ceiling design and precision lighting' },
@@ -439,8 +438,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover7.jpg', alt: 'Modern LED Recessed Ceiling Installation in Washington, D.C. - Hero View' },
-                { src: 'img41.jpg', alt: 'Geometric recessed ceiling with linear LED dining area' },
                 { src: 'img44.jpg', alt: 'Symmetrical recessed ceiling lighting design' },
+                { src: 'img41.jpg', alt: 'Geometric recessed ceiling with linear LED dining area' },
                 { src: 'img42.jpg', alt: 'Integrated perimeter LED lighting Washington DC' },
                 { src: 'img43.jpg', alt: 'Custom architectural ceiling detailing modern home' }
             ]
@@ -502,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-bath"></i> Luxury Bathroom</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
             <p>A luxury bathroom ceiling installation featuring a geometric rectangular LED frame recessed into the ceiling plane, paired with vertical LED strips flanking the vanity mirror. The layout was designed to eliminate harsh shadows, deliver balanced ambient and task lighting, and complement the high-contrast materials throughout the space.</p>
             <div class="project-features">
@@ -513,6 +512,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover12.jpg', alt: 'Modern LED Ceiling & Luxury Bathroom Installation - Hero View' },
+                { src: 'img4001.jpg', alt: 'High-gloss ceiling detail with integrated lighting' },
+                { src: 'img501.jpg', alt: 'Luxury bathroom with overlapping geometric LED lighting' },
                 { src: 'img54.jpg', alt: 'Geometric LED ceiling lighting bathroom' }
             ]
         },
@@ -550,12 +551,12 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Premium High-Gloss Reflective Ceiling for Modern Living Spaces',
             description: `
             <div class="project-details-meta">
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
                 <span><i class="fas fa-eye"></i> Mirror Finish</span>
             </div>
             <p>This stunning living room installation features a high-gloss black stretch ceiling that creates a dramatic mirror effect, doubling the perceived space and reflecting the architectural elements of the room. The seamless finish provides a ultra-modern aesthetic that creates a sense of luxury and depth.</p>
             <div class="project-features">
-                <h2>Elite Residential Gloss Ceiling Installation</h2>
+                <h2>Elite Residential-gloss Ceiling Installation</h2>
                 <ul>
                     <li>High-gloss black reflective stretch membrane</li>
                     <li>Precision perimeter mounting system</li>
@@ -570,7 +571,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'cover88': {
-            title: 'Modern Curved Tray Ceiling with LED Lighting – Washington, DC',
+            title: 'Modern Curved Tray Ceiling with LED Lighting â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -580,7 +581,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>The combination of concealed cove lighting, recessed spotlights, and linear fixtures creates a balanced lighting system that enhances both comfort and visual appeal. Clean drywall transitions and precision framing ensure a seamless, high-end finish.</p>
             <p>Ideal for luxury living rooms, new construction homes, and upscale renovations seeking custom ceiling design with integrated lighting.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -592,18 +593,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover88.jpg', alt: 'Modern Curved Tray Ceiling with LED Lighting – Washington, DC - Hero View' },
-                { src: 'img4000.jpg', alt: 'Custom curved tray ceiling with LED lighting' },
-                { src: 'img4001.jpg', alt: 'Integrated perimeter LED lighting curved ceiling' },
-                { src: 'img4002.jpg', alt: 'Recessed linear lighting detail' },
-                { src: 'cover88.jpg', alt: 'High-end residential ceiling finish Washington DC' }
+                { src: 'cover88.jpg', alt: 'Modern Curved Tray Ceiling with LED Lighting â€“ Washington, DC - Hero View' }
             ]
         },
         'cover16': {
             title: 'High-Gloss Walk-in Closet Ceiling with Integrated Lighting',
             description: `
             <div class="project-details-meta">
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
                 <span><i class="fas fa-layer-group"></i> High-Gloss Stretch</span>
             </div>
             <p>This premium walk-in closet features a high-gloss reflective stretch ceiling with integrated geometric LED lighting. The mirror-like finish maximizes light distribution and adds a sophisticated, clean aesthetic to the wardrobe space, making it feel more spacious and modern.</p>
@@ -651,7 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'commercial3': {
-            title: 'Custom Architectural Ceiling with Wood Panel & Backlit Design – Washington, DC',
+            title: 'Custom Architectural Ceiling with Wood Panel & Backlit Design â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-building"></i> Commercial</span>
@@ -661,7 +658,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Precision framing supports the suspended ceiling structure, while concealed LED lighting provides uniform light distribution without visible fixtures. The combination of wood finishes and illuminated panels enhances modern office, lobby, and collaborative environments.</p>
             <p>Designed for corporate interiors, commercial renovations, and high-end build-outs seeking distinctive ceiling architecture.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -673,12 +670,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'commercial3.jpg', alt: 'Custom Architectural Ceiling with Wood Panel & Backlit Design – Washington, DC - Hero View' },
+                { src: 'commercial3.jpg', alt: 'Custom Architectural Ceiling with Wood Panel & Backlit Design â€“ Washington, DC - Hero View' },
                 { src: 'commercial2.jpg', alt: 'Modern office ceiling with wood finishes and illuminated panels' }
             ]
         },
         'commercial5': {
-            title: 'Linear LED Ceiling Installation – Washington, DC',
+            title: 'Linear LED Ceiling Installation â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-building"></i> Commercial</span>
@@ -688,7 +685,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>The minimalist design eliminates bulky fixtures, delivering a streamlined, contemporary finish ideal for conference rooms, offices, and corporate interiors. Precision framing and drywall finishing ensure seamless panel alignment and uniform light distribution.</p>
             <p>Designed for commercial build-outs and professional environments requiring modern, high-performance lighting solutions.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -700,7 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'commercial5.jpg', alt: 'Linear LED Ceiling Installation – Washington, DC - Hero View' },
+                { src: 'commercial5.jpg', alt: 'Linear LED Ceiling Installation â€“ Washington, DC - Hero View' },
                 { src: 'commercial6.jpg', alt: 'Integrated linear LED lighting with clean architectural lines' },
                 { src: 'commercial7.jpg', alt: 'Recessed light channels running parallel along the ceiling' }
             ]
@@ -754,8 +751,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover19.jpg', alt: 'Custom Curved Ceiling with Integrated LED Cove Lighting in Luxury Indoor Pool Facility - Hero View' },
-                { src: 'img69.jpg', alt: 'Modern architectural lighting indoor pool' },
-                { src: 'img68.jpg', alt: 'Recessed circular ceiling cove with LED lighting' }
+                { src: 'img68.jpg', alt: 'Recessed circular ceiling cove with LED lighting' },
+                { src: 'img69.jpg', alt: 'Modern architectural lighting indoor pool' }
             ]
         },
         'cover20': {
@@ -765,7 +762,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-building"></i> Commercial</span>
                 <span><i class="fas fa-briefcase"></i> Modern Office</span>
             </div>
-            <p>A contemporary office ceiling installation featuring precision-cut recessed rectangular LED channels that frame the workspace with clean, indirect ambient lighting. The system eliminates glare from overhead sources and reduces eye strain in screen-facing environments — professionally installed with concealed drivers, full electrical coordination, and seamless ceiling finishing.</p>
+            <p>A contemporary office ceiling installation featuring precision-cut recessed rectangular LED channels that frame the workspace with clean, indirect ambient lighting. The system eliminates glare from overhead sources and reduces eye strain in screen-facing environments â€” professionally installed with concealed drivers, full electrical coordination, and seamless ceiling finishing.</p>
             <div class="project-features">
                 <h2>Licensed &amp; Professional Architectural Ceiling Lighting Contractor for Commercial Interiors</h2>
                 <ul>
@@ -790,7 +787,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-building"></i> Commercial</span>
                 <span><i class="fas fa-utensils"></i> Modern Restaurant</span>
             </div>
-            <p>Installed in a modern restaurant interior, this ceiling pairs suspended geometric LED light frames with a high-gloss reflective stretch ceiling membrane. The reflective surface amplifies the illuminated geometry overhead, creating a layered visual experience that shifts throughout the day — delivering both ambient lighting and a bold architectural identity to the dining space.</p>
+            <p>Installed in a modern restaurant interior, this ceiling pairs suspended geometric LED light frames with a high-gloss reflective stretch ceiling membrane. The reflective surface amplifies the illuminated geometry overhead, creating a layered visual experience that shifts throughout the day â€” delivering both ambient lighting and a bold architectural identity to the dining space.</p>
             <div class="project-features">
                 <h2>Licensed &amp; Professional Architectural Ceiling Lighting Contractor for Hospitality &amp; Commercial Interiors</h2>
                 <ul>
@@ -816,7 +813,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-building"></i> Commercial</span>
                 <span><i class="fas fa-briefcase"></i> Modern Office</span>
             </div>
-            <p>An open-plan commercial office ceiling featuring interconnected polygonal LED channels recessed into a seamless white ceiling. The geometric network provides balanced ambient illumination across the workspace while adding a modern architectural identity to the interior — installed with concealed power supply coordination and full compliance with commercial electrical codes.</p>
+            <p>An open-plan commercial office ceiling featuring interconnected polygonal LED channels recessed into a seamless white ceiling. The geometric network provides balanced ambient illumination across the workspace while adding a modern architectural identity to the interior â€” installed with concealed power supply coordination and full compliance with commercial electrical codes.</p>
             <div class="project-features">
                 <h2>Licensed &amp; Professional Architectural Ceiling Lighting Contractor for Commercial Interiors</h2>
                 <ul>
@@ -856,9 +853,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover23.jpg', alt: 'Custom Suspended Perimeter LED Ceiling Installation in Modern Fitness Facility - Hero View' },
-                { src: 'img75.jpg', alt: 'Suspended LED perimeter frame gym ceiling' },
-                { src: 'img76.jpg', alt: 'Modern fitness facility architectural lighting' },
                 { src: 'img79.jpg', alt: 'Performance lighting design fitness center' },
+                { src: 'img76.jpg', alt: 'Modern fitness facility architectural lighting' },
+                { src: 'img75.jpg', alt: 'Suspended LED perimeter frame gym ceiling' },
                 { src: 'img77.jpg', alt: 'Linear LED ceiling installation workout area' },
                 { src: 'img78.jpg', alt: 'Commercial gym suspended lighting system' }
             ]
@@ -922,11 +919,11 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Alexandria, Virginia</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
-            <p>This custom recessed ceiling installation in Alexandria, Virginia showcases the precision and clean execution our team delivers throughout Northern Virginia and the Washington, DC metro area. The homeowner requested a sleek architectural ceiling design with integrated LED perimeter lighting and recessed fixtures — not a basic flat drywall finish.</p>
+            <p>This custom recessed ceiling installation in Alexandria, Virginia showcases the precision and clean execution our team delivers throughout Northern Virginia and the Washington, DC metro area. The homeowner requested a sleek architectural ceiling design with integrated LED perimeter lighting and recessed fixtures â€” not a basic flat drywall finish.</p>
             <p>The completed ceiling features seamless linear LED detailing, sharp framing lines, and evenly distributed recessed downlights that elevate the entire kitchen space. From structural framing and lighting layout to final drywall finishing, every phase was executed to meet modern design standards and current electrical code requirements.</p>
-            <p>The result is clean, contemporary, and architecturally refined — designed to enhance both function and visual appeal in a modern residential interior.</p>
+            <p>The result is clean, contemporary, and architecturally refined â€” designed to enhance both function and visual appeal in a modern residential interior.</p>
             <div class="project-features">
                 <h2>Licensed & Permitted Ceiling Contractor in Northern Virginia</h2>
                 <p>We proudly serve Alexandria, Arlington, McLean, Washington, DC, Rockville, and Potomac with high-end ceiling installations and integrated lighting systems.</p>
@@ -951,11 +948,11 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> McLean, Virginia</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
-            <p>This modern circular recessed ceiling installation in McLean, Virginia highlights the craftsmanship and precision our team delivers throughout Northern Virginia and the Washington, DC metro area. The homeowner requested a statement ceiling design — not a flat drywall finish — featuring a custom round recessed detail with integrated LED halo lighting and perimeter cove illumination.</p>
-            <p>The finished result is a clean, architectural ceiling with a floating circular feature and seamless LED integration that adds depth, dimension, and a refined luxury aesthetic to the living space. The concealed lighting enhances the room’s atmosphere while maintaining a smooth, uninterrupted ceiling surface.</p>
-            <p>Every phase — from structural framing and circular layout planning to LED integration and final finishing — was completed to meet modern design standards and current electrical code requirements.</p>
+            <p>This modern circular recessed ceiling installation in McLean, Virginia highlights the craftsmanship and precision our team delivers throughout Northern Virginia and the Washington, DC metro area. The homeowner requested a statement ceiling design â€” not a flat drywall finish â€” featuring a custom round recessed detail with integrated LED halo lighting and perimeter cove illumination.</p>
+            <p>The finished result is a clean, architectural ceiling with a floating circular feature and seamless LED integration that adds depth, dimension, and a refined luxury aesthetic to the living space. The concealed lighting enhances the roomâ€™s atmosphere while maintaining a smooth, uninterrupted ceiling surface.</p>
+            <p>Every phase â€” from structural framing and circular layout planning to LED integration and final finishing â€” was completed to meet modern design standards and current electrical code requirements.</p>
             <div class="project-features">
                 <h2>Licensed & Permitted Ceiling Contractor in Northern Virginia</h2>
                 <p>We serve McLean, Arlington, Alexandria, Washington, DC, Rockville, and Potomac with high-end ceiling installations designed for luxury homes and modern remodels.</p>
@@ -981,10 +978,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-location-dot"></i> Potomac, Maryland</span>
                 <span><i class="fas fa-home"></i> Residential</span>
             </div>
-            <p>This custom curved ceiling installation in Potomac, Maryland showcases a high-end residential architectural design featuring soft wave detailing and integrated perimeter LED lighting. The homeowner wanted a modern statement ceiling that adds movement and depth — not a standard flat drywall finish.</p>
-            <p>The completed design introduces subtle curvature across the ceiling plane, creating a fluid architectural element that enhances the overall living space. Integrated perimeter LED lighting provides soft ambient illumination while emphasizing the ceiling’s sculpted form.</p>
+            <p>This custom curved ceiling installation in Potomac, Maryland showcases a high-end residential architectural design featuring soft wave detailing and integrated perimeter LED lighting. The homeowner wanted a modern statement ceiling that adds movement and depth â€” not a standard flat drywall finish.</p>
+            <p>The completed design introduces subtle curvature across the ceiling plane, creating a fluid architectural element that enhances the overall living space. Integrated perimeter LED lighting provides soft ambient illumination while emphasizing the ceilingâ€™s sculpted form.</p>
             <p>From custom structural framing and curved drywall shaping to lighting coordination and final finishing, every phase of the installation was executed to meet modern design standards and current building code requirements.</p>
-            <p>The result is clean, contemporary, and architecturally refined — ideal for luxury homes and upscale residential remodels.</p>
+            <p>The result is clean, contemporary, and architecturally refined â€” ideal for luxury homes and upscale residential remodels.</p>
             <div class="project-features">
                 <h2>Licensed & Permitted Ceiling Contractor Serving Maryland & DC Metro</h2>
                 <p>We proudly serve Potomac, Rockville, Washington, DC, Arlington, Alexandria, and Northern Virginia with precision architectural ceiling installations.</p>
@@ -999,8 +996,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'img600.jpg', alt: 'Modern Curved Ceiling Installation in Potomac, Maryland - Hero View' },
-                { src: 'cover30.jpg', alt: 'Custom architectural curved ceiling Potomac' },
+                { src: 'cover30.jpg', alt: 'Modern Curved Ceiling Installation in Potomac, Maryland - Hero View' },
+                { src: 'img600.jpg', alt: 'Custom architectural curved ceiling Potomac' },
                 { src: 'img602.jpg', alt: 'Sculpted ceiling form with soft ambient illumination' },
                 { src: 'img601.jpg', alt: 'Integrated perimeter LED lighting curved ceiling' },
                 { src: 'img603.jpg', alt: 'High-end residential ceiling craftsmanship Potomac MD' }
@@ -1017,7 +1014,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>The completed design features a custom grid-style recessed ceiling with built-in LED lighting and precision framing that enhances the entire room. The structured panel layout introduces dimension and symmetry while maintaining a clean, modern aesthetic.</p>
             <p>From structural framing and panel layout to electrical coordination and final finishing, every stage of the installation was completed to meet modern building codes and refined architectural standards.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with high-end ceiling design and installation services.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1044,10 +1041,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>This custom LED ceiling installation in Washington, DC features precision linear lighting, recessed perimeter illumination, and a clean contemporary finish. The objective was to create a bold architectural statement ceiling that transforms the space through light and structure.</p>
             <p>The completed design showcases a fully integrated geometric ceiling system with seamless LED channels and RGB capability. The lighting layout was strategically planned to deliver balanced illumination while emphasizing architectural lines and symmetry.</p>
-            <p>The result is a modern ceiling installation that adds depth, dimension, and strong visual character — ideal for luxury basements, entertainment areas, showrooms, and upscale commercial interiors seeking a high-impact design element.</p>
+            <p>The result is a modern ceiling installation that adds depth, dimension, and strong visual character â€” ideal for luxury basements, entertainment areas, showrooms, and upscale commercial interiors seeking a high-impact design element.</p>
             <p>From structural framing and LED channel integration to electrical coordination and final finishing, the installation was executed to meet current building codes and professional architectural standards.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with advanced architectural ceiling systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1070,10 +1067,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-building"></i> Commercial</span>
             </div>
             <p>This custom curved LED ceiling installation in Washington, DC features seamless recessed strip lighting fully integrated into sculpted drywall architecture.</p>
-            <p>The completed design delivers a fluid, curved ceiling form enhanced by continuous linear LED channels embedded directly into the structure — not surface-mounted fixtures. The lighting follows the architectural curvature precisely, creating a clean, uninterrupted visual flow across the ceiling plane.</p>
+            <p>The completed design delivers a fluid, curved ceiling form enhanced by continuous linear LED channels embedded directly into the structure â€” not surface-mounted fixtures. The lighting follows the architectural curvature precisely, creating a clean, uninterrupted visual flow across the ceiling plane.</p>
             <p>This type of installation is ideal for luxury office lobbies, corporate headquarters, commercial interiors, and modern residential projects seeking a high-end architectural feature.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with advanced architectural ceiling systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1085,7 +1082,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover33.jpg', alt: 'Modern Curved LED Ceiling Installation in Washington, DC - Hero View' },
+                { src: 'comcom.jpg', alt: 'Modern Curved LED Ceiling Installation in Washington, DC - Hero View' },
+                { src: 'cover33.jpg', alt: 'Modern Curved LED Ceiling detail view' },
                 { src: 'img300.jpg', alt: 'Recessed curved strip lighting Washington DC' },
                 { src: 'img301.jpg', alt: 'Sculpted drywall architecture with integrated LED' }
             ]
@@ -1097,12 +1095,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
                 <span><i class="fas fa-building"></i> Commercial</span>
             </div>
-            <p>This custom recessed tray ceiling installation in Washington, DC features integrated perimeter LED lighting and a clean architectural design tailored for professional conference environments. The objective was to elevate a standard boardroom with a structured, high-end ceiling system — not basic drop ceiling panels or exposed fixtures.</p>
+            <p>This custom recessed tray ceiling installation in Washington, DC features integrated perimeter LED lighting and a clean architectural design tailored for professional conference environments. The objective was to elevate a standard boardroom with a structured, high-end ceiling system â€” not basic drop ceiling panels or exposed fixtures.</p>
             <p>The completed installation showcases a precision-framed recessed tray design with continuous LED strip integration and a central architectural light feature. The layered ceiling geometry adds depth while delivering balanced ambient illumination suitable for executive meetings and professional settings.</p>
             <p>The result is a refined architectural ceiling system ideal for corporate offices, boardrooms, government facilities, and upscale commercial interiors requiring a modern, polished appearance.</p>
             <p>From structural framing and lighting layout planning to electrical coordination and final finishing, every phase was completed to meet current building codes and professional construction standards.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with advanced architectural ceiling systems for commercial environments.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1127,7 +1125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>This custom geometric LED ceiling design in Washington, DC features integrated linear light frames and recessed perimeter lighting built into a smooth drywall layout. The concept creates a bold architectural statement with clean lines and seamless illumination.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with advanced architectural ceiling and LED lighting systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1139,7 +1137,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover42.jpg', alt: 'Modern Geometric LED Ceiling Installation – Rendering View', category: 'ceiling', quality: 'high' },
+                { src: 'cover42.jpg', alt: 'Modern Geometric LED Ceiling Installation â€“ Rendering View', category: 'ceiling', quality: 'high' },
                 { src: 'img401.jpg', alt: 'Geometric LED ceiling frames rendering', category: 'ceiling', quality: 'high' },
                 { src: 'img402.jpg', alt: 'Modern linear lighting architectural concept', category: 'ceiling', quality: 'high' },
                 { src: 'img403.jpg', alt: 'Recessed perimeter LED ceiling design', category: 'ceiling', quality: 'high' },
@@ -1147,7 +1145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'cover43': {
-            title: 'Luxury Tray Ceiling with Skylight Integration – Washington, DC',
+            title: 'Luxury Tray Ceiling with Skylight Integration â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -1155,7 +1153,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>This luxury bedroom design features a custom tray ceiling with integrated skylight detailing, introducing natural overhead light and architectural depth into the space. The recessed perimeter framing adds dimension while maintaining a clean, modern profile that complements high-end residential interiors.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas with high-end architectural ceiling systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1166,7 +1164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover43.jpg', alt: 'Luxury Tray Ceiling with Skylight Integration – Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover43.jpg', alt: 'Luxury Tray Ceiling with Skylight Integration â€“ Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'img400.jpg', alt: 'Bedroom with tray ceiling and integrated skylights', category: 'ceiling', quality: 'high' }
             ]
         },
@@ -1182,7 +1180,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Ideal for luxury residential interiors, living rooms, basements, and modern commercial spaces seeking refined architectural lighting concepts, this rendering illustrates a clean and contemporary approach to integrated LED ceiling systems.</p>
             <p>The layout reflects realistic framing strategy, LED channel placement, and code-compliant electrical planning to ensure constructability and professional execution standards.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with advanced architectural ceiling and lighting systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1194,7 +1192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover44.jpg', alt: 'Modern LED Accent Ceiling Installation – Rendering View', category: 'ceiling', quality: 'high' },
+                { src: 'cover44.jpg', alt: 'Modern LED Accent Ceiling Installation â€“ Rendering View', category: 'ceiling', quality: 'high' },
                 { src: 'img405.jpg', alt: 'Integrated LED architectural lighting layout', category: 'ceiling', quality: 'high' },
                 { src: 'img406.jpg', alt: 'Modern luxury accent ceiling design Rendering', category: 'ceiling', quality: 'high' }
             ]
@@ -1211,7 +1209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Designed for luxury kitchens, open-concept living areas, renovations, and upscale residential interiors, this rendering illustrates a high-end architectural lighting approach focused on subtle integration and modern aesthetics.</p>
             <p>The layout reflects realistic framing strategy, LED channel positioning, and code-compliant electrical planning to ensure feasibility for professional construction and installation.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with advanced architectural ceiling and LED lighting systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1223,7 +1221,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover45.jpg', alt: 'Modern Recessed LED Ceiling Installation – Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover45.jpg', alt: 'Modern Recessed LED Ceiling Installation â€“ Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'img407.jpg', alt: 'Modern recessed LED ceiling rendering', category: 'ceiling', quality: 'high' },
                 { src: 'img409.jpg', alt: 'Minimalist ceiling architectural lighting', category: 'ceiling', quality: 'high' },
                 { src: 'img408.jpg', alt: 'Integrated perimeter LED lighting design', category: 'ceiling', quality: 'high' },
@@ -1239,12 +1237,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
                 <span><i class="fas fa-pencil-ruler"></i> Renderings</span>
             </div>
-            <p>This custom recessed ceiling installation in Washington, DC features integrated LED downlighting with a clean, smooth drywall finish. The objective was to create a refined, modern ceiling design — not a basic fixture layout or exposed lighting system.</p>
+            <p>This custom recessed ceiling installation in Washington, DC features integrated LED downlighting with a clean, smooth drywall finish. The objective was to create a refined, modern ceiling design â€” not a basic fixture layout or exposed lighting system.</p>
             <p>The completed installation includes precision-positioned recessed LED downlights embedded into a seamless ceiling surface. The lighting layout was carefully planned to provide balanced, even illumination while preserving a minimal architectural appearance.</p>
-            <p>The result is a streamlined recessed lighting system that enhances the living space without visual clutter — ideal for living rooms, basements, renovations, and upscale residential interiors seeking a clean, contemporary finish.</p>
+            <p>The result is a streamlined recessed lighting system that enhances the living space without visual clutter â€” ideal for living rooms, basements, renovations, and upscale residential interiors seeking a clean, contemporary finish.</p>
             <p>From framing adjustments and layout planning to electrical coordination and final finishing, every phase was completed to meet current building codes and professional construction standards.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with precision ceiling and recessed lighting installations.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1256,7 +1254,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover46.jpg', alt: 'Modern Recessed Lighting Ceiling Installation – Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover46.jpg', alt: 'Modern Recessed Lighting Ceiling Installation â€“ Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'img413.jpg', alt: 'Modern recessed lighting installation detail', category: 'ceiling', quality: 'high' },
                 { src: 'img416.jpg', alt: 'Luxury ceiling recessed lighting project', category: 'ceiling', quality: 'high' },
                 { src: 'img414.jpg', alt: 'Sleek residential ceiling with integrated downlights', category: 'ceiling', quality: 'high' },
@@ -1273,7 +1271,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>This custom linear LED ceiling design in Washington, DC features recessed strip lighting integrated into a sleek, contemporary drywall layout. The objective was to create clean, structured illumination.</p>
             <p>The structured alignment of the LED lines reinforces spatial geometry and adds depth without visual clutter.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p> We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and Potomac with advanced architectural ceiling and LED lighting systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1285,7 +1283,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover47.jpg', alt: 'Modern Linear LED Ceiling Installation – Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover47.jpg', alt: 'Modern Linear LED Ceiling Installation â€“ Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'img425.jpg', alt: 'Modern linear LED lighting concept rendering', category: 'ceiling', quality: 'high' },
                 { src: 'img428.jpg', alt: 'Luxury architectural linear lighting rendering', category: 'ceiling', quality: 'high' },
                 { src: 'img427.jpg', alt: 'Sleek contemporary ceiling lighting layout', category: 'ceiling', quality: 'high' },
@@ -1293,7 +1291,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'hometheatre': {
-            title: 'Precision Architectural Ceiling Installation – Washington, DC',
+            title: 'Precision Architectural Ceiling Installation â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -1301,7 +1299,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>A high-precision residential ceiling installation featuring custom recessed LED channels and a integrated "star ceiling" centerpiece. This project highlights the technical framing and lighting integration required for a true luxury home theater environment.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas.</p>
                 <ul>
                     <li>Custom recessed LED channel integration</li>
@@ -1311,16 +1309,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'hometheatre.jpg', alt: 'Precision Architectural Ceiling Installation – Hero View', category: 'ceiling', quality: 'high' },
-                { src: 'Hometheatre12.png', alt: 'High-precision ceiling layout and framing detail', category: 'ceiling', quality: 'high' },
-                { src: 'Hometheatre11.png', alt: 'Integrated LED lighting and star ceiling transition', category: 'ceiling', quality: 'high' },
-                { src: 'Hometheatre10.png', alt: 'Recessed linear LED lighting detail', category: 'ceiling', quality: 'high' },
-                { src: 'Hometheatre14.png', alt: 'Architectural ceiling perspective with lighting', category: 'ceiling', quality: 'high' },
-                { src: 'Hometheatre13.png', alt: 'Technical ceiling build-out and construction progress', category: 'ceiling', quality: 'low' }
+                { src: 'hometheatre.jpg', alt: 'Precision Architectural Ceiling Installation â€“ Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'Hometheatre14.jpg', alt: 'Architectural ceiling perspective with lighting', category: 'ceiling', quality: 'high' },
+                { src: 'Hometheatre11.jpg', alt: 'Integrated LED lighting and star ceiling transition', category: 'ceiling', quality: 'high' },
+                { src: 'Hometheatre10.jpg', alt: 'Recessed linear LED lighting detail', category: 'ceiling', quality: 'high' },
+                { src: 'Hometheatre12.jpg', alt: 'High-precision ceiling layout and framing detail', category: 'ceiling', quality: 'high' },
+                { src: 'Hometheatre13.jpg', alt: 'Technical ceiling build-out and construction progress', category: 'ceiling', quality: 'low' }
             ]
         },
         'hometheatre8': {
-            title: 'Elite Fiber Optic Home Theater – Washington, DC',
+            title: 'Elite Fiber Optic Home Theater â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -1328,7 +1326,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>A premium cinematic environment featuring a custom fiber optic star ceiling and integrated perimeter LED illumination. The design combines architectural depth with immersive lighting technology, creating a world-class home theater experience.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas.</p>
                 <ul>
                     <li>Custom "Star Ceiling" fiber optic integration</li>
@@ -1338,13 +1336,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'Hometheatre8.jpg', alt: 'Elite Fiber Optic Home Theater – Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'Hometheatre8.jpg', alt: 'Elite Fiber Optic Home Theater â€“ Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'Hometheatre7.jpg', alt: 'Symmetrical star ceiling and architectural lighting', category: 'ceiling', quality: 'high' },
                 { src: 'Hometheatre6.jpg', alt: 'Wide screen perspective with illuminated ceiling', category: 'ceiling', quality: 'high' }
             ]
         },
         'hometheatre2': {
-            title: 'Modern Home Theater Design – Washington, DC',
+            title: 'Modern Home Theater Design â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -1352,7 +1350,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>A sophisticated residential home theater featuring precision architectural ceiling design and integrated luxury lighting. This project showcases a modern approach to cinematic environments with high-end finishing and customized lighting solutions.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas.</p>
                 <ul>
                     <li>Custom framing and drywall finishing</li>
@@ -1362,23 +1360,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'Hometheatre2.jpg', alt: 'Modern Home Theater Design – Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'Hometheatre2.jpg', alt: 'Modern Home Theater Design â€“ Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'Hometheatre4.jpg', alt: 'Cinema ceiling with integrated lighting', category: 'ceiling', quality: 'high' }
             ]
         },
         'cover35': {
-            title: 'Luxury Home Theater Installation – Washington, DC',
+            title: 'Luxury Home Theater Installation â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
                 <span><i class="fas fa-film"></i> Home Theater</span>
             </div>
-            <p>This custom home theater installation in Washington, DC features a fully integrated LED accent lighting system combined with a fiber optic “star ceiling” design, creating a true cinematic environment.</p>
-            <p>Vertical recessed LED wall strips introduce architectural depth and symmetry, while concealed perimeter lighting enhances the room’s modern, high-end aesthetic. The fiber optic ceiling detail replicates a night-sky effect, delivering immersive ambiance without visible fixtures or surface-mounted lighting.</p>
+            <p>This custom home theater installation in Washington, DC features a fully integrated LED accent lighting system combined with a fiber optic â€œstar ceilingâ€ design, creating a true cinematic environment.</p>
+            <p>Vertical recessed LED wall strips introduce architectural depth and symmetry, while concealed perimeter lighting enhances the roomâ€™s modern, high-end aesthetic. The fiber optic ceiling detail replicates a night-sky effect, delivering immersive ambiance without visible fixtures or surface-mounted lighting.</p>
             <p>The installation includes precision structural framing, acoustic wall panel integration, and custom ceiling detailing to optimize both performance and visual impact. Every element was engineered to balance lighting design, sound control, and architectural refinement.</p>
             <p>Designed for private residences, luxury basements, and dedicated media rooms, this theater system combines immersive lighting with professional construction standards and clean finishing.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas with high-end home theater and architectural ceiling installations.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1390,7 +1388,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover35.jpg', alt: 'Luxury Home Theater Installation – Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover35.jpg', alt: 'Luxury Home Theater Installation â€“ Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'img153.jpg', alt: 'Integrated LED and fiber optic star ceiling rendering', category: 'ceiling', quality: 'high' },
                 { src: 'img154.jpg', alt: 'Modern luxury home theater architectural lighting', category: 'ceiling', quality: 'high' },
                 { src: 'img155.jpg', alt: 'Custom cinematic lighting design Washington DC', category: 'ceiling', quality: 'high' },
@@ -1399,18 +1397,18 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'cover36': {
-            title: 'Custom Home Theater Build & Acoustic Wall Installation – Washington, DC',
+            title: 'Custom Home Theater Build & Acoustic Wall Installation â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
                 <span><i class="fas fa-film"></i> Home Theater</span>
             </div>
             <p>This modern home theater installation in Washington, DC features custom acoustic wall panels, recessed ceiling lighting, and a professionally framed media wall designed for optimal sound performance and visual clarity.</p>
-            <p>The layout enhances audio precision while maintaining a clean, contemporary finish. Acoustic treatment panels are strategically positioned to improve sound absorption, reduce echo, and balance room acoustics — creating a true cinematic experience within a private residential setting.</p>
+            <p>The layout enhances audio precision while maintaining a clean, contemporary finish. Acoustic treatment panels are strategically positioned to improve sound absorption, reduce echo, and balance room acoustics â€” creating a true cinematic experience within a private residential setting.</p>
             <p>Recessed ceiling lighting provides controlled, glare-free illumination that does not interfere with screen visibility. The custom media wall build-out allows for seamless integration of speakers, display components, and wiring, ensuring a refined and clutter-free appearance.</p>
             <p>From structural framing and acoustic coordination to lighting integration and final finishing, every detail was completed to professional construction standards.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas with high-end home theater and architectural interior installations.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1422,12 +1420,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover36.jpg', alt: 'Custom Home Theater Build & Acoustic Wall Installation – Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover36.jpg', alt: 'Custom Home Theater Build & Acoustic Wall Installation â€“ Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'cover37.jpg', alt: 'Additional view of custom acoustic home theater build', category: 'ceiling', quality: 'high' }
             ]
         },
         'cover38': {
-            title: 'Luxury Basement Home Theater Build – Washington, DC',
+            title: 'Luxury Basement Home Theater Build â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -1438,7 +1436,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>The stepped floor system is professionally framed and finished to structurally support theater seating while optimizing sightlines toward the screen. Concealed lighting within the risers improves visibility and safety without causing glare or distraction during viewing.</p>
             <p>From structural framing and tiered platform construction to LED integration and final finishing, every component was completed to professional construction standards and current building code requirements.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas with high-end home theater and architectural interior builds.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1450,13 +1448,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover38.jpg', alt: 'Luxury Basement Home Theater Build – Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover38.jpg', alt: 'Luxury Basement Home Theater Build â€“ Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'cover39.jpg', alt: 'Additional angle of tiered theater seating and lighting', category: 'ceiling', quality: 'high' },
                 { src: 'cover41.jpg', alt: 'Close-up of integrated theater lighting and ceiling design', category: 'ceiling', quality: 'high' }
             ]
         },
         'cover55': {
-            title: 'Backlit Stretch Ceiling with Sky Print – Commercial Lobby Project in Washington, DC, Northern Virginia & Maryland',
+            title: 'Backlit Stretch Ceiling with Sky Print â€“ Commercial Lobby Project in Washington, DC, Northern Virginia & Maryland',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-building"></i> Commercial</span>
@@ -1464,10 +1462,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>This modern commercial lobby installation features a custom backlit stretch ceiling with a realistic sky and cloud print, creating the illusion of natural daylight within an interior atrium space. The illuminated ceiling panel acts as a dramatic architectural focal point while delivering balanced ambient lighting throughout the lobby.</p>
             <p>The system is built using a precision aluminum track framework with a tensioned stretch membrane and integrated LED lightbox technology. The evenly diffused backlighting eliminates visible hotspots while enhancing ceiling height perception and spatial openness.</p>
-            <p>Ideal for hotel lobbies, office atriums, corporate headquarters, and luxury commercial buildings throughout Washington, DC, Northern Virginia, and Maryland — including Tysons, Arlington, Bethesda, and Rockville — this ceiling system transforms enclosed vertical spaces into visually expansive environments.</p>
+            <p>Ideal for hotel lobbies, office atriums, corporate headquarters, and luxury commercial buildings throughout Washington, DC, Northern Virginia, and Maryland â€” including Tysons, Arlington, Bethesda, and Rockville â€” this ceiling system transforms enclosed vertical spaces into visually expansive environments.</p>
             <p>The installation process included structural coordination, electrical planning, LED integration, and professional membrane tensioning to ensure durability, code compliance, and a seamless architectural finish.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Commercial Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Commercial Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Tysons, McLean, Bethesda, Rockville, and surrounding metro areas.</p>
                 <p>Every commercial project includes:</p>
                 <ul>
@@ -1489,7 +1487,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'cover57': {
-            title: 'Backlit Stretch Ceiling with Custom Sky Print – Residential Project in Washington, DC, Northern Virginia & Maryland',
+            title: 'Backlit Stretch Ceiling with Custom Sky Print â€“ Residential Project in Washington, DC, Northern Virginia & Maryland',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -1497,10 +1495,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>This residential home theater installation features a custom backlit stretch ceiling with a printed sky design, creating a dramatic illuminated ceiling centerpiece. The integrated LED lightbox system delivers smooth, even ambient lighting while serving as a bold architectural feature within the room.</p>
             <p>The stretch ceiling membrane is precision-installed over a concealed framing system, allowing the backlighting to diffuse evenly across the custom sky print. The result is a seamless illuminated surface that enhances depth, atmosphere, and visual impact without visible fixtures.</p>
-            <p>Ideal for luxury homes, dedicated media rooms, and entertainment spaces throughout Washington, DC, Northern Virginia, and Maryland — including McLean, Alexandria, Bethesda, and Rockville — this ceiling system combines modern lighting technology with high-end interior design.</p>
+            <p>Ideal for luxury homes, dedicated media rooms, and entertainment spaces throughout Washington, DC, Northern Virginia, and Maryland â€” including McLean, Alexandria, Bethesda, and Rockville â€” this ceiling system combines modern lighting technology with high-end interior design.</p>
             <p>From structural preparation and frame alignment to LED integration and final tensioning, the installation was completed to meet professional construction standards and code-compliant electrical requirements.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, Bethesda, and surrounding areas with advanced architectural ceiling systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1512,13 +1510,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover57.jpg', alt: 'Backlit Stretch Ceiling with Custom Sky Print – Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover57.jpg', alt: 'Backlit Stretch Ceiling with Custom Sky Print â€“ Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'img878.jpg', alt: 'Sky print backlit stretch ceiling detail', category: 'ceiling', quality: 'high' },
                 { src: 'img898.jpg', alt: 'Illuminated sky ceiling in residential theater', category: 'ceiling', quality: 'high' }
             ]
         },
         'cover777': {
-            title: 'Backlit Stretch Ceiling with Forest Sky Print – Commercial Project in Washington, DC, Northern Virginia & Maryland',
+            title: 'Backlit Stretch Ceiling with Forest Sky Print â€“ Commercial Project in Washington, DC, Northern Virginia & Maryland',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-building"></i> Commercial</span>
@@ -1526,10 +1524,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <p>This commercial interior installation features a custom backlit stretch ceiling with a forest sky print, creating a bright and immersive architectural ceiling feature. The illuminated panel simulates natural daylight filtering through trees, transforming the space with depth, softness, and a calming visual atmosphere.</p>
             <p>The system is built using a concealed perimeter track with a tensioned stretch membrane and integrated LED lightbox technology. Even light diffusion ensures a seamless glow across the printed surface, eliminating harsh shadows and visible fixtures while enhancing the perception of openness.</p>
-            <p>Ideal for offices, wellness centers, medical clinics, hotels, and modern commercial interiors throughout Washington, DC, Northern Virginia, and Maryland — including Arlington, Tysons, Bethesda, Silver Spring, and Rockville — this ceiling solution combines functional lighting with a high-end design statement.</p>
+            <p>Ideal for offices, wellness centers, medical clinics, hotels, and modern commercial interiors throughout Washington, DC, Northern Virginia, and Maryland â€” including Arlington, Tysons, Bethesda, Silver Spring, and Rockville â€” this ceiling solution combines functional lighting with a high-end design statement.</p>
             <p>Installation included structural coordination, LED integration, membrane tensioning, and code-compliant electrical planning to ensure long-term performance and professional finish quality.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Commercial Ceiling Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Commercial Ceiling Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Tysons, Bethesda, Silver Spring, Rockville, and surrounding metro areas.</p>
                 <p>Every commercial project includes:</p>
                 <ul>
@@ -1541,7 +1539,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover777.jpg', alt: 'Backlit Stretch Ceiling with Forest Sky Print – Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'cover777.jpg', alt: 'Backlit Stretch Ceiling with Forest Sky Print â€“ Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'Printedforest backlit2.jpg', alt: 'Professional forest sky backlit ceiling installation', category: 'ceiling', quality: 'high' },
                 { src: 'Printedforest backlit5.jpg', alt: 'Modern interior with illuminated forest canopy ceiling', category: 'ceiling', quality: 'high' },
                 { src: 'Printedforest backlit6.jpg', alt: 'High-definition printed backlit ceiling detail', category: 'ceiling', quality: 'high' },
@@ -1550,7 +1548,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'rendering1': {
-            title: 'Recessed Cove Ceiling with LED Lighting – Washington, DC',
+            title: 'Recessed Cove Ceiling with LED Lighting â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -1560,7 +1558,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>The layered drywall design adds architectural depth without visible fixtures, creating balanced ambient lighting throughout the room. Precision framing and finishing ensure smooth transitions and uniform light distribution.</p>
             <p>Ideal for living rooms, lounges, and upscale residential interiors seeking subtle, high-end ceiling design with integrated lighting.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1572,12 +1570,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'rendering1.jpg', alt: 'Recessed Cove Ceiling with LED Lighting – Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'rendering1.jpg', alt: 'Recessed Cove Ceiling with LED Lighting â€“ Washington, DC - Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'rendering2.jpg', alt: 'Custom recessed cove ceiling with integrated LED lighting', category: 'ceiling', quality: 'high' }
             ]
         },
         'rendering3': {
-            title: 'Custom Curved Recessed Ceiling with LED Cove Lighting – Modern Living Space',
+            title: 'Custom Curved Recessed Ceiling with LED Cove Lighting â€“ Modern Living Space',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-pencil-ruler"></i> Renderings</span>
@@ -1586,7 +1584,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Warm perimeter lighting enhances the clean drywall detailing and complements the wood wall panels and built-in shelving. The concealed LED system provides balanced ambient light without visible fixtures, maintaining a refined, minimalist aesthetic.</p>
             <p>Ideal for high-end residential interiors seeking modern ceiling design with integrated lighting solutions.</p>
             <div class="project-features">
-                <h2>Licensed & Insured – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Insured â€“ DC, Maryland & Northern Virginia</h2>
                 <p>Services include:</p>
                 <ul>
                     <li>Custom curved and recessed ceiling construction</li>
@@ -1597,7 +1595,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'rendering3.jpg', alt: 'Custom Curved Recessed Ceiling with LED Cove Lighting – Modern Living Space - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'rendering3.jpg', alt: 'Custom Curved Recessed Ceiling with LED Cove Lighting â€“ Modern Living Space - Hero View', category: 'ceiling', quality: 'high' },
                 { src: 'rendering4.jpg', alt: 'Curved recessed ceiling detail with LED lighting', category: 'ceiling', quality: 'high' }
             ]
         },
@@ -1611,7 +1609,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>The floating media wall and base cabinetry are accentuated with under-cabinet LED strips, creating depth and visual balance throughout the space. Warm lighting tones complement the neutral palette and modern furnishings.</p>
             <p>Ideal for contemporary residential interiors seeking refined ceiling design and integrated lighting solutions.</p>
             <div class="project-features">
-                <h2>Licensed & Insured – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Insured â€“ DC, Maryland & Northern Virginia</h2>
                 <p>Services include:</p>
                 <ul>
                     <li>Recessed and tray ceiling construction</li>
@@ -1629,7 +1627,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         'cover97': { images: [{ src: 'img600.jpg' }, { src: 'img601.jpg' }, { src: 'img602.jpg' }, { src: 'img603.jpg' }] },
         'cover84': {
-            title: 'Modern LED Tray Ceiling & Feature Wall Installation – Washington, DC',
+            title: 'Modern LED Tray Ceiling & Feature Wall Installation â€“ Washington, DC',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Washington, DC</span>
@@ -1639,7 +1637,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>The feature media wall includes a built-in fireplace, mounted display integration, and precision drywall framing for a sleek, high-end appearance. Concealed LED lighting continues along the ceiling transitions, providing soft indirect light without visible fixtures.</p>
             <p>Designed for upscale residential interiors, this installation combines structural framing, lighting integration, and refined finishing to elevate the entire living space.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -1651,11 +1649,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'cover84.jpg', alt: 'Modern LED Tray Ceiling & Feature Wall Installation – Washington, DC - Hero View' },
-                { src: 'img2000.jpg', alt: 'Modern LED tray ceiling Washington DC' },
-                { src: 'img2001.jpg', alt: 'Feature media wall with integrated fireplace and LED' },
+                { src: 'cover84.jpg', alt: 'Modern LED Tray Ceiling & Feature Wall Installation â€“ Washington, DC - Hero View' },
                 { src: 'img2002.jpg', alt: 'Precision drywall framing and custom ceiling detail' },
-                { src: 'img2003.jpg', alt: 'Concealed LED lighting transitions' }
+                { src: 'img2003.jpg', alt: 'Concealed LED lighting transitions' },
+                { src: 'img2001.jpg', alt: 'Feature media wall with integrated fireplace and LED' }
             ]
         },
         'gloss7': {
@@ -1663,7 +1660,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Luxury Residence</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
             <p>This premium high-gloss stretch ceiling installation provides a perfect mirror-like finish, significantly enhancing the room's spatial depth and light distribution. The reflective surface creates a sophisticated architectural focal point that complements modern interior design.</p>
             <p>Engineered for a flawless, distortion-free reflection, our gloss membranes offer a level of finish that surpasses traditional ceiling treatments, providing an elegant and expansive atmosphere.</p>
@@ -1678,10 +1675,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'Residential gloss5.jpg', alt: 'Mirror-finish ceiling with integrated lighting detail', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss4.jpg', alt: 'Contemporary gloss ceiling architectural perspective', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss3.jpg', alt: 'Residential gloss ceiling installation view', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss2.jpg', alt: 'High-gloss membrane reflection clarity', category: 'ceiling', quality: 'high' }
+                { src: 'Residential-gloss5.jpg', alt: 'Mirror-finish ceiling with integrated lighting detail', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss4.jpg', alt: 'Contemporary gloss ceiling architectural perspective', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss3.jpg', alt: 'Residential-gloss ceiling installation view', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss2.jpg', alt: 'High-gloss membrane reflection clarity', category: 'ceiling', quality: 'high' }
             ]
         },
         'glossy-hero': {
@@ -1689,7 +1686,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Luxury Residence</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
             <p>This premium high-gloss stretch ceiling installation provides a perfect mirror-like finish, significantly enhancing the room's spatial depth and light distribution. The reflective surface creates a sophisticated architectural focal point that complements modern interior design.</p>
             <div class="project-features">
@@ -1715,7 +1712,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Luxury Residence</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
             <p>A high-performance gloss stretch ceiling that redefines interior volume through exceptional reflectivity and depth. This installation features our signature mirror-finish membrane, engineered for architectural clarity and precision lighting integration.</p>
             <div class="project-features">
@@ -1739,7 +1736,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Luxury Residence</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
             <p>This premium high-gloss stretch ceiling installation provides a perfect mirror-like finish, significantly enhancing the room's spatial depth and light distribution. The reflective surface creates a sophisticated architectural focal point that complements modern interior design.</p>
             <p>Engineered for a flawless, distortion-free reflection, our gloss membranes offer a level of finish that surpasses traditional ceiling treatments, providing an elegant and expansive atmosphere.</p>
@@ -1754,15 +1751,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'Residential gloss17.jpg', alt: 'Elite high-gloss ceiling mirror reflection', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss9.jpg', alt: 'Premium high-gloss architectural ceiling finish', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss19.jpg', alt: 'Contemporary gloss ceiling reflection detail', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss13.jpg', alt: 'Luxury gloss stretch ceiling overview', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss10.jpg', alt: 'Modern high-gloss ceiling gallery view', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss14.jpg', alt: 'Reflective gloss ceiling perspective', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss12.jpg', alt: 'Gloss ceiling installation detail Northern VA', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss20.jpg', alt: 'Minimalist high-gloss ceiling reflection', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss11.jpg', alt: 'Sleek mirrored ceiling membrane finish', category: 'ceiling', quality: 'high' }
+                { src: 'Residential-gloss17.jpg', alt: 'Elite high-gloss ceiling mirror reflection', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss9.jpg', alt: 'Premium high-gloss architectural ceiling finish', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss19.jpg', alt: 'Contemporary gloss ceiling reflection detail', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss13.jpg', alt: 'Luxury gloss stretch ceiling overview', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss10.jpg', alt: 'Modern high-gloss ceiling gallery view', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss14.jpg', alt: 'Reflective gloss ceiling perspective', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss12.jpg', alt: 'Gloss ceiling installation detail Northern VA', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss20.jpg', alt: 'Minimalist high-gloss ceiling reflection', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss11.jpg', alt: 'Sleek mirrored ceiling membrane finish', category: 'ceiling', quality: 'high' }
             ]
         },
         'Residentialgloss': {
@@ -1770,7 +1767,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Custom Installation</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
             <p>A specialized high-gloss ceiling implementation featuring precision-stretched membranes that provide exceptional clarity and architectural depth. This installation showcases the versatility of gloss finishes in modern residential environments.</p>
             <div class="project-features">
@@ -1784,10 +1781,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'Residentialgloss.jpg', alt: 'Premium high-gloss reflective ceiling finish', category: 'ceiling', quality: 'high' },
-                { src: 'Residential gloss21.jpg', alt: 'Modern high-gloss ceiling installation - View 1', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss21.jpg', alt: 'Modern high-gloss ceiling installation - View 1', category: 'ceiling', quality: 'high' },
                 { src: 'Showergloss.jpg', alt: 'High-gloss shower ceiling reflective finish', category: 'ceiling', quality: 'high' },
-                { src: 'residential gloss22.jpg', alt: 'High-gloss ceiling detail - View 2', category: 'ceiling', quality: 'high' },
-                { src: 'residential gloss23.jpg', alt: 'Reflective ceiling perspective - View 3', category: 'ceiling', quality: 'high' }
+                { src: 'Residential-gloss22.jpg', alt: 'High-gloss ceiling detail - View 2', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss23.jpg', alt: 'Reflective ceiling perspective - View 3', category: 'ceiling', quality: 'high' }
             ]
         },
         'ResidentialMat3': {
@@ -1840,7 +1837,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-location-dot"></i> Architectural Residence</span>
-                <span><i class="fas fa-home"></i> Residential Gloss</span>
+                <span><i class="fas fa-home"></i> Residential-gloss</span>
             </div>
             <p>Our premium high-gloss solutions provide a stunning reflective finish that adds depth and modern sophistication to your living space. These installations showcase mirror-like properties, creating an expansive architectural feel while delivering a luxurious aesthetic.</p>
             <div class="project-features">
@@ -1876,15 +1873,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
+                { src: 'Residentialglossy4.jpg', alt: 'Strongest commercial glossy ceiling perspective', category: 'ceiling', quality: 'high' },
                 { src: 'Residentialglossy5.jpg', alt: 'Commercial ceiling lighting integration', category: 'ceiling', quality: 'high' },
                 { src: 'Residentialglossy.jpg', alt: 'Modern medical facility glossy ceiling finish', category: 'ceiling', quality: 'high' },
-                { src: 'Residentialglossy4.jpg', alt: 'Strongest commercial glossy ceiling perspective', category: 'ceiling', quality: 'high' },
                 { src: 'Residentialglossy3.jpg', alt: 'Dental clinic glossy ceiling installation', category: 'ceiling', quality: 'high' },
                 { src: 'Residentialglossy2.jpg', alt: 'Clinical space glossy ceiling detail', category: 'ceiling', quality: 'high' }
             ]
         },
         'Printed_backlit_sky': {
-            title: 'Custom Printed Backlit Sky Ceiling – Luxury Interior Architecture',
+            title: 'Custom Printed Backlit Sky Ceiling â€“ Luxury Interior Architecture',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-image"></i> Printed Backlit</span>
@@ -1903,12 +1900,12 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'Printedbacklit.jpg', alt: 'Custom Printed Backlit Sky Ceiling - Hero View', category: 'ceiling', quality: 'high' },
-                { src: 'printedbacklit22.jpg', alt: 'Sky ceiling installation with surrounding architectural context', category: 'ceiling', quality: 'high' },
-                { src: 'printedbacklit28.jpg', alt: 'Detailed view of backlit sky membrane and circular cove', category: 'ceiling', quality: 'high' }
+                { src: 'printedbacklit28.jpg', alt: 'Detailed view of backlit sky membrane and circular cove', category: 'ceiling', quality: 'high' },
+                { src: 'printedbacklit22.jpg', alt: 'Sky ceiling installation with surrounding architectural context', category: 'ceiling', quality: 'high' }
             ]
         },
         'Printed_backlit_abstract': {
-            title: 'Abstract Geometric Backlit Ceiling – Custom Commercial Installation',
+            title: 'Abstract Geometric Backlit Ceiling â€“ Custom Commercial Installation',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-image"></i> Printed Backlit</span>
@@ -1949,7 +1946,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'Commercialpool.jpg', alt: 'Custom Architectural Ceiling for Luxury Commercial Pool Facility - Hero View' },
+                { src: 'commercial-pool.jpg', alt: 'Custom Architectural Ceiling for Luxury Commercial Pool Facility - Hero View' },
                 { src: 'commercialpool2.jpg', alt: 'Luxury commercial pool interior with architectural ceiling' }
             ]
         },
@@ -1978,20 +1975,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>`,
             images: [
-                { src: 'car commercial.jpg', alt: 'Premium Automotive Showroom Architectural Ceiling - Focused View', category: 'ceiling', quality: 'high' }
+                { src: 'car-commercial.jpg', alt: 'Premium Automotive Showroom Architectural Ceiling - Focused View', category: 'ceiling', quality: 'high' }
             ]
         },
         'commercial20': {
-            title: 'Custom Commercial Ceiling Installation – Washington, DC Metro Area',
+            title: 'Custom Commercial Ceiling Installation â€“ Washington, DC Metro Area',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-building"></i> Commercial</span>
                 <span><i class="fas fa-lightbulb"></i> Architectural Lighting</span>
             </div>
             <p>This commercial ceiling installation showcases precision architectural design with integrated lighting systems engineered for high-end commercial interiors. The installation combines premium ceiling materials with expert structural coordination, delivering a clean, refined finish that elevates the entire space.</p>
-            <p>From structural framing and electrical coordination to final finishing, every phase was completed to professional construction standards and current building code requirements — serving clients throughout Washington, DC, Northern Virginia, and Maryland.</p>
+            <p>From structural framing and electrical coordination to final finishing, every phase was completed to professional construction standards and current building code requirements â€” serving clients throughout Washington, DC, Northern Virginia, and Maryland.</p>
             <div class="project-features">
-                <h2>Licensed & Permitted Commercial Contractor – DC, Maryland & Northern Virginia</h2>
+                <h2>Licensed & Permitted Commercial Contractor â€“ DC, Maryland & Northern Virginia</h2>
                 <p>We serve Washington, DC, Arlington, Alexandria, McLean, Rockville, and surrounding areas with high-end commercial ceiling installations and integrated lighting systems.</p>
                 <p>Every project includes:</p>
                 <ul>
@@ -2003,7 +2000,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>
             <div class="project-seo-tags">
-                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland — Arlington, Alexandria, McLean, Tysons, Rockville, Bethesda, Potomac</p>
+                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland â€” Arlington, Alexandria, McLean, Tysons, Rockville, Bethesda, Potomac</p>
                 <p><strong>Project Type:</strong> Commercial Ceiling Installation, Architectural Lighting, Integrated LED Systems</p>
                 <p><strong>Keywords:</strong> commercial ceiling contractor DC, architectural ceiling installation Virginia, commercial LED lighting Maryland, licensed ceiling contractor DMV</p>
             </div>`,
@@ -2012,17 +2009,17 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'commercial-main': {
-            title: 'Commercial Ceiling Installations – High-End Spaces',
+            title: 'Commercial Ceiling Installations â€“ High-End Spaces',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-building"></i> Commercial</span>
                 <span><i class="fas fa-lightbulb"></i> Architectural Lighting</span>
                 <span><i class="fas fa-expand-arrows-alt"></i> Large-Scale</span>
             </div>
-            <p>A curated portfolio of our most impactful commercial ceiling installations — spanning premium hospitality environments, large open-plan commercial lobbies, and high-specification office and retail spaces. Each project was engineered and installed to exact architectural standards, combining structural precision with integrated LED lighting systems.</p>
-            <p>From expansive ballroom-scale installations to refined corridor and reception ceilings, every space in this gallery represents Designo Ceilings at its most ambitious — delivering striking visual results that set the standard for commercial interior excellence in the Washington, DC metro area.</p>
+            <p>A curated portfolio of our most impactful commercial ceiling installations â€” spanning premium hospitality environments, large open-plan commercial lobbies, and high-specification office and retail spaces. Each project was engineered and installed to exact architectural standards, combining structural precision with integrated LED lighting systems.</p>
+            <p>From expansive ballroom-scale installations to refined corridor and reception ceilings, every space in this gallery represents Designo Ceilings at its most ambitious â€” delivering striking visual results that set the standard for commercial interior excellence in the Washington, DC metro area.</p>
             <div class="project-features">
-                <h2>Licensed Commercial Ceiling Contractor – DC, Virginia & Maryland</h2>
+                <h2>Licensed Commercial Ceiling Contractor â€“ DC, Virginia & Maryland</h2>
                 <ul>
                     <li>Large-scale architectural stretch ceiling systems</li>
                     <li>Fully integrated LED and ambient lighting</li>
@@ -2032,17 +2029,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>
             <div class="project-seo-tags">
-                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland — Arlington, Alexandria, McLean, Tysons, Rockville, Bethesda</p>
+                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland â€” Arlington, Alexandria, McLean, Tysons, Rockville, Bethesda</p>
                 <p><strong>Project Type:</strong> Commercial Ceiling Installation, Hotel Ceiling, Office Ceiling, Retail Lighting</p>
                 <p><strong>Keywords:</strong> commercial stretch ceiling contractor DC, large-scale commercial ceiling Virginia, hotel lobby ceiling installation Maryland, commercial LED ceiling DMV</p>
             </div>`,
             images: [
-                { src: 'commercial (8).jpg', alt: 'Premium large-scale commercial ceiling installation – flagship interior', category: 'ceiling', quality: 'high' },
-                { src: 'commercial15.jpg', alt: 'High-end commercial ceiling with integrated LED – expansive space', category: 'ceiling', quality: 'high' },
-                { src: 'commercial (7).jpg', alt: 'Architectural commercial ceiling installation – open-plan environment', category: 'ceiling', quality: 'high' },
+                { src: 'commercial (8).jpg', alt: 'Premium large-scale commercial ceiling installation â€“ flagship interior', category: 'ceiling', quality: 'high' },
+                { src: 'commercial15.jpg', alt: 'High-end commercial ceiling with integrated LED â€“ expansive space', category: 'ceiling', quality: 'high' },
+                { src: 'commercial (7).jpg', alt: 'Architectural commercial ceiling installation â€“ open-plan environment', category: 'ceiling', quality: 'high' },
                 { src: 'commercial (6).jpg', alt: 'Contemporary commercial ceiling design with precision lighting', category: 'ceiling', quality: 'high' },
-                { src: 'commercial (5).jpg', alt: 'Commercial interior ceiling upgrade – professional finish', category: 'ceiling', quality: 'high' },
-                { src: 'commercial (4).jpg', alt: 'Commercial ceiling installation – refined architectural detail', category: 'ceiling', quality: 'high' }
+                { src: 'commercial (5).jpg', alt: 'Commercial interior ceiling upgrade â€“ professional finish', category: 'ceiling', quality: 'high' },
+                { src: 'commercial (4).jpg', alt: 'Commercial ceiling installation â€“ refined architectural detail', category: 'ceiling', quality: 'high' }
             ]
         },
         'shand-matte': {
@@ -2053,27 +2050,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-paint-roller"></i> Matte Finish</span>
                 <span><i class="fas fa-lightbulb"></i> Integrated Lighting</span>
             </div>
-            <p>This residential matte ceiling installation demonstrates Designo Ceilings' precision craftsmanship in a refined home interior setting. The seamless matte finish eliminates glare and delivers a clean, sophisticated look that enhances natural and artificial light alike — creating an elevated atmosphere throughout the space.</p>
+            <p>This residential matte ceiling installation demonstrates Designo Ceilings' precision craftsmanship in a refined home interior setting. The seamless matte finish eliminates glare and delivers a clean, sophisticated look that enhances natural and artificial light alike â€” creating an elevated atmosphere throughout the space.</p>
             <p>Matte stretch ceilings are ideal for homeowners seeking a modern, gallery-quality interior aesthetic with the added benefit of integrated lighting, sound absorption, and moisture resistance. All materials are custom-fabricated and installed without drywall.</p>
             <div class="project-features">
-                <h2>Premium Residential Matte Ceiling – Washington DC, Virginia & Maryland</h2>
+                <h2>Premium Residential Matte Ceiling â€“ Washington DC, Virginia & Maryland</h2>
                 <ul>
                     <li>Seamless matte stretch ceiling membrane</li>
                     <li>Integrated ceiling fan and lighting coordination</li>
-                    <li>No drywall — custom fabrication and clean installation</li>
+                    <li>No drywall â€” custom fabrication and clean installation</li>
                     <li>Glare-free finish ideal for living spaces and bedrooms</li>
                     <li>Sound-dampening and moisture-resistant properties</li>
                 </ul>
             </div>
             <div class="project-seo-tags">
-                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland — Arlington, Alexandria, McLean, Bethesda, Rockville</p>
+                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland â€” Arlington, Alexandria, McLean, Bethesda, Rockville</p>
                 <p><strong>Project Type:</strong> Residential Matte Ceiling, Custom Stretch Ceiling, Interior Ceiling Upgrade</p>
                 <p><strong>Keywords:</strong> matte stretch ceiling Virginia, residential ceiling installation DC, custom ceiling contractor Maryland, matte ceiling DMV</p>
             </div>`,
             images: [
-                { src: 'fan.jpg', alt: 'Residential matte ceiling with integrated ceiling fan – main view', category: 'ceiling', quality: 'high' },
-                { src: 'fan1.jpg', alt: 'Matte stretch ceiling installation detail – lighting integration', category: 'ceiling', quality: 'high' },
-                { src: 'fan2.jpg', alt: 'Premium residential matte ceiling – clean architectural finish', category: 'ceiling', quality: 'high' }
+                { src: 'fan.jpg', alt: 'Residential matte ceiling with integrated ceiling fan â€“ main view', category: 'ceiling', quality: 'high' },
+                { src: 'fan1.jpg', alt: 'Matte stretch ceiling installation detail â€“ lighting integration', category: 'ceiling', quality: 'high' },
+                { src: 'fan2.jpg', alt: 'Premium residential matte ceiling â€“ clean architectural finish', category: 'ceiling', quality: 'high' }
             ]
         },
         'backlit-geometric': {
@@ -2101,7 +2098,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'backlit-sky-bedroom': {
-            title: 'Premium Backlit Sky Ceiling – Luxury Residential Installation',
+            title: 'Premium Backlit Sky Ceiling â€“ Luxury Residential Installation',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-image"></i> Printed Backlit</span>
@@ -2124,7 +2121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'backlit-office-grid': {
-            title: 'Custom Grid-Patterned Backlit Sky Ceiling – Modern Office Design',
+            title: 'Custom Grid-Patterned Backlit Sky Ceiling â€“ Modern Office Design',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-image"></i> Printed Backlit</span>
@@ -2148,7 +2145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         'backlit-nature-scenic': {
-            title: 'Scenic Nature Printed Backlit Ceiling – Custom Interior Design',
+            title: 'Scenic Nature Printed Backlit Ceiling â€“ Custom Interior Design',
             description: `
             <div class="project-details-meta">
                 <span><i class="fas fa-image"></i> Printed Backlit</span>
@@ -2179,14 +2176,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-paint-roller"></i> Matte Finish</span>
                 <span><i class="fas fa-lightbulb"></i> Integrated Lighting</span>
             </div>
-            <p>This residential matte ceiling installation demonstrates Designo Ceilings' precision craftsmanship in a refined home interior setting. The seamless matte finish eliminates glare and delivers a clean, sophisticated look that enhances natural and artificial light alike — creating an elevated atmosphere throughout the space.</p>
+            <p>This residential matte ceiling installation demonstrates Designo Ceilings' precision craftsmanship in a refined home interior setting. The seamless matte finish eliminates glare and delivers a clean, sophisticated look that enhances natural and artificial light alike â€” creating an elevated atmosphere throughout the space.</p>
             <p>Matte stretch ceilings are ideal for homeowners seeking a modern, gallery-quality interior aesthetic with the added benefit of integrated lighting, sound absorption, and moisture resistance. All materials are custom-fabricated and installed without drywall.</p>
             <div class="project-features">
-                <h2>Premium Residential Matte Ceiling – Washington DC, Virginia & Maryland</h2>
+                <h2>Premium Residential Matte Ceiling â€“ Washington DC, Virginia & Maryland</h2>
                 <ul>
                     <li>Seamless matte stretch ceiling membrane</li>
                     <li>Integrated ceiling fan and lighting coordination</li>
-                    <li>No drywall — custom fabrication and clean installation</li>
+                    <li>No drywall â€” custom fabrication and clean installation</li>
                     <li>Glare-free finish ideal for living spaces and bedrooms</li>
                     <li>Sound-dampening and moisture-resistant properties</li>
                 </ul>
@@ -2197,9 +2194,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Keywords:</strong> matte stretch ceiling Virginia, residential ceiling installation DC, custom ceiling contractor Maryland</p>
             </div>`,
             images: [
-                { src: 'fan.jpg', alt: 'Residential matte ceiling with integrated ceiling fan – main view', category: 'ceiling', quality: 'high' },
-                { src: 'fan1.jpg', alt: 'Matte stretch ceiling installation detail – lighting integration', category: 'ceiling', quality: 'high' },
-                { src: 'fan2.jpg', alt: 'Premium residential matte ceiling – clean architectural finish', category: 'ceiling', quality: 'high' }
+                { src: 'fan.jpg', alt: 'Residential matte ceiling with integrated ceiling fan â€“ main view', category: 'ceiling', quality: 'high' },
+                { src: 'fan1.jpg', alt: 'Matte stretch ceiling installation detail â€“ lighting integration', category: 'ceiling', quality: 'high' },
+                { src: 'fan2.jpg', alt: 'Premium residential matte ceiling â€“ clean architectural finish', category: 'ceiling', quality: 'high' }
             ]
         },
         'fireplace-matte': {
@@ -2211,26 +2208,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span><i class="fas fa-fire"></i> Feature Wall</span>
             </div>
             <p>This residential matte ceiling installation pairs a seamless architectural stretch ceiling with a striking fireplace feature wall, creating a dramatic and cohesive interior statement. The matte finish provides a refined, glare-free surface that complements the warmth of the fireplace and the overall luxury of the space.</p>
-            <p>From structural coordination to final installation, every detail was executed to the highest standard — delivering a premium residential interior that blends modern ceiling design with classic architectural character throughout the Washington, DC metro area.</p>
+            <p>From structural coordination to final installation, every detail was executed to the highest standard â€” delivering a premium residential interior that blends modern ceiling design with classic architectural character throughout the Washington, DC metro area.</p>
             <div class="project-features">
-                <h2>Custom Residential Matte Ceiling – DC, Virginia & Maryland</h2>
+                <h2>Custom Residential Matte Ceiling â€“ DC, Virginia & Maryland</h2>
                 <ul>
                     <li>Seamless matte stretch ceiling membrane</li>
                     <li>Coordinated with fireplace and feature wall design</li>
-                    <li>No drywall — precision fabrication and installation</li>
+                    <li>No drywall â€” precision fabrication and installation</li>
                     <li>Glare-free finish ideal for living and family rooms</li>
                     <li>Sound-dampening and moisture-resistant material</li>
                 </ul>
             </div>
             <div class="project-seo-tags">
-                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland — Arlington, Alexandria, McLean, Bethesda, Rockville</p>
+                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland â€” Arlington, Alexandria, McLean, Bethesda, Rockville</p>
                 <p><strong>Project Type:</strong> Residential Matte Ceiling, Fireplace Room Ceiling, Custom Interior Ceiling</p>
                 <p><strong>Keywords:</strong> matte ceiling with fireplace Virginia, residential stretch ceiling DC, luxury ceiling contractor Maryland, custom matte ceiling DMV</p>
             </div>`,
             images: [
-                { src: 'fireplace1.jpg', alt: 'Residential matte ceiling with fireplace feature wall – main view', category: 'ceiling', quality: 'high' },
+                { src: 'fireplace1.jpg', alt: 'Residential matte ceiling with fireplace feature wall â€“ main view', category: 'ceiling', quality: 'high' },
                 { src: 'fireplace2.jpg', alt: 'Matte stretch ceiling installation alongside luxury fireplace detail', category: 'ceiling', quality: 'high' },
-                { src: 'fireplace3.jpg', alt: 'Premium residential matte ceiling – fireplace room overview', category: 'ceiling', quality: 'high' }
+                { src: 'fireplace3.jpg', alt: 'Premium residential matte ceiling â€“ fireplace room overview', category: 'ceiling', quality: 'high' }
             ]
         }
     };
@@ -2274,7 +2271,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
     }
 
-    // ─── Lightbox ──────────────────────────────────────────
+    // â”€â”€â”€ Lightbox â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const lightbox = document.getElementById('gallery-lightbox');
     const lightboxImg = document.getElementById('gallery-lightbox-img');
 
