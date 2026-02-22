@@ -439,6 +439,10 @@ ul {
     transition: all 0.3s ease;
 }
 
+.back-btn i {
+    margin-right: 8px;
+}
+
 .back-btn:hover {
     background-color: #111;
     color: #fff;
