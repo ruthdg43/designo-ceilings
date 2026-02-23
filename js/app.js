@@ -1656,11 +1656,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover777.jpg', alt: 'Backlit Stretch Ceiling with Forest Sky Print â€“ Hero View', category: 'ceiling', quality: 'high' },
-                { src: 'Printedforest backlit2.jpg', alt: 'Professional forest sky backlit ceiling installation', category: 'ceiling', quality: 'high' },
-                { src: 'Printedforest backlit5.jpg', alt: 'Modern interior with illuminated forest canopy ceiling', category: 'ceiling', quality: 'high' },
-                { src: 'Printedforest backlit6.jpg', alt: 'High-definition printed backlit ceiling detail', category: 'ceiling', quality: 'high' },
-                { src: 'Printedforest backlit3.jpg', alt: 'Forest sky print backlit membrane perspective', category: 'ceiling', quality: 'high' },
-                { src: 'Printedforest backlit4.jpg', alt: 'Installation phase of printed backlit stretch ceiling', category: 'ceiling', quality: 'high' }
+                { src: 'backlit1.jpg', alt: 'Professional forest sky backlit ceiling installation', category: 'ceiling', quality: 'high' },
+                { src: 'backlit2.jpg', alt: 'Modern interior with illuminated forest canopy ceiling', category: 'ceiling', quality: 'high' },
+                { src: 'backlit4.jpg', alt: 'High-definition printed backlit ceiling detail', category: 'ceiling', quality: 'high' },
+                { src: 'backlit5.jpg', alt: 'Forest sky print backlit membrane perspective', category: 'ceiling', quality: 'high' },
+                { src: 'backlit6.jpg', alt: 'Installation phase of printed backlit stretch ceiling', category: 'ceiling', quality: 'high' }
             ]
         },
         'rendering1': {
