@@ -387,11 +387,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'cover1.jpg', alt: 'Luxury Custom Ceiling Installation in Arlington, Virginia - Main Interior' },
-                { src: 'img9.jpg', alt: 'Architectural ceiling lines and minimalist detailing Arlington VA' },
                 { src: 'img7.jpg', alt: 'Double-height custom ceiling design Arlington VA' },
                 { src: 'img8.jpg', alt: 'Modern recessed lighting in high-end residential ceiling Arlington' },
-                { src: 'img12.jpg', alt: 'Modern luxury custom ceiling finishing detail Arlington' },
-                { src: 'img10.jpg', alt: 'Licensed residential ceiling contractor Arlington Northern Virginia' }
+                { src: 'img9.jpg', alt: 'Architectural ceiling lines and minimalist detailing Arlington VA' },
+                { src: 'img10.jpg', alt: 'Licensed residential ceiling contractor Arlington Northern Virginia' },
+                { src: 'img12.jpg', alt: 'Modern luxury custom ceiling finishing detail Arlington' }
             ]
         },
         'cover2': {
