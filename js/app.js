@@ -116,6 +116,122 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const projectsData = {
+        'gloss-glow': {
+            title: 'Elite High-Gloss Luminous Ceiling',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Luxury Interior</span>
+                <span><i class="fas fa-eye"></i> High-Gloss Finish</span>
+            </div>
+            <p>A masterfully executed high-gloss stretch ceiling installation that combines exceptional reflectivity with modern architectural aesthetics. The mirror-like surface creates a stunning 'glow' effect by amplifying natural and artificial light, significantly expanding the visual volume of the interior space.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>Superior high-reflectivity gloss membrane</li>
+                    <li>Luminous architectural light diffusion</li>
+                    <li>Seamless monolithic ceiling surface</li>
+                    <li>Moisture resistant and anti-static</li>
+                    <li>Precision-tensioned edge detailing</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'glow.jpg', alt: 'Elite High-Gloss Luminous Ceiling - Hero View', category: 'ceiling', quality: 'high' }
+            ]
+        },
+        'gloss-glo': {
+            title: 'Modern High-Gloss Interior Ceiling',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Luxury Residence</span>
+                <span><i class="fas fa-eye"></i> High-Gloss Finish</span>
+            </div>
+            <p>A sophisticated high-gloss stretch ceiling installation designed to enhance spatial depth and architectural clarity. The reflective membrane provides a mirror-like finish that amplifies ambient light and creates a clean, monolithic ceiling plane.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>High-reflectivity mirror finish membrane</li>
+                    <li>Integrated architectural lighting</li>
+                    <li>Seamless monolithic ceiling plane</li>
+                    <li>Advanced light-reflection properties</li>
+                    <li>Precision-engineered installation</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'glo.jpg', alt: 'Modern High-Gloss Interior Ceiling - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'glo1.jpg', alt: 'Glossy ceiling detail 1', category: 'ceiling', quality: 'high' },
+                { src: 'glo2.jpg', alt: 'Glossy ceiling detail 2', category: 'ceiling', quality: 'high' }
+            ]
+        },
+        'gloss-add1': {
+            title: 'Elite Residential Gloss Ceiling Installation',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Luxury Residence</span>
+                <span><i class="fas fa-eye"></i> High-Gloss Finish</span>
+            </div>
+            <p>A stunning high-gloss stretch ceiling installation that redefines interior volume through exceptional reflectivity. The mirror-like finish maximizes natural light and creates a sophisticated architectural focal point, ideal for modern luxury living environments.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>High-reflectivity mirror finish membrane</li>
+                    <li>Integrated architectural lighting</li>
+                    <li>Seamless monolithic ceiling surface</li>
+                    <li>Advanced light-reflective properties</li>
+                    <li>Precision-tensioned edge detailing</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'add1.jpg', alt: 'Elite Residential Gloss Ceiling - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'add2.jpg', alt: 'Gloss ceiling reflective detail', category: 'ceiling', quality: 'high' }
+            ]
+        },
+        'matte-add4': {
+            title: 'Modern Residential Matte Ceiling Installation',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Luxury Residence</span>
+                <span><i class="fas fa-home"></i> Residential Matte</span>
+            </div>
+            <p>A pristine execution of our museum-grade matte stretch ceiling system. This installation provides a seamless, monolithic finish that perfectly diffuses light and elevates the architectural character of the home without the maintenance or imperfections of traditional materials.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>Seamless monolithic ceiling plane</li>
+                    <li>Premium museum-grade matte finish</li>
+                    <li>Architectural lighting integration</li>
+                    <li>Precision-engineered perimeter detailing</li>
+                    <li>Maintenance-free luxury surface</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'add4.jpg', alt: 'Modern Residential Matte Ceiling - Hero View', category: 'ceiling', quality: 'high' }
+            ]
+        },
+        'matte-hero': {
+            title: 'Premium Residential Matte Ceiling Collection',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Luxury Residential</span>
+                <span><i class="fas fa-home"></i> Residential Matte</span>
+            </div>
+            <p>A sophisticated collection of premium matte stretch ceiling installations, showcasing the perfect balance of minimalist aesthetics and architectural precision. These installations feature museum-grade matte membranes that provide a flawless, non-reflective finish, ideal for modern luxury living spaces.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>Premium museum-grade matte membrane</li>
+                    <li>Seamless monolithic ceiling plane</li>
+                    <li>Integrated architectural lighting details</li>
+                    <li>Non-reflective architectural finish</li>
+                    <li>Precision-engineered installation</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'gllo5.jpg', alt: 'Premium Residential Matte Ceiling - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'gllo4.jpg', alt: 'Matte ceiling detail view 1', category: 'ceiling', quality: 'high' },
+                { src: 'gllo3.jpg', alt: 'Matte ceiling detail view 2', category: 'ceiling', quality: 'high' },
+                { src: 'gllo.jpg', alt: 'Matte ceiling detail view 3', category: 'ceiling', quality: 'high' }
+            ]
+        },
         'rend-hero': {
             title: 'Architectural Rendering Collection',
             description: `
@@ -1852,7 +1968,8 @@ document.addEventListener('DOMContentLoaded', () => {
             images: [
                 { src: 'Residential10.jpg', alt: 'Strongest matte ceiling perspective', category: 'ceiling', quality: 'high' },
                 { src: 'Residential11.jpg', alt: 'Contemporary matte installation view', category: 'ceiling', quality: 'high' },
-                { src: 'Residentialgloss5.jpg', alt: 'Special matte-integrated finish detail', category: 'ceiling', quality: 'high' }
+                { src: 'Residentialgloss5.jpg', alt: 'Special matte-integrated finish detail', category: 'ceiling', quality: 'high' },
+                { src: 'gllo.jpg', alt: 'Matte ceiling architectural detail', category: 'ceiling', quality: 'high' }
             ]
         },
         'Residentialglossy': {
@@ -1931,7 +2048,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Custom Architectural Ceiling for Luxury Commercial Pool Facility',
             description: `
             <div class="project-details-meta">
-                <span><i class="fas fa-building"></i> Commercial</span>
+                <span><i class="fas fa-image"></i> Printed Backlit</span>
                 <span><i class="fas fa-water"></i> Aquatic Facility</span>
             </div>
             <p>This premium commercial pool facility features a custom high-end ceiling installation designed for both visual impact and technical performance. The architectural design integrates seamlessly with the aquatic environment, providing elegant lighting and a clean, sophisticated finish that elevates the entire space.</p>
