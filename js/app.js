@@ -1791,10 +1791,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'Residential-gloss5.jpg', alt: 'Mirror-finish ceiling with integrated lighting detail', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss2.jpg', alt: 'High-gloss membrane reflection clarity', category: 'ceiling', quality: 'high' },
                 { src: 'Residential-gloss4.jpg', alt: 'Contemporary gloss ceiling architectural perspective', category: 'ceiling', quality: 'high' },
-                { src: 'Residential-gloss3.jpg', alt: 'Residential-gloss ceiling installation view', category: 'ceiling', quality: 'high' },
-                { src: 'Residential-gloss2.jpg', alt: 'High-gloss membrane reflection clarity', category: 'ceiling', quality: 'high' }
+                { src: 'Residential-gloss5.jpg', alt: 'Mirror-finish ceiling with integrated lighting detail', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss3.jpg', alt: 'Residential-gloss ceiling installation view', category: 'ceiling', quality: 'high' }
             ]
         },
         'glossy-hero': {
@@ -1816,11 +1816,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'glossyy.jpg', alt: 'Premium high-gloss ceiling mirror reflection', category: 'ceiling', quality: 'high' },
-                { src: 'glossyy1.jpg', alt: 'High-gloss ceiling detail view', category: 'ceiling', quality: 'high' },
-                { src: 'glossyy2.jpg', alt: 'Reflective ceiling architectural perspective', category: 'ceiling', quality: 'high' },
-                { src: 'glossyy3.jpg', alt: 'Modern high-gloss stretch ceiling overview', category: 'ceiling', quality: 'high' },
-                { src: 'glossyy4.jpg', alt: 'Luxury gloss ceiling installation finish', category: 'ceiling', quality: 'high' }
+                { src: 'glossyy.jpg', alt: 'Premium high-gloss ceiling mirror reflection', category: 'ceiling', quality: 'high' }
             ]
         },
         'gloss-hero': {
@@ -1867,6 +1863,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
+                { src: 'Residential-gloss7.jpg', alt: 'Elite high-gloss ceiling - Premium reflection', category: 'ceiling', quality: 'high' },
+                { src: 'Residential-gloss6.jpg', alt: 'Elite high-gloss ceiling mirror reflection', category: 'ceiling', quality: 'high' },
                 { src: 'Residential-gloss17.jpg', alt: 'Elite high-gloss ceiling mirror reflection', category: 'ceiling', quality: 'high' },
                 { src: 'Residential-gloss9.jpg', alt: 'Premium high-gloss architectural ceiling finish', category: 'ceiling', quality: 'high' },
                 { src: 'Residential-gloss19.jpg', alt: 'Contemporary gloss ceiling reflection detail', category: 'ceiling', quality: 'high' },
@@ -1922,7 +1920,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`,
             images: [
                 { src: 'Residential Mat2.jpg', alt: 'Premium residential matte ceiling finish', category: 'ceiling', quality: 'high' },
-                { src: 'Residential Mat1.jpg', alt: 'Modern matte stretch ceiling installation', category: 'ceiling', quality: 'high' }
+                { src: 'Residential Mat1.jpg', alt: 'Modern matte stretch ceiling installation', category: 'ceiling', quality: 'high' },
+                { src: 'img35.jpg', alt: 'Matte ceiling installation detail', category: 'ceiling', quality: 'high' }
             ]
         },
         'Residential1': {
@@ -2157,6 +2156,53 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'commercial (6).jpg', alt: 'Contemporary commercial ceiling design with precision lighting', category: 'ceiling', quality: 'high' },
                 { src: 'commercial (5).jpg', alt: 'Commercial interior ceiling upgrade â€“ professional finish', category: 'ceiling', quality: 'high' },
                 { src: 'commercial (4).jpg', alt: 'Commercial ceiling installation â€“ refined architectural detail', category: 'ceiling', quality: 'high' }
+            ]
+        },
+        'glossy-commercial-gallery': {
+            title: 'Premium Commercial Glossy Interior Installation',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Luxury Commercial Space</span>
+                <span><i class="fas fa-building"></i> Commercial</span>
+            </div>
+            <p>Our premium high-gloss solutions provide a stunning reflective finish that adds depth and modern sophistication to your commercial living space. These installations showcase mirror-like properties, creating an expansive architectural feel while delivering a luxurious aesthetic.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>High-gloss mirror-finish membrane</li>
+                    <li>Balanced ambient light distribution</li>
+                    <li>Precision-tensioned seamless surface</li>
+                    <li>Professional-grade commercial installation</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'glossyy1.jpg', alt: 'High-gloss ceiling detail view', category: 'ceiling', quality: 'high' },
+                { src: 'glossyy2.jpg', alt: 'Reflective ceiling architectural perspective', category: 'ceiling', quality: 'high' },
+                { src: 'glossyy3.jpg', alt: 'Premium high-gloss ceiling - Main View', category: 'ceiling', quality: 'high' },
+                { src: 'glossyy4.jpg', alt: 'Luxury gloss ceiling installation finish', category: 'ceiling', quality: 'high' }
+            ]
+        },
+        'commercial-office': {
+            title: 'Modern Commercial Office Ceiling Installation',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-location-dot"></i> Corporate Office</span>
+                <span><i class="fas fa-building"></i> Commercial</span>
+            </div>
+            <p>A premium commercial office ceiling installation featuring advanced stretch membrane technology and integrated architectural lighting. This project demonstrates our commitment to creating professional environments that balance aesthetic excellence with functional performance.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>High-performance acoustic stretch ceiling</li>
+                    <li>Integrated professional office lighting</li>
+                    <li>Seamless monolithic architectural finish</li>
+                    <li>Commercial-grade durability and safety standards</li>
+                    <li>Expert installation in professional corporate space</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'commercial4.jpg', alt: 'Modern commercial office ceiling - Hero View', category: 'ceiling', quality: 'high' },
+                { src: 'commercialoffice1.jpg', alt: 'Commercial office interior with architectural ceiling', category: 'ceiling', quality: 'high' }
             ]
         },
         'shand-matte': {
