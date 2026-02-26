@@ -8,9 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.content-section');
 
-    function showSection(sectionId) {
+    window.showSection = function (sectionId) {
+        console.log('Switching to section:', sectionId);
         sections.forEach(section => section.classList.remove('active'));
         const targetSection = document.getElementById(sectionId);
+        console.log('Target section found:', !!targetSection);
         if (targetSection) targetSection.classList.add('active');
 
         navLinks.forEach(link => {
@@ -44,16 +46,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
+            console.log('Link clicked:', link.href, 'Data-section:', link.getAttribute('data-section'));
             e.preventDefault();
-            const sectionId = link.getAttribute('data-section');
-            if (sectionId) {
-                showSection(sectionId);
-                history.pushState(null, null, `#${sectionId}`);
+            try {
+                const sectionId = link.getAttribute('data-section');
+                if (sectionId) {
+                    showSection(sectionId);
+                    history.pushState(null, null, `#${sectionId}`);
 
-                // Auto-close menu on mobile
-                if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
-                    toggleMobileMenu();
+                    // Auto-close menu on mobile
+                    if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
+                        toggleMobileMenu();
+                    }
+                } else {
+                    console.warn('No data-section found for link:', link);
                 }
+            } catch (err) {
+                console.error('Error in click listener:', err);
             }
         });
     });
@@ -232,6 +241,107 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'gllo.jpg', alt: 'Matte ceiling detail view 3', category: 'ceiling', quality: 'high' }
             ]
         },
+        'rere2': {
+            title: 'Master Architectural Concept RERE2',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-pencil-ruler"></i> Renderings</span>
+                <span><i class="fas fa-lightbulb"></i> Elite Concept</span>
+            </div>
+            <p>This exclusive architectural rendering concept showcases the potential of modern stretch ceiling integration in luxury residential spaces. Featuring a curated selection of advanced visualizations, it demonstrates the interplay of geometric precision and adaptive lighting scenarios.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>High-fidelity conceptual previsualization</li>
+                    <li>Integrated architectural lighting scenarios</li>
+                    <li>Precision geometric design intent</li>
+                    <li>Advanced material and finish simulation</li>
+                    <li>Seamless spatial integration concepts</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'RERE2.JPG', alt: 'Master Architectural Concept RERE2 - Hero View', category: 'rendering', quality: 'high' },
+                { src: 'RERE1.JPG', alt: 'Architectural Concept RERE1', category: 'rendering', quality: 'high' },
+                { src: 'Rendering16.jpg', alt: 'Integrated Lighting Concept 16', category: 'rendering', quality: 'high' },
+                { src: 'Rendering19.jpg', alt: 'Integrated Lighting Concept 19', category: 'rendering', quality: 'high' },
+                { src: 'Rendering20.jpg', alt: 'Integrated Lighting Concept 20', category: 'rendering', quality: 'high' },
+                { src: 'Rendering22.jpg', alt: 'Integrated Lighting Concept 22', category: 'rendering', quality: 'high' }
+            ]
+        },
+        'rendering35': {
+            title: 'Elite Architectural Rendering - Master Suite',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-pencil-ruler"></i> Renderings</span>
+                <span><i class="fas fa-lightbulb"></i> Conceptual Design</span>
+            </div>
+            <p>This comprehensive collection of high-fidelity architectural renderings showcases advanced stretch ceiling systems with integrated linear lighting concepts. Each visualization demonstrates the perfect synergy between modern ceiling architecture and precision-engineered illumination, providing a clear vision for high-end interior transformations.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>Photorealistic architectural visualization</li>
+                    <li>Integrated linear LED lighting concepts</li>
+                    <li>Seamless monolithic ceiling planes</li>
+                    <li>Advanced material and finish simulation</li>
+                    <li>Precision-engineered design intent</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'Rendering35.jpg', alt: 'Elite Architectural Rendering - Hero View', category: 'rendering', quality: 'high' },
+                { src: 'Rendering23.jpg', alt: 'Architectural Rendering 23', category: 'rendering', quality: 'high' },
+                { src: 'Rendering24.jpg', alt: 'Architectural Rendering 24', category: 'rendering', quality: 'high' },
+                { src: 'Rendering25.jpg', alt: 'Architectural Rendering 25', category: 'rendering', quality: 'high' },
+                { src: 'Rendering26.jpg', alt: 'Architectural Rendering 26', category: 'rendering', quality: 'high' },
+                { src: 'Rendering27.jpg', alt: 'Architectural Rendering 27', category: 'rendering', quality: 'high' },
+                { src: 'Rendering28.jpg', alt: 'Architectural Rendering 28', category: 'rendering', quality: 'high' },
+                { src: 'Rendering29.jpg', alt: 'Architectural Rendering 29', category: 'rendering', quality: 'high' },
+                { src: 'Rendering30.jpg', alt: 'Architectural Rendering 30', category: 'rendering', quality: 'high' },
+                { src: 'Rendering32.jpg', alt: 'Architectural Rendering 32', category: 'rendering', quality: 'high' },
+                { src: 'Rendering34.jpg', alt: 'Architectural Rendering 34', category: 'rendering', quality: 'high' },
+                { src: 'Rendering36.jpg', alt: 'Architectural Rendering 36', category: 'rendering', quality: 'high' },
+                { src: 'Rendering37.jpg', alt: 'Architectural Rendering 37', category: 'rendering', quality: 'high' },
+                { src: 'Rendering38.jpg', alt: 'Architectural Rendering 38', category: 'rendering', quality: 'high' },
+                { src: 'Rendering39.jpg', alt: 'Architectural Rendering 39', category: 'rendering', quality: 'high' },
+                { src: 'Rendering40.jpg', alt: 'Architectural Rendering 40', category: 'rendering', quality: 'high' }
+            ]
+        },
+        'rendering23': { title: 'Architectural Rendering 23', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering23.jpg', alt: 'Hero View' }] },
+        'rendering24': { title: 'Architectural Rendering 24', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering24.jpg', alt: 'Hero View' }] },
+        'rendering25': { title: 'Architectural Rendering 25', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering25.jpg', alt: 'Hero View' }] },
+        'rendering26': { title: 'Architectural Rendering 26', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering26.jpg', alt: 'Hero View' }] },
+        'rendering27': { title: 'Architectural Rendering 27', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering27.jpg', alt: 'Hero View' }] },
+        'rendering28': { title: 'Architectural Rendering 28', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering28.jpg', alt: 'Hero View' }] },
+        'rendering29': { title: 'Architectural Rendering 29', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering29.jpg', alt: 'Hero View' }] },
+        'rendering30': { title: 'Architectural Rendering 30', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering30.jpg', alt: 'Hero View' }] },
+        'rendering32': { title: 'Architectural Rendering 32', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering32.jpg', alt: 'Hero View' }] },
+        'rendering34': { title: 'Architectural Rendering 34', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering34.jpg', alt: 'Hero View' }] },
+        'rendering36': { title: 'Architectural Rendering 36', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering36.jpg', alt: 'Hero View' }] },
+        'rendering37': { title: 'Architectural Rendering 37', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering37.jpg', alt: 'Hero View' }] },
+        'rendering38': { title: 'Architectural Rendering 38', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering38.jpg', alt: 'Hero View' }] },
+        'rendering39': { title: 'Architectural Rendering 39', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering39.jpg', alt: 'Hero View' }] },
+        'rendering40': { title: 'Architectural Rendering 40', description: '<p>High-fidelity architectural visualization concept.</p>', images: [{ src: 'Rendering40.jpg', alt: 'Hero View' }] },
+        'rendering10': {
+            title: 'Elite Architectural Rendering Concept',
+            description: `
+            <div class="project-details-meta">
+                <span><i class="fas fa-pencil-ruler"></i> Renderings</span>
+                <span><i class="fas fa-lightbulb"></i> Conceptual Design</span>
+            </div>
+            <p>A high-fidelity architectural rendering showcasing an advanced stretch ceiling system with integrated linear lighting. This visualization demonstrates the perfect synergy between modern ceiling architecture and precision-engineered illumination, providing a clear vision for high-end interior transformations.</p>
+            <div class="project-features">
+                <h2>Project Highlights</h2>
+                <ul>
+                    <li>Photorealistic architectural visualization</li>
+                    <li>Integrated linear LED lighting concept</li>
+                    <li>Seamless monolithic ceiling plane</li>
+                    <li>Advanced material and finish simulation</li>
+                    <li>Precision-engineered design intent</li>
+                </ul>
+            </div>`,
+            images: [
+                { src: 'Rendering10.jpg', alt: 'Elite Architectural Rendering Concept - Hero View', category: 'rendering', quality: 'high' }
+            ]
+        },
         'rend-hero': {
             title: 'Architectural Rendering Collection',
             description: `
@@ -251,6 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
+                { src: 'Rendering10.jpg', alt: 'Architectural Rendering - Elite Concept', category: 'rendering', quality: 'high' },
                 { src: 'rend.jpg', alt: 'Architectural Rendering Collection - Hero View', category: 'rendering', quality: 'high' },
                 { src: 'rend1.jpg', alt: 'Architectural rendering detail 1', category: 'rendering', quality: 'high' },
                 { src: 'rend2.jpg', alt: 'Architectural rendering detail 2', category: 'rendering', quality: 'high' },
