@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>
             </div>`,
             images: [
-                { src: 'Rendering35.jpg', alt: 'Elite Architectural Rendering - Hero View', category: 'rendering', quality: 'high' },
+                { src: 'Rendering32.jpg', alt: 'Elite Architectural Rendering - Hero View', category: 'rendering', quality: 'high' },
                 { src: 'Rendering23.jpg', alt: 'Architectural Rendering 23', category: 'rendering', quality: 'high' },
                 { src: 'Rendering24.jpg', alt: 'Architectural Rendering 24', category: 'rendering', quality: 'high' },
                 { src: 'Rendering25.jpg', alt: 'Architectural Rendering 25', category: 'rendering', quality: 'high' },
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'Rendering28.jpg', alt: 'Architectural Rendering 28', category: 'rendering', quality: 'high' },
                 { src: 'Rendering29.jpg', alt: 'Architectural Rendering 29', category: 'rendering', quality: 'high' },
                 { src: 'Rendering30.jpg', alt: 'Architectural Rendering 30', category: 'rendering', quality: 'high' },
-                { src: 'Rendering32.jpg', alt: 'Architectural Rendering 32', category: 'rendering', quality: 'high' },
+                { src: 'Rendering35.jpg', alt: 'Architectural Rendering 35', category: 'rendering', quality: 'high' },
                 { src: 'Rendering34.jpg', alt: 'Architectural Rendering 34', category: 'rendering', quality: 'high' },
                 { src: 'Rendering36.jpg', alt: 'Architectural Rendering 36', category: 'rendering', quality: 'high' },
                 { src: 'Rendering37.jpg', alt: 'Architectural Rendering 37', category: 'rendering', quality: 'high' },
