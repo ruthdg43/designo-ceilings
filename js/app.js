@@ -2442,37 +2442,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { src: 'tree.jpg', alt: 'Artistic branch and sky printed backlit ceiling', category: 'ceiling', quality: 'low' }
             ]
         },
-        'shand-matte': {
-            title: 'Residential Matte Ceiling Installation',
-            description: `
-            <div class="project-details-meta">
-                <span><i class="fas fa-home"></i> Residential</span>
-                <span><i class="fas fa-paint-roller"></i> Matte Finish</span>
-                <span><i class="fas fa-lightbulb"></i> Integrated Lighting</span>
-            </div>
-            <p>This residential matte ceiling installation demonstrates Designo Ceilings' precision craftsmanship in a refined home interior setting. The seamless matte finish eliminates glare and delivers a clean, sophisticated look that enhances natural and artificial light alike â€” creating an elevated atmosphere throughout the space.</p>
-            <p>Matte stretch ceilings are ideal for homeowners seeking a modern, gallery-quality interior aesthetic with the added benefit of integrated lighting, sound absorption, and moisture resistance. All materials are custom-fabricated and installed without drywall.</p>
-            <div class="project-features">
-                <h2>Premium Residential Matte Ceiling â€“ Washington DC, Virginia & Maryland</h2>
-                <ul>
-                    <li>Seamless matte stretch ceiling membrane</li>
-                    <li>Integrated ceiling fan and lighting coordination</li>
-                    <li>No drywall â€” custom fabrication and clean installation</li>
-                    <li>Glare-free finish ideal for living spaces and bedrooms</li>
-                    <li>Sound-dampening and moisture-resistant properties</li>
-                </ul>
-            </div>
-            <div class="project-seo-tags">
-                <p><strong>Service Area:</strong> Washington DC, Northern Virginia, Maryland</p>
-                <p><strong>Project Type:</strong> Residential Matte Ceiling, Custom Stretch Ceiling, Interior Ceiling Upgrade</p>
-                <p><strong>Keywords:</strong> matte stretch ceiling Virginia, residential ceiling installation DC, custom ceiling contractor Maryland</p>
-            </div>`,
-            images: [
-                { src: 'fan.jpg', alt: 'Residential matte ceiling with integrated ceiling fan â€“ main view', category: 'ceiling', quality: 'high' },
-                { src: 'fan1.jpg', alt: 'Matte stretch ceiling installation detail â€“ lighting integration', category: 'ceiling', quality: 'high' },
-                { src: 'fan2.jpg', alt: 'Premium residential matte ceiling â€“ clean architectural finish', category: 'ceiling', quality: 'high' }
-            ]
-        },
+
         'fireplace-matte': {
             title: 'Residential Matte Ceiling with Fireplace Feature',
             description: `

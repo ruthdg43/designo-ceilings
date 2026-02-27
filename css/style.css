@@ -426,30 +426,12 @@ ul {
     transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.6s ease;
 }
 
+/* Removed manual rotations that caused layout and orientation issues on modern browsers/mobile */
+/*
 .project-card img[src*="Rendering23.jpg"],
-.project-card img[src*="Rendering24.jpg"],
-.project-card img[src*="Rendering25.jpg"],
-.project-card img[src*="Rendering26.jpg"],
-.project-card img[src*="Rendering27.jpg"],
-.project-card img[src*="Rendering28.jpg"],
-.project-card img[src*="Rendering29.jpg"],
-.project-card img[src*="Rendering30.jpg"],
-.project-card img[src*="Rendering31.jpg"],
-.project-card img[src*="Rendering32.jpg"],
-.project-card img[src*="Rendering33.jpg"],
-.project-card img[src*="Rendering34.jpg"],
-.project-card img[src*="Rendering35.jpg"],
-.project-card img[src*="Rendering36.jpg"],
-.project-card img[src*="Rendering37.jpg"],
-.project-card img[src*="Rendering38.jpg"],
-.project-card img[src*="Rendering39.jpg"],
-.project-card img[src*="Rendering40.jpg"],
-.project-card img[src*="Rendering16.jpg"],
-.project-card img[src*="Rendering19.jpg"],
-.project-card img[src*="Rendering20.jpg"],
-.project-card img[src*="Rendering22.jpg"] {
-    transform: rotate(90deg) scale(1.35) !important;
-}
+...
+*/
+
 
 /* Lighting Overlay for a high-end photography feel */
 .project-card::after {
@@ -490,7 +472,8 @@ ul {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 5000;
+    /* Increased to stay above mobile header (4000) */
     left: 0;
     top: 0;
     width: 100%;
@@ -593,61 +576,23 @@ ul {
 }
 
 /* Fix for sideways images - Orientation Correction */
-#gallery-lightbox-img[src*="Hometheatre14.jpg"],
-#gallery-lightbox-img[src*="Hometheatre10.jpg"],
+/* Removed manual rotations for modal gallery items */
+/*
 .gallery-item img[src*="Rendering23.jpg"],
-.gallery-item img[src*="Rendering24.jpg"],
-.gallery-item img[src*="Rendering25.jpg"],
-.gallery-item img[src*="Rendering26.jpg"],
-.gallery-item img[src*="Rendering27.jpg"],
-.gallery-item img[src*="Rendering28.jpg"],
-.gallery-item img[src*="Rendering29.jpg"],
-.gallery-item img[src*="Rendering30.jpg"],
-.gallery-item img[src*="Rendering31.jpg"],
-.gallery-item img[src*="Rendering32.jpg"],
-.gallery-item img[src*="Rendering33.jpg"],
-.gallery-item img[src*="Rendering34.jpg"],
-.gallery-item img[src*="Rendering35.jpg"],
-.gallery-item img[src*="Rendering36.jpg"],
-.gallery-item img[src*="Rendering37.jpg"],
-.gallery-item img[src*="Rendering38.jpg"],
-.gallery-item img[src*="Rendering39.jpg"],
-.gallery-item img[src*="Rendering40.jpg"],
-.gallery-item img[src*="Rendering16.jpg"],
-.gallery-item img[src*="Rendering19.jpg"],
-.gallery-item img[src*="Rendering20.jpg"],
-.gallery-item img[src*="Rendering22.jpg"] {
+...
+*/
+
+
+/* Fix for upside down home theatre images */
+.gallery-item img[src*="Hometheatre10.jpg"],
+.gallery-item img[src*="Hometheatre14.jpg"] {
     transform: rotate(90deg) scale(1.35) !important;
-    /* Scale to fill container after rotation */
 }
 
-#gallery-lightbox-img[src*="Hometheatre14.jpg"],
 #gallery-lightbox-img[src*="Hometheatre10.jpg"],
-#gallery-lightbox-img[src*="Rendering23.jpg"],
-#gallery-lightbox-img[src*="Rendering24.jpg"],
-#gallery-lightbox-img[src*="Rendering25.jpg"],
-#gallery-lightbox-img[src*="Rendering26.jpg"],
-#gallery-lightbox-img[src*="Rendering27.jpg"],
-#gallery-lightbox-img[src*="Rendering28.jpg"],
-#gallery-lightbox-img[src*="Rendering29.jpg"],
-#gallery-lightbox-img[src*="Rendering30.jpg"],
-#gallery-lightbox-img[src*="Rendering31.jpg"],
-#gallery-lightbox-img[src*="Rendering32.jpg"],
-#gallery-lightbox-img[src*="Rendering33.jpg"],
-#gallery-lightbox-img[src*="Rendering34.jpg"],
-#gallery-lightbox-img[src*="Rendering35.jpg"],
-#gallery-lightbox-img[src*="Rendering36.jpg"],
-#gallery-lightbox-img[src*="Rendering37.jpg"],
-#gallery-lightbox-img[src*="Rendering38.jpg"],
-#gallery-lightbox-img[src*="Rendering39.jpg"],
-#gallery-lightbox-img[src*="Rendering40.jpg"],
-#gallery-lightbox-img[src*="Rendering16.jpg"],
-#gallery-lightbox-img[src*="Rendering19.jpg"],
-#gallery-lightbox-img[src*="Rendering20.jpg"],
-#gallery-lightbox-img[src*="Rendering22.jpg"] {
+#gallery-lightbox-img[src*="Hometheatre14.jpg"] {
     animation: lightboxZoomInRotate 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) forwards !important;
     max-width: 85vh;
-    /* Adjust constraints because width/height are swapped visually */
     max-height: 90vw;
 }
 
@@ -662,6 +607,8 @@ ul {
         opacity: 1;
     }
 }
+
+
 
 /* ─── Image Lightbox Overlay ─────────────────────────── */
 #gallery-lightbox {
