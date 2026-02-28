@@ -1047,7 +1047,18 @@ ul {
 
     .sidebar-header .logo,
     .sidebar-header .tagline {
-        display: none;
+        display: flex;
+    }
+
+    .sidebar-header .logo {
+        margin-bottom: 20px;
+    }
+
+    .sidebar-header .tagline {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+        color: #666;
+        padding: 0 10px;
     }
 
     .sidebar-header {
@@ -1252,6 +1263,11 @@ ul {
     }
 }
 
+@media (max-width: 768px) {
+    /* No specific mobile-header-social styles needed here,
+       as they are handled by default or smaller breakpoints */
+}
+
 @media (max-width: 480px) {
     .mobile-header {
         height: 60px;
@@ -1268,5 +1284,17 @@ ul {
 
     .project-card {
         aspect-ratio: 1/1;
+    }
+
+    /* Shrink social icons slightly on very small screens */
+    .mobile-header-social {
+        gap: 8px;
+        margin-right: 10px;
+    }
+
+    .mobile-social-link {
+        width: 28px;
+        height: 28px;
+        font-size: 0.78rem;
     }
 }
