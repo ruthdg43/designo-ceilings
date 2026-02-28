@@ -1298,3 +1298,168 @@ ul {
         font-size: 0.78rem;
     }
 }
+
+/* Mobile Back Button */
+.mobile-back-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .mobile-back-btn {
+        display: flex;
+    }
+}
+
+/* Mobile Landing Section Styles */
+.mobile-only-section {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-header {
+        display: flex;
+        background: #fff;
+        justify-content: center;
+    }
+
+    .mobile-logo-link {
+        margin: 0 auto;
+    }
+
+    .hamburger-btn {
+        display: none !important;
+    }
+
+    .sidebar {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Mobile Landing Portal - The actual homepage on mobile */
+    .mobile-only-section.active {
+        display: block !important;
+    }
+
+    #mobile-landing {
+        background: #fff;
+        min-height: 100vh;
+        z-index: 5000;
+    }
+
+    .mobile-landing-container {
+        padding: 60px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-landing-header {
+        margin-bottom: 40px;
+    }
+
+    .mobile-landing-logo {
+        height: 85px;
+        width: auto;
+        margin-bottom: 25px;
+    }
+
+    .mobile-landing-title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #000;
+        margin-bottom: 10px;
+    }
+
+    .mobile-landing-tagline {
+        font-size: 0.95rem;
+        color: #888;
+        line-height: 1.4;
+    }
+
+    .mobile-landing-nav {
+        margin-bottom: 60px;
+    }
+
+    .mobile-nav-group {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mobile-landing-link {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .mobile-landing-footer {
+        margin-top: auto;
+        padding-top: 40px;
+        border-top: 1px solid #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .mobile-landing-phone-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .mobile-landing-socials-row {
+        display: flex;
+        gap: 35px;
+        align-items: center;
+    }
+
+    .mobile-landing-socials-row a {
+        font-size: 1.8rem;
+        color: #444;
+        transition: color 0.2s ease;
+    }
+
+    .mobile-landing-socials-row a:hover {
+        color: #000;
+    }
+
+    /* Section content (Galleries) */
+    .content-section {
+        display: none;
+        padding: 100px 20px 60px;
+    }
+
+    .content-section.active {
+        display: block;
+    }
+
+    .section-label {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Fixed header logo should only show when not on landing */
+    body:has(#mobile-landing.active) .mobile-header {
+        display: none;
+    }
+}

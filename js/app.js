@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Designo Ceilings: Luxury Gallery System Initialized.');
 
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-landing-link');
     const sections = document.querySelectorAll('.content-section');
 
     window.showSection = function (sectionId) {
@@ -2561,10 +2561,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial load
     const currentHash = window.location.hash.substring(1).toLowerCase();
-    const validSections = ['about', 'residential-matte', 'residential-gloss', 'residential-condos', 'commercial', 'renderings', 'residential-hometheatre', 'backlit'];
+    const validSections = ['about', 'residential-matte', 'residential-gloss', 'residential-condos', 'commercial', 'renderings', 'residential-hometheatre', 'mobile-landing'];
+
     if (validSections.includes(currentHash)) {
         showSection(currentHash);
     } else {
-        showSection('residential-matte');
+        // Defaults: mobile-landing for mobile if no hash, residential-matte for desktop
+        if (window.innerWidth <= 768) {
+            showSection('mobile-landing');
+        } else {
+            showSection('residential-matte');
+        }
     }
 });

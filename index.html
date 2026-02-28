@@ -19,7 +19,7 @@
 
     <!-- Mobile Header -->
     <header class="mobile-header">
-        <a href="#residential-matte" class="mobile-logo-link">
+        <a href="#mobile-landing" class="mobile-logo-link" data-section="mobile-landing">
             <img src="./images/logo.jpg" alt="Designo Ceilings Logo" class="mobile-logo-img">
         </a>
         <button id="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle Menu">
@@ -97,9 +97,54 @@
     <!-- Main Content (Original Template Framework) -->
     <main class="main-content">
 
+        <!-- Mobile Landing / Menu Section -->
+        <section id="mobile-landing" class="content-section active mobile-only-section">
+            <div class="mobile-landing-container">
+                <div class="mobile-landing-header">
+                    <img src="./images/logo.jpg" alt="Designo Builders Logo" class="mobile-landing-logo">
+                    <h1 class="mobile-landing-title">Designo Builders</h1>
+                    <p class="mobile-landing-tagline">Specializing in new home builds, remodels & design.</p>
+                </div>
+
+                <nav class="mobile-landing-nav">
+                    <div class="mobile-nav-group">
+                        <a href="#residential-matte" class="mobile-landing-link"
+                            data-section="residential-matte">Residential Matte</a>
+                        <a href="#residential-gloss" class="mobile-landing-link"
+                            data-section="residential-gloss">Residential Gloss</a>
+                        <a href="#residential-condos" class="mobile-landing-link"
+                            data-section="residential-condos">Residential Condominium</a>
+                        <a href="#residential-hometheatre" class="mobile-landing-link"
+                            data-section="residential-hometheatre">Home Theater</a>
+                        <a href="#commercial" class="mobile-landing-link" data-section="commercial">Commercial</a>
+                        <a href="#renderings" class="mobile-landing-link" data-section="renderings">Rendering</a>
+                        <a href="#about" class="mobile-landing-link" data-section="about">About</a>
+                    </div>
+                </nav>
+
+                <div class="mobile-landing-footer">
+                    <a href="tel:7037751113" class="mobile-landing-phone-text">703-775-1113</a>
+                    <div class="mobile-landing-socials-row">
+                        <a href="tel:7037751113" title="Call Us">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://www.instagram.com/designoceilings" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@designoceiling" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@DesignoCeilings" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Residential Matte Ceilings Section -->
-        <section id="residential-matte" class="content-section active">
+        <section id="residential-matte" class="content-section">
+            <button class="mobile-back-btn" onclick="showSection('mobile-landing')">← Back</button>
             <h2 class="section-label">Residential Matte Ceilings</h2>
             <div class="projects-grid">
                 <div class="project-card" onclick="openProject('cover0')">
@@ -187,6 +232,7 @@
 
         <!-- Residential-Gloss Ceilings Section -->
         <section id="residential-gloss" class="content-section">
+            <button class="mobile-back-btn" onclick="showSection('mobile-landing')">← Back</button>
             <h2 class="section-label">Residential-Gloss Ceilings</h2>
             <div class="projects-grid">
                 <div class="project-card" onclick="openProject('Residentialgloss')">
@@ -250,6 +296,7 @@
         </section>
 
         <section id="residential-condos" class="content-section">
+            <button class="mobile-back-btn" onclick="showSection('mobile-landing')">← Back</button>
             <h2 class="section-label">Residential Condominiums</h2>
             <div class="projects-grid">
 
@@ -291,6 +338,7 @@
 
         <!-- Commercial Section -->
         <section id="commercial" class="content-section">
+            <button class="mobile-back-btn" onclick="showSection('mobile-landing')">← Back</button>
             <h2 class="section-label">Commercial</h2>
             <div class="projects-grid">
                 <div class="project-card" onclick="openProject('cover17')">
@@ -382,6 +430,7 @@
 
         <!-- Renderings Section -->
         <section id="renderings" class="content-section">
+            <button class="mobile-back-btn" onclick="showSection('mobile-landing')">← Back</button>
             <h2 class="section-label">Rendering</h2>
             <div class="projects-grid">
                 <div class="project-card" onclick="openProject('rere2')">
@@ -438,6 +487,7 @@
 
         <!-- Residential Home Theatre Section -->
         <section id="residential-hometheatre" class="content-section">
+            <button class="mobile-back-btn" onclick="showSection('mobile-landing')">← Back</button>
             <h2 class="section-label">Residential Home Theatre</h2>
             <div class="projects-grid">
                 <div class="project-card" onclick="openProject('hometheatre')">
@@ -466,57 +516,9 @@
             </div>
         </section>
 
-        <!-- Backlit Section -->
-        <section id="backlit" class="content-section">
-            <h2 class="section-label">Printed Backlit</h2>
-            <div class="projects-grid">
-                <!-- Row 1: Subtle & Scenic Residential -->
-                <div class="project-card" onclick="openProject('Printed_backlit_sky')">
-                    <img src="./images/Printedbacklit.jpg" class="project-cover-img">
-                </div>
-
-                <div class="project-card" onclick="openProject('backlit-geometric')">
-                    <img src="./images/bcklit.jpg" class="project-cover-img">
-                </div>
-
-                <div class="project-card" onclick="openProject('backlit-nature-scenic')">
-                    <img src="./images/tree1.jpg" class="project-cover-img">
-                </div>
-
-                <!-- Row 2: Immersive Residential & Forest -->
-                <div class="project-card" onclick="openProject('cover57')">
-                    <img src="./images/cover57.jpg" class="project-cover-img">
-                </div>
-
-                <div class="project-card" onclick="openProject('backlit-office-grid')">
-                    <img src="./images/backlit7.jpg" class="project-cover-img">
-                </div>
-
-                <div class="project-card" onclick="openProject('backlit-sky-bedroom')">
-                    <img src="./images/backlit3.jpg" class="project-cover-img">
-                </div>
-
-                <!-- Row 3: High-Impact & Commercial -->
-                <div class="project-card" onclick="openProject('cover777')">
-                    <img src="./images/cover777.jpg" class="project-cover-img">
-                </div>
-
-                <div class="project-card" onclick="openProject('cover55')">
-                    <img src="./images/cover55.jpg" class="project-cover-img">
-                </div>
-
-                <div class="project-card" onclick="openProject('Printed_backlit_abstract')">
-                    <img src="./images/Printedbacklit1.jpg" class="project-cover-img">
-                </div>
-
-                <div class="project-card" onclick="openProject('commercial-pool')">
-                    <img src="./images/commercial-pool.jpg" class="project-cover-img">
-                </div>
-            </div>
-        </section>
-
         <!-- About Section -->
         <section id="about" class="content-section about-section">
+            <button class="mobile-back-btn" onclick="showSection('mobile-landing')">← Back</button>
             <h2 class="section-label">About Us</h2>
             <div class="about-grid">
                 <div class="about-text">
@@ -544,6 +546,29 @@
                         Designo Ceilings is the trusted partner for next level custom ceilings.</p>
                     <p>Residential or commercial, feel free to give us a call at <a href="tel:7037751113"
                             class="inline-link">703-775-1113</a> and let us design something extraordinary.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Contact & Social Section -->
+        <section id="mobile-contact" class="content-section mobile-only-section contact-social-section">
+            <div class="mobile-contact-container">
+                <div class="contact-info-wrap">
+                    <a href="tel:7037751113" class="mobile-footer-phone">703-775-1113</a>
+                </div>
+                <div class="mobile-footer-socials">
+                    <a href="https://www.instagram.com/designoceilings" target="_blank" rel="noopener noreferrer"
+                        title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@designoceiling" target="_blank" rel="noopener noreferrer"
+                        title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@DesignoCeilings" target="_blank" rel="noopener noreferrer"
+                        title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
         </section>
