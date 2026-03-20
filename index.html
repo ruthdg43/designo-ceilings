@@ -98,46 +98,53 @@
 
         <!-- Mobile Landing / Menu Section -->
         <section id="mobile-landing" class="content-section active mobile-only-section">
-            <div class="mobile-landing-container">
-                <div class="mobile-landing-header">
-                    <img src="./images/logo.jpg" alt="Designo Builders Logo" class="mobile-landing-logo">
-                    <h1 class="mobile-landing-title">Designo Builders</h1>
-                    <p class="mobile-landing-tagline">Specializing in new home builds, remodels & design.</p>
+            <div class="mobile-landing-container" style="padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 400px; margin: 0 auto; min-height: 80vh; justify-content: center;">
+                <div class="mobile-landing-header" style="margin-bottom: 20px;">
+                    <img src="./images/logo.jpg" alt="Designo Ceilings Logo" class="mobile-landing-logo" style="max-width: 250px; margin-bottom: 20px;">
+                    
+                    <p class="tagline" style="font-size: 0.95rem; color: #888; line-height: 1.6; margin-bottom: 25px;">We design and install high end ceiling systems that elevate interiors through precision, lighting, and clean architectural lines.</p>
+                    
+                    <a href="tel:7037751113" class="sidebar-phone" style="display: block; font-size: 1.1rem; font-weight: 700; color: #000; text-decoration: none; margin-bottom: 25px;">703-775-1113</a>
+                    
+                    <div class="sidebar-location" style="margin-bottom: 40px; border-bottom: 1px solid #f0f0f0; padding-bottom: 20px; border-top: 1px solid #f0f0f0; padding-top: 20px;">
+                        <div class="location-label" style="font-size: 0.7rem; font-weight: 700; color: #a0a0a0; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">
+                            Proudly Serving the DMV Area
+                        </div>
+                        <div class="location-dmv" style="font-size: 0.85rem; color: #3b82f6; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <span>Virginia</span>
+                            <span class="sep" style="color: #93c5fd; font-size: 0.7rem;">•</span>
+                            <span>Washington, D.C.</span>
+                            <span class="sep" style="color: #93c5fd; font-size: 0.7rem;">•</span>
+                            <span>Maryland</span>
+                        </div>
+                    </div>
                 </div>
 
-                <nav class="mobile-landing-nav">
+                <nav class="mobile-landing-nav" style="width: 100%; text-align: left; padding-left: 10px;">
+                    <style>
+                        .mobile-landing-link {
+                            display: block;
+                            font-size: 1rem;
+                            color: #555;
+                            text-decoration: none;
+                            padding: 12px 0;
+                            transition: color 0.3s ease;
+                        }
+                        .mobile-landing-link.active {
+                            color: #000 !important;
+                            font-weight: 700 !important;
+                        }
+                    </style>
                     <div class="mobile-nav-group">
-                        <a href="#residential-matte" class="mobile-landing-link"
-                            data-section="residential-matte">Residential Matte</a>
-                        <a href="#residential-gloss" class="mobile-landing-link"
-                            data-section="residential-gloss">Residential Gloss</a>
-                        <a href="#residential-condos" class="mobile-landing-link"
-                            data-section="residential-condos">Residential Condominium</a>
-                        <a href="#residential-hometheatre" class="mobile-landing-link"
-                            data-section="residential-hometheatre">Home Theater</a>
-                        <a href="#commercial" class="mobile-landing-link" data-section="commercial">Commercial</a>
-                        <a href="#renderings" class="mobile-landing-link" data-section="renderings">Rendering</a>
-                        <a href="#about" class="mobile-landing-link" data-section="about">About</a>
+                        <a href="#residential-matte" class="mobile-landing-link active nav-link" data-section="residential-matte">Residential Matte Ceilings</a>
+                        <a href="#residential-gloss" class="mobile-landing-link nav-link" data-section="residential-gloss">Residential-Gloss Ceilings</a>
+                        <a href="#residential-condos" class="mobile-landing-link nav-link" data-section="residential-condos">Residential Condominiums</a>
+                        <a href="#residential-hometheatre" class="mobile-landing-link nav-link" data-section="residential-hometheatre">Residential Home Theatre</a>
+                        <a href="#commercial" class="mobile-landing-link nav-link" data-section="commercial">Commercial</a>
+                        <a href="#renderings" class="mobile-landing-link nav-link" data-section="renderings">Rendering</a>
+                        <a href="#about" class="mobile-landing-link nav-link" data-section="about">About Us</a>
                     </div>
                 </nav>
-
-                <div class="mobile-landing-footer">
-                    <a href="tel:7037751113" class="mobile-landing-phone-text">703-775-1113</a>
-                    <div class="mobile-landing-socials-row">
-                        <a href="tel:7037751113" title="Call Us">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="https://www.instagram.com/designoceilings" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@designoceiling" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@DesignoCeilings" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
             </div>
         </section>
 
